@@ -55,4 +55,56 @@
           </li>
         </comps>
       </ThingDef>
+
+      <ThingDef ParentName="BuildingBase">
+        <defName>SC_DwarvenOven</defName>
+        <label>dwarven kiln</label>
+        <description>A rustic brick-built oven which is used for various stoneborn recipes.</description>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+          <texPath>Things/Buildings/Oven/Oven</texPath>
+          <drawSize>3.2</drawSize>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <damageData>
+            <rect>(0.05,0.1,0.9,0.9)</rect>
+          </damageData>
+          <shadowData>
+            <volume>(0.75, 0.35, 0.33)</volume>
+          </shadowData>
+        </graphicData>
+      <size>(2,2)</size>
+      <costStuffCount>85</costStuffCount>
+      <stuffCategories>
+        <li>Stony</li>
+      </stuffCategories>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <defaultPlacingRot>North</defaultPlacingRot>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.45</fillPercent>
+        <pathCost>70</pathCost>
+        <statBases>
+          <WorkToBuild>1500</WorkToBuild>
+          <Mass>28</Mass>
+          <MaxHitPoints>120</MaxHitPoints>
+          <Flammability>0</Flammability>
+        </statBases>
+        <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      </comps>
+      <tickerType>Rare</tickerType>
+      <rotatable>false</rotatable>
+      <designationCategory>Production</designationCategory>
+        <uiOrder>2790</uiOrder>
+        <building>
+          <buildingTags>
+            <li>Production</li>
+          </buildingTags>
+          <destroySound>BuildingDestroyed_Stone_Medium</destroySound>
+        </building>
+        <thingCategories>
+          <li>BuildingsProduction</li>
+        </thingCategories>
+      </ThingDef>
 </Defs>
