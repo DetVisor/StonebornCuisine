@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="CavePlantBase">
+    <defName>SD_Plant_CaveWheat</defName>
+    <label>cave wheat</label>
+    <description>A tall, stalky fungus that is grown for it's versatile flour. It can grow on fungal gravel, but only in darkness - exposing it to sunlight will kill it.</description>
+    <statBases>
+      <MaxHitPoints>55</MaxHitPoints>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plants/CaveWheat</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>45</pathCost>
+    <ingestible />
+    <plant>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SD_Flour</harvestedThingDef>
+	    <drugForHarvestPurposes>True</drugForHarvestPurposes>
+      <harvestYield>15</harvestYield>
+      <harvestWork>200</harvestWork>
+	    <sowMinSkill>5</sowMinSkill>
+      <topWindExposure>0</topWindExposure>
+      <growDays>12</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.3~0.8</visualSizeRange>
+      <maxMeshCount>4</maxMeshCount>
+      <sowResearchPrerequisites>
+        <li>SubterraneanAgri</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+  
+      <ThingDef ParentName="RoughPlantBase">
+    <defName>SD_Flour</defName>
+    <label>fungal flour</label>
+    <description>Raw bladeroot. A flavoring and preserving agent that is necessary for making shroom ale.</description>
+    <possessionCount>15</possessionCount>
+    <graphicData>
+      <texPath>Things/Flour</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>120</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+  </ThingDef>
+
+  </Defs>
+  
