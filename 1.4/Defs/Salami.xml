@@ -3,12 +3,13 @@
 <Defs>
 
 <ThingDef ParentName="OrganicProductBase">
-    <defName>SD_Salami</defName>
+    <defName>Sc_Salami</defName>
     <label>salami</label>
     <description>A cured, salted sausage usually prepared with some spices. It lasts a long time outside of storage and requires little refrigeration.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
       <li>Foods</li>
+      <li>MeatRaw</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Foods/Salami</texPath>
@@ -42,7 +43,7 @@
     </comps>
     <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
-
+<!--
   <RecipeDef>
     <defName>SD_Make_Salami</defName>
     <label>make salami</label>
@@ -138,5 +139,6 @@
     <researchPrerequisite>Pemmican</researchPrerequisite>
     <displayPriority>1420</displayPriority>
   </RecipeDef>
+-->
 
 </Defs>

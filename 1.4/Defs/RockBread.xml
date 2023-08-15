@@ -3,7 +3,7 @@
 <Defs>
 
 <ThingDef ParentName="OrganicProductBase">
-    <defName>SD_RockBread</defName>
+    <defName>SC_RockBread</defName>
     <label>rockbread</label>
     <description>A cured, salted sausage usually prepared with some spices. It lasts a long time outside of storage and requires little refrigeration.</description>
     <thingClass>ThingWithComps</thingClass>
