@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>SC_HotGrill</defName>
+    <label>hot grill</label>
+    <description>A metal grill with a campfire below, used to grill food.</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Buildings/Production/DwarvenGrill/DwarvenGrill</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(5,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <costList>
+      <Steel>80</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2110</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li>SC_CookMeatSkewer</li>
+      <li>SC_CookVegSkewer</li>
+      <li>SC_CookFungusSkewer</li>
+      <li>SC_CookInsectSkewer</li>
+
+      <li>SC_CookCheeseburger</li>
+      <li>SC_CookVeggieburger</li>
+      <li>SC_CookCaveburger</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>160.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <canEjectFuel>true</canEjectFuel>
+      </li>
+      <li Class="CompProperties_FireOverlay">
+        <fireSize>1</fireSize>
+        <offset>(0,-2,0)</offset>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>4</heatPerSecond>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>SC_Mote_HotGrillLogs</mote>
+        <maintain>True</maintain>
+        <saveKeysPrefix>glow</saveKeysPrefix>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(184,136,83,0)</glowColor>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <building>
+      <isMealSource>true</isMealSource>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+      <workTableRoomRole>Kitchen</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>1</workTableNotInRoomRoleFactor>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>SC_ArtificialHive</defName>
+    <label>insectiary</label>
+    <thingClass>Building</thingClass>
+    <description>An artificial hive, with a juvenile queen inside. It slowly and constantly produces insect jelly.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Production/ArtificialHive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <researchPrerequisites>
+      <li>SC_InsectFarming</li>
+    </researchPrerequisites>
+    <uiIconScale>0.65</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>50</WoodLog>
+      <SC_JuvenileQueen>1</SC_JuvenileQueen>
+    </costList>
+    <pathCost>42</pathCost>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <killedLeavings>
+      <InsectJelly>30</InsectJelly>
+    </killedLeavings>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2790</uiOrder>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Medium</destroySound>
+    </building>
+    <comps>
+      <li Class="CompProperties_DamageOnInterval">
+        <damageDef>Deterioration</damageDef>
+        <damage>15</damage>
+        <ticksBetweenDamage>30000</ticksBetweenDamage>
+      </li>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>SC_HiveFlyersEffect</effecterDef>
+      </li>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>InsectJelly</thingToSpawn>
+        <spawnCount>20</spawnCount>
+        <spawnIntervalRange>26000~30000</spawnIntervalRange>
+        <spawnMaxAdjacent>80</spawnMaxAdjacent>
+        <spawnForbidden>false</spawnForbidden>
+        <saveKeysPrefix>jelly</saveKeysPrefix>
+      </li>
+      <li Class="CompProperties_SpawnerFilth">
+        <filthDef>Filth_Slime</filthDef>
+        <spawnCountOnSpawn>3</spawnCountOnSpawn>
+        <spawnMtbHours>4</spawnMtbHours>
+        <spawnRadius>1</spawnRadius>
+      </li>
+      <li Class="CompProperties_Maintainable">
+        <ticksHealthy>60000</ticksHealthy>
+        <ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+        <damagePerTickRare>10</damagePerTickRare>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>SC_DwarvenOven</defName>
+    <label>dwarven kiln</label>
+    <description>A rustic brick-built oven which is used for various stoneborn recipes.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Buildings/Production/Oven/Oven</texPath>
+      <drawSize>3.2</drawSize>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.7, 2, 1.7)</volume>
+      </shadowData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>SC_BasicBaking</li>
+    </researchPrerequisites>
+    <size>(2,2)</size>
+    <costStuffCount>85</costStuffCount>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>70</pathCost>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>28</Mass>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>12.0</fuelConsumptionRate>
+        <fuelCapacity>75.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <canEjectFuel>true</canEjectFuel>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>12</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+        <notWorkingKey>SC_KilnNotWorking</notWorkingKey>
+        <processes>
+          <li>SC_RawToRockbread</li>
+
+          <li>SC_DoughToMeatRockpie</li>
+          <li>SC_DoughToVeganRockpie</li>
+          <li>SC_DoughToMushroomRockpie</li>
+          <li>SC_RawToMeatMeal</li>
+          <li>SC_RawToVeganMeal</li>
+
+          <li>SC_DoughToPastry</li>
+          <li>SC_DoughToBerryPie</li>
+          <li>SC_DoughToChocolatePie</li>
+          <li>SC_DoughToCheesePie</li>
+
+          <li>SC_RawToJellyGlazedShank</li>
+          <li>SC_RawToRoastedMegascarab</li>
+          <li>SC_RawToMushroomSoup</li>
+          <li>SC_DoughToRockdoughPizza</li>
+        </processes>
+        <progressBarOffset>(0,4,-1)</progressBarOffset>
+        <alwaysShowProgressBar>true</alwaysShowProgressBar>
+        <inProgressTexture>Things/Buildings/Production/Oven/OvenFull</inProgressTexture>
+        <finishedTexture>Things/Buildings/Production/Oven/OvenFull</finishedTexture>
+        <hideSettings>true</hideSettings>
+      </li>
+      <li Class="PipeSystem.CompProperties_GlowerOnProcess">
+        <glowRadius>4</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>PipeSystem.ITab_Processor</li>
+    </inspectorTabs>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2790</uiOrder>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Stone_Medium</destroySound>
+    </building>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>SC_PortablePot</defName>
+    <label>portable pot</label>
+    <description>A simple, portable steel pot for baking on the move.\n\nParticularly useful for dungeoneering.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Buildings/Production/PortablePot/PortablePot</texPath>
+      <drawSize>1.2</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <researchPrerequisites>
+      <li>SC_BasicBaking</li>
+    </researchPrerequisites>
+    <size>(1,1)</size>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>70</pathCost>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>12</Mass>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>12.0</fuelConsumptionRate>
+        <fuelCapacity>75.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>12</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+        <notWorkingKey>SC_PotNotWorking</notWorkingKey>
+        <processes>
+          <li>SC_Pot_RawToRockbread</li>
+
+          <li>SC_Pot_RawToMeatMeal</li>
+          <li>SC_Pot_RawToVeganMeal</li>
+
+          <li>SC_Pot_RawToMushroomSoup</li>
+        </processes>
+        <progressBarOffset>(0,2,-0.9)</progressBarOffset>
+        <alwaysShowProgressBar>false</alwaysShowProgressBar>
+        <inProgressTexture>Things/Buildings/Production/PortablePot/PortablePot_full</inProgressTexture>
+        <finishedTexture>Things/Buildings/Production/PortablePot/PortablePot_full</finishedTexture>
+        <hideSettings>true</hideSettings>
+      </li>
+      <li Class="PipeSystem.CompProperties_GlowerOnProcess">
+        <glowRadius>6</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>PipeSystem.ITab_Processor</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+      <li>PlaceWorker_Heater</li>
+      <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2790</uiOrder>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Stone_Medium</destroySound>
+    </building>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>SC_CuringRack</defName>
+    <label>curing rack</label>
+    <description>A wooden rack to hang meat or fish to dry and age.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Buildings/Production/SalamiRack</texPath>
+      <drawSize>(3.3,2.3)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.60, 0.6, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>SC_SalamiAndCheese</li>
+    </researchPrerequisites>
+    <costList>
+      <WoodLog>80</WoodLog>
+    </costList>
+    <size>(2,1)</size>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>70</pathCost>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>28</Mass>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="ProcessorFramework.CompProperties_Processor">
+        <capacity>30</capacity>
+        <independentProcesses>false</independentProcesses>
+        <parallelProcesses>false</parallelProcesses>
+        <dropIngredients>false</dropIngredients>
+        <showProductIcon>false</showProductIcon>
+        <barOffset>(0.0, 0.385)</barOffset>
+        <barScale>(1.2, 0.6)</barScale>
+        <colorCoded>true</colorCoded>
+        <processes>
+          <li>SC_CureMeat</li>
+          <li>SC_CureInsectMeat</li>
+          <li>SC_CureHumanMeat</li>
+          <li>SC_CureFish</li>
+        </processes>
+      </li>
+    </comps>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2790</uiOrder>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Medium</destroySound>
+    </building>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BenchBase">
+    <defName>SC_PrepTable</defName>
+    <label>preparation bench</label>
+    <description>A simple wooden table equipped with drawers of cooking utensils for preparing raw products like dough.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Buildings/Production/DoughPreparationTable/DoughPreparationTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.8, 2.8)</drawSize>
+      <shadowData>
+        <volume>(1.8, 0.35, 0.59)</volume>
+        <offset>(0, 0, 0.08)</offset>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>SC_BasicDough</li>
+    </researchPrerequisites>
+    <costList>
+      <WoodLog>80</WoodLog>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2200</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <size>(2,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2500</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <recipes>
+      <li>SC_PrepareDough</li>
+      <li>SC_PreparePastryDough</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Kitchen</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.5</workTableNotInRoomRoleFactor>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <!-- Stop snooping, you dog. -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>SC_ArchotechMicrowave</defName>
+    <label>quantum microgenerator</label>
+    <description>A portable archotech machine that generates powerful radioactive microwaves, causing the molecules of matter stored inside to begin violently vibrating.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Buildings/Production/Special/ArchotechMicrowave</texPath>
+      <drawSize>1.2</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <size>(1,1)</size>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>0</Beauty>
+      <Mass>15</Mass>
+      <WorkToBuild>2000</WorkToBuild>
+    </statBases>
+    <clearBuildingArea>false</clearBuildingArea>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+      <isEdifice>false</isEdifice>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+        <notWorkingKey>SC_MicrowaveNotWorking</notWorkingKey>
+        <processes>
+          <li>SC_Microwave_ReheatJellyGlazedShank</li>
+          <li>SC_Microwave_ReheatRoastedMegascarab</li>
+          <li>SC_Microwave_ReheatMushroomSoup</li>
+          <li>SC_Microwave_ReheatRockdoughPizza</li>
+
+          <li>SC_Microwave_HeatMetal</li>
+        </processes>
+        <progressBarOffset>(0,2,-0.4)</progressBarOffset>
+        <alwaysShowProgressBar>false</alwaysShowProgressBar>
+        <inProgressTexture>Things/Buildings/Production/Special/ArchotechMicrowaveFull</inProgressTexture>
+        <finishedTexture>Things/Buildings/Production/Special/ArchotechMicrowaveFull</finishedTexture>
+        <hideSettings>true</hideSettings>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(214,221,60,0)</glowColor>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>PipeSystem.ITab_Processor</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <uiOrder>2790</uiOrder>
+    <tradeTags>
+      <li>ExoticBuilding</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

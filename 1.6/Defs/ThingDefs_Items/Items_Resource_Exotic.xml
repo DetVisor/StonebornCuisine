@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>SC_JuvenileQueen</defName>
+    <label>juvenile queen</label>
+    <description>A small, juvenile insectoid queen maggot. It needs an artifical housing to start working.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SC_ArtificialHive</ThingDef>
+    </descriptionHyperlinks>
+    <stackLimit>5</stackLimit>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>0.3</Mass>
+      <Beauty>0</Beauty>
+      <MarketValue>70</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Special/QueenMaggot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.8, 0.8)</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>SC_UnstableMatter</defName>
+    <label>unstable matter</label>
+    <description>A microscopic, unstable, unobservable element, lasting nearly only a zeptosecond of real time in the material plane before vanishing with an implosion.</description>
+    <stackLimit>1</stackLimit>
+    <tickerType>Normal</tickerType>
+    <thingClass>ThingWithComps</thingClass>
+    <selectable>false</selectable>
+    <statBases>
+      <MaxHitPoints>1</MaxHitPoints>
+      <Mass>0</Mass>
+      <Beauty>0</Beauty>
+      <MarketValue>0</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/UnstableMatter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.2, 1.2)</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_DamageOnInterval">
+        <damageDef>Deterioration</damageDef>
+        <damage>9999</damage>
+        <ticksBetweenDamage>1</ticksBetweenDamage>
+      </li>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>1</wickTicks>
+        <explosiveRadius>150</explosiveRadius>
+        <explosiveDamageType>BombSuper</explosiveDamageType>
+        <explodeOnKilled>true</explodeOnKilled>
+        <startWickHitPointsPercent>0.15</startWickHitPointsPercent>
+        <drawWick>false</drawWick>
+        <startWickOnInternalDamageTaken>
+          <li>Deterioration</li>
+        </startWickOnInternalDamageTaken>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Cave Wheat-->
+
+  <ThingDef ParentName="CavePlantBase">
+    <defName>SC_Plant_CaveWheat</defName>
+    <label>moldwheat</label>
+    <description>A tall, stalky mold that is grown for its versatile flour. It can grow on fungal gravel, but only in darkness - exposing it to sunlight will kill it.</description>
+    <statBases>
+      <MaxHitPoints>55</MaxHitPoints>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CaveWheat</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>45</pathCost>
+    <ingestible />
+    <plant>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SC_Flour</harvestedThingDef>
+      <drugForHarvestPurposes>True</drugForHarvestPurposes>
+      <harvestYield>15</harvestYield>
+      <harvestWork>200</harvestWork>
+      <sowMinSkill>5</sowMinSkill>
+      <topWindExposure>0</topWindExposure>
+      <growDays>12</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.3~1</visualSizeRange>
+      <maxMeshCount>4</maxMeshCount>
+      <sowResearchPrerequisites>
+        <li>SC_DwarvenCrops</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>SC_Flour</defName>
+    <label>fungal flour</label>
+    <description>Powdery and dense fungal flour. Used for stoneborn baking recipes.</description>
+    <possessionCount>15</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/Flour</texPath>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>120</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+  </ThingDef>
+
+  <!--Plump Helmet-->
+
+  <ThingDef ParentName="PlantBase">
+    <defName>SC_Plant_PlumpHelmet</defName>
+    <label>plump helmet</label>
+    <description>A short, plump pink-capped mushroom that grows in large bundles. It is meaty yet still neutral in flavor, making it a great base for plenty of dishes. Unlike other mushrooms, it is also more capable of handling light, and won't die in its presence.\n\n&lt;color=#6e6e6eff&gt;The first fungus the original stoneborn families cultivated to feed their colonies, they have deep ties to stoneborn history and culture, remaining still one of the most utilized crops amongst underground strongholds, and even spaceforges.&lt;/color&gt;</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.175</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/PlumpHelmet</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/PlumpHelmet_Immature</immatureGraphicPath>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RawFungus</harvestedThingDef>
+      <harvestYield>25</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0</topWindExposure>
+      <growDays>12</growDays>
+      <cavePlantWeight>0.1</cavePlantWeight>
+      <visualSizeRange>0.4~1</visualSizeRange>
+      <purpose>Food</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+      <maxMeshCount>4</maxMeshCount>
+      <sowResearchPrerequisites>
+        <li>SC_DwarvenCrops</li>
+      </sowResearchPrerequisites>
+      <growMinGlow>0</growMinGlow>
+      <growOptimalGlow>0</growOptimalGlow>
+      <diesToLight>false</diesToLight>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>SC_Plant_Bunshroom</defName>
+    <label>bunshroom</label>
+    <description>A short, fast-growing fungus that yields tough caps that aren't edible by humans, but are great for feeding animals.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.6</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Bunshroom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RawFungus</harvestedThingDef>
+      <harvestYield>5</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <topWindExposure>0</topWindExposure>
+      <growDays>8</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.4~0.9</visualSizeRange>
+      <purpose>Food</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+      <maxMeshCount>9</maxMeshCount>
+      <sowResearchPrerequisites>
+        <li>SC_DwarvenCrops</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>SC_Plant_Gemberry</defName>
+    <label>gemberry bush</label>
+    <description>A porous white fruiting body that grows small, sweet gummy-like berries. These gemberries are delicious both raw and cooked.\n\n&lt;color=#6e6e6eff&gt;In the underground ecosystem, this fungus acts as a food supply for plenty of smaller creatures. When the berries mature and drop from the fruiting body, Silver moles are often the first to swoop in to feast.&lt;/color&gt;</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.50</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Gemberry</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.55, 0.2, 0.2)</volume>
+        <offset>(0,0,-0.25)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>30</pathCost>
+    <plant>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <mustBeWildToSow>false</mustBeWildToSow>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>8</growDays>
+      <immatureGraphicPath>Things/Plant/Gemberry_Immature</immatureGraphicPath>
+      <harvestYield>15</harvestYield>
+      <harvestWork>300</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.30</harvestAfterGrowth>
+      <harvestedThingDef>RawBerries</harvestedThingDef>
+      <cavePlantWeight>0.08</cavePlantWeight>
+      <visualSizeRange>0.95~1.7</visualSizeRange>
+      <purpose>Food</purpose>
+      <growMinGlow>0</growMinGlow>
+      <growOptimalGlow>0</growOptimalGlow>
+      <diesToLight>true</diesToLight>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <sowResearchPrerequisites Inherit="False">
+        <li>SC_DwarvenCrops_Sweet</li>
+      </sowResearchPrerequisites>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(174,115,197,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>SC_Plant_Kokobark</defName>
+    <label>chocobark</label>
+    <description>A stocky, tall fungus with a sweet, candy scent. It processes the same chemicals as cocoa trees into its stem, and when ripe, the "bark" start flaking off into pure edible chocolate.\n\n&lt;color=#6e6e6eff&gt;Created as a pet project by a stoneborn geneticist, the chocobark is only one of four fungus of its family: the Dark Chocobark, the White Chocobark and the Rum Chocobark.&lt;/color&gt;</description>
+    <fillPercent>0.4</fillPercent>
+    <graphicData>
+      <texPath>Things/Plant/Kokobark</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <shadowData>
+        <volume>(0.2, 0.6, 0.2)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </shadowData>
+    </graphicData>
+    <neverMultiSelect>false</neverMultiSelect>
+    <minifiedDef IsNull="True" />
+    <plant>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <mustBeWildToSow>false</mustBeWildToSow>
+      <topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>Things/Plant/Kokobark_Immature</immatureGraphicPath>
+      <growDays>20</growDays>
+      <harvestWork>310</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <forceIsTree>true</forceIsTree>
+      <visualSizeRange>1~2</visualSizeRange>
+      <sowMinSkill>8</sowMinSkill>
+      <harvestYield>20</harvestYield>
+      <harvestedThingDef>Chocolate</harvestedThingDef>
+      <harvestFailable>true</harvestFailable>
+      <neverBlightable>true</neverBlightable>
+      <wildClusterWeight>0</wildClusterWeight>
+      <growMinGlow>0</growMinGlow>
+      <growOptimalGlow>0</growOptimalGlow>
+      <diesToLight>true</diesToLight>
+      <wildOrder>1</wildOrder>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
+      <pollution>Any</pollution>
+      <sowResearchPrerequisites Inherit="False">
+        <li>Cocoa</li>
+        <li>SC_DwarvenCrops_Sweet</li>
+      </sowResearchPrerequisites>
+      <interferesWithRoof>false</interferesWithRoof>
+    </plant>
+  </ThingDef>
+
+</Defs>
+  

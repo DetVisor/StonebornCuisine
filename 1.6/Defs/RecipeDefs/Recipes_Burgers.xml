@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookCheeseburger</defName>
+        <label>grill cheese rockburger</label>
+        <description>Grill meat and cheese into a cheese rockburger.</description>
+        <jobString>Grilling rockburger.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_BasicBaking</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenCheese</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Rockbread</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Burger_Cheeseburger>4</SC_Burger_Cheeseburger>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookVeggieburger</defName>
+        <label>grill veggie rockburger</label>
+        <description>Grill veggie into a veggie rockburger.</description>
+        <jobString>Grilling rockburger.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_BasicBaking</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>30</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Rockbread</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Burger_Veggieburger>4</SC_Burger_Veggieburger>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookCaveburger</defName>
+        <label>grill cave rockburger</label>
+        <description>Grill insect meat and fungus into a cave rockburger.</description>
+        <jobString>Grilling rockburger.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_BasicBaking</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Megaspider</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawFungus</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Rockbread</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Burger_Caveburger>4</SC_Burger_Caveburger>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+</Defs>

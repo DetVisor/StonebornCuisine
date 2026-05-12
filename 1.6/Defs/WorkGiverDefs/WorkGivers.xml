@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <WorkGiverDef>
+        <defName>SC_DoBillsKnead</defName>
+        <label>knead dough</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Cooking</workType>
+        <priorityInType>100</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SC_PrepTable</li>
+        </fixedBillGiverDefs>
+        <verb>knead at</verb>
+        <gerund>kneading at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>SC_DoBillsGrill</defName>
+        <label>grill food</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Cooking</workType>
+        <priorityInType>100</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SC_HotGrill</li>
+        </fixedBillGiverDefs>
+        <verb>grill at</verb>
+        <gerund>grilling at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+</Defs>

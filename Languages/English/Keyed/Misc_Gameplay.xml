@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<SC_CheeseAging>Dry-aging..</SC_CheeseAging>
+	<SC_CheeseCurrentlyFrozen>This cheese is frozen and will not age.</SC_CheeseCurrentlyFrozen>
+	<SC_CheeseCurrentlyRefrigerated>This cheese is refrigerated and will not age as fast as it could (ages in {0})</SC_CheeseCurrentlyRefrigerated>
+	<SC_CheeseAgingCorrectly>This cheese is dry-aging properly (ages in {0})</SC_CheeseAgingCorrectly>
+
+	<SC_BullgrogResourceString>Milk production</SC_BullgrogResourceString>
+	<SC_CreamgrubResourceString>Silk production</SC_CreamgrubResourceString>
+
+	<SC_KilnNotWorking>This kiln is not working at the moment</SC_KilnNotWorking>
+	<SC_PotNotWorking>This pot is not working at the moment</SC_PotNotWorking>
+	<SC_MicrowaveNotWorking>Are you happy with yourself?</SC_MicrowaveNotWorking>
+
+</LanguageData>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_OvenMeal_Meat</defName>
+    <label>meat stew</label>
+    <description>A simple stew made of meat and water.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Meal/Oven</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>30</stackLimit>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal, Meat, Fungus</foodType>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_OvenMeal_Vegan</defName>
+    <label>veggie stew</label>
+    <description>A simple stew made of vegetables and water.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Meal/VeganOven</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>30</stackLimit>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal, VegetableOrFruit, Fungus</foodType>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

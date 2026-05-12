@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>SC_Thought_AteRockburger</defName>
+        <durationDays>1</durationDays>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Joy_Low</icon>
+        <stages>
+            <li>
+                <label>ate a rockburger</label>
+                <description>Greasy yet tasty!</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+        <replaceThoughts>
+            <li>SC_Thought_AteRockpie</li>
+            <li>SC_Thought_AteFeast</li>
+            <li>SC_Thought_AteFrozenFeast</li>
+        </replaceThoughts>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SC_Thought_AteRockpie</defName>
+        <durationDays>1</durationDays>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Joy_Low</icon>
+        <stages>
+            <li>
+                <label>ate a rockpie</label>
+                <description>What a filling, hearty meal!</description>
+                <baseMoodEffect>7</baseMoodEffect>
+            </li>
+        </stages>
+        <replaceThoughts>
+            <li>SC_Thought_AteRockburger</li>
+            <li>SC_Thought_AteFeast</li>
+            <li>SC_Thought_AteFrozenFeast</li>
+        </replaceThoughts>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SC_Thought_AteFeast</defName>
+        <durationDays>2</durationDays>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Joy</icon>
+        <stages>
+            <li>
+                <label>ate a glorious feast</label>
+                <description>What a wonderful meal, nutritious and tasty!</description>
+                <baseMoodEffect>16</baseMoodEffect>
+            </li>
+        </stages>
+        <replaceThoughts>
+            <li>SC_Thought_AteRockburger</li>
+            <li>SC_Thought_AteRockpie</li>
+            <li>SC_Thought_AteFrozenFeast</li>
+        </replaceThoughts>
+    </ThoughtDef>
+
+
+    <ThoughtDef>
+        <defName>SC_Thought_AteFrozenFeast</defName>
+        <durationDays>1.2</durationDays>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Joy_Low</icon>
+        <stages>
+            <li>
+                <label>ate a cold feast</label>
+                <description>What a nice meal, if only it was still warm..</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+        </stages>
+        <replaceThoughts>
+            <li>SC_Thought_AteRockpie</li>
+            <li>SC_Thought_AteRockburger</li>
+            <li>SC_Thought_AteFeast</li>
+        </replaceThoughts>
+    </ThoughtDef>
+
+</Defs>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <JoyGiverDef>
+        <defName>SC_EatSweets</defName>
+        <giverClass>JoyGiver_Ingest</giverClass>
+        <baseChance>2.5</baseChance>
+        <thingDefs>
+            <li>SC_Pastry</li>
+            <li>SC_BerryPie</li>
+            <li>SC_ChocolatePie</li>
+            <li>SC_CheesePie</li>
+        </thingDefs>
+        <joyKind>Gluttonous</joyKind>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </JoyGiverDef>
+
+</Defs>

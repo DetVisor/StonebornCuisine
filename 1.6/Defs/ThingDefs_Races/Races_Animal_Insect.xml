@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" ParentName="AnimalThingBase" Name="BaseThermalite">
+    <devNote>insect</devNote>
+    <statBases>
+      <ToxicResistance>1</ToxicResistance>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.8</ToxicEnvironmentResistance>
+    </statBases>
+    <race>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>Filth_BloodInsect</bloodDef>
+      <meatColor>(160,168,139)</meatColor>
+      <meatMarketValue>0.5</meatMarketValue>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+      <soundEating>Insectoid_Eat</soundEating>
+    </race>
+    <ingredient>
+      <mergeCompatibilityTags>
+        <li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
+      </mergeCompatibilityTags>
+    </ingredient>
+    <receivesSignals>true</receivesSignals>
+  </ThingDef>
+
+  <!-- ====================================================== -->
+
+  <ThingDef ParentName="BaseThermalite" Name="BaseMoleroach">
+    <defName>SC_Insect_Moleroach</defName>
+    <label>moleroach</label>
+    <description>A medium-sized bioengineered insectoid the size of a lamb. Thermalites were designed to aid in colonization efforts, taking the place of more fragile animals like ducks or chickens. Due to this, they aren't eusocial like other insectoids, instead reproducing through normal mating and egg-laying. The shiny, translucent eggs are edible and are quite popular for many unique dishes, especially paired with seafood, or the Thermalite's own meat.</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <MarketValue>200</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+      <Wildness>0</Wildness>
+    </statBases>
+    <uiIconScale>1.1</uiIconScale>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>SC_MoleroachEggUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>SC_MoleroachEggFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>2.2</eggLayIntervalDays>
+        <eggCountRange>2~3</eggCountRange>
+      </li>
+      <li Class="VEF.AnimalBehaviours.CompProperties_BuildPeriodically">
+        <defOfBuilding>SC_MoleroachNest</defOfBuilding>
+        <ticksToBuild>3200</ticksToBuild>
+        <onlyOneExistingPerPawn>true</onlyOneExistingPerPawn>
+        <maxBuildingsPerMap>100</maxBuildingsPerMap>
+        <onlyTamed>true</onlyTamed>
+        <checkForExistingEdifices>true</checkForExistingEdifices>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>mandibles</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>SC_CustomAnimal</thinkTreeMain>
+      <body>BeetleLikeWithClaw</body>
+      <baseHungerRate>0.25</baseHungerRate>
+      <baseBodySize>0.8</baseBodySize>
+      <baseHealthScale>1.7</baseHealthScale>
+      <foodType>VegetarianRoughAnimal, OmnivoreAnimal</foodType>
+      <useMeatFrom>Megaspider</useMeatFrom>
+      <roamMtbDays>3</roamMtbDays>
+      <mateMtbHours>8</mateMtbHours>
+      <lifeExpectancy>4</lifeExpectancy>
+      <trainability>Advanced</trainability>
+      <wildBiomes>
+        <AridShrubland>0.76</AridShrubland>
+        <Desert>0.66</Desert>
+        <ExtremeDesert>0.44</ExtremeDesert>
+        <TemperateForest>0.43</TemperateForest>
+        <TemperateSwamp>0.43</TemperateSwamp>
+      </wildBiomes>
+      <specialTrainables>
+        <li>Dig</li>
+      </specialTrainables>
+      <lifeStageAges>
+        <li>
+          <def>SC_InsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>SC_InsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>SC_InsectAdult</def>
+          <minAge>0.2</minAge>
+          <soundWounded>Pawn_Spelopede_Pain</soundWounded>
+          <soundDeath>Pawn_Spelopede_Death</soundDeath>
+          <soundCall>Pawn_Spelopede_Call</soundCall>
+          <soundAngry>Pawn_Spelopede_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.14)</li>
+        <li>(0.07, 0, 0.08)</li>
+        <li>(0.0, 0, -0.12)</li>
+        <li>(-0.07, 0, 0.08)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalFarm</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMoleroach">
+    <defName>SC_Insect_MoleroachBlue</defName>
+    <label>moleroach</label>
+    <description>A medium-sized bioengineered insectoid the size of a lamb. Thermalites were designed to aid in colonization efforts, taking the place of more fragile animals like ducks or chickens. Due to this, they aren't eusocial like other insectoids, instead reproducing through normal mating and egg-laying. The shiny, translucent eggs are edible and are quite popular for many unique dishes, especially paired with seafood, or the Thermalite's own meat.</description>
+    <statBases>
+      <MarketValue>400</MarketValue>
+    </statBases>
+    <race>
+      <canCrossBreedWith>
+        <li>SC_Insect_Moleroach</li>
+      </canCrossBreedWith>
+      <crossAggroWith>
+        <li>SC_Insect_Moleroach</li>
+      </crossAggroWith>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>SC_Moleroach</defName>
+    <label>moleroach</label>
+    <race>SC_Insect_Moleroach</race>
+    <combatPower>75</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    <ecoSystemWeight>0.3</ecoSystemWeight>
+    <labelMale>moleroach cock</labelMale>
+    <labelFemale>moleroach hen</labelFemale>
+    <wildGroupSize>5~8</wildGroupSize>
+    <ecoSystemWeight>0.5</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>moleroach nymph</label>
+        <labelPlural>moleroach nymphs</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/MoleroachNymph</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/Dessicated_MoleroachNymph</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/MoleroachMale</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/Moleroach</texPath>
+          <drawSize>1.3</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Thermalite/Dessicated_Moleroach</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/MoleroachMale</texPath>
+          <drawSize>1.6</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/Moleroach</texPath>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/Dessicated_Moleroach</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>SC_MoleroachBlue</defName>
+    <label>moleroach</label>
+    <race>SC_Insect_MoleroachBlue</race>
+    <combatPower>75</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    <ecoSystemWeight>0.3</ecoSystemWeight>
+    <labelMale>moleroach cock</labelMale>
+    <labelFemale>moleroach hen</labelFemale>
+    <wildGroupSize>2~3</wildGroupSize>
+    <ecoSystemWeight>0.5</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>moleroach nymph</label>
+        <labelPlural>moleroach nymphs</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/MoleroachShinyNymph</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/Dessicated_MoleroachNymph</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/MoleroachShinyMale</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/MoleroachShiny</texPath>
+          <drawSize>1.3</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Thermalite/Dessicated_Moleroach</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/MoleroachShinyMale</texPath>
+          <drawSize>1.6</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/MoleroachShiny</texPath>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Moleroach/Dessicated_Moleroach</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

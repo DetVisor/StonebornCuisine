@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--Pot processes-->
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Pot_RawToRockbread</defName>
+        <label>Bake rockbread</label>
+        <description>Turns 45 flour into 45 rockbread.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake flour into rockbread</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>SC_Flour</thing>
+                <countNeeded>45</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>40000</ticks>
+        <results>
+            <li>
+                <thing>SC_Rockbread</thing>
+                <count>45</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_PotBoiling</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Pot_RawToMeatMeal</defName>
+        <label>Bake meat oven meals</label>
+        <description>Turns 60 flour and 30 meat into 30 meals.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake flour and meat into oven meals</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <useIngredients>true</useIngredients>
+        <transfersIngredientList>true</transfersIngredientList>
+        <ingredients>
+            <li>
+                <thingCategory>MeatRaw</thingCategory>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_Flour</thing>
+                <countNeeded>60</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>55000</ticks>
+        <results>
+            <li>
+                <thing>SC_OvenMeal_Meat</thing>
+                <count>30</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_PotBoiling</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Pot_RawToVeganMeal</defName>
+        <label>Bake vegetarian oven meals</label>
+        <description>Turns 60 flour and 30 vegetables into 30 vegetarian meals.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake flour and vegetables into oven meals</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <useIngredients>true</useIngredients>
+        <transfersIngredientList>true</transfersIngredientList>
+        <ingredients>
+            <li>
+                <thingCategory>PlantFoodRaw</thingCategory>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_Flour</thing>
+                <countNeeded>60</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>55000</ticks>
+        <results>
+            <li>
+                <thing>SC_OvenMeal_Vegan</thing>
+                <count>30</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_PotBoiling</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Pot_RawToMushroomSoup</defName>
+        <label>Cook cream of mushroom soup</label>
+        <description>Turns 75 fungus and 45 dwarven milk into cream of mushroom soup (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Cook fungus and dwarven milk into cream of mushroom soup</labelOverride>
+        <transfersIngredientList>true</transfersIngredientList>
+        <priorityInBillList>0</priorityInBillList>
+        <researchPrerequisites>
+            <li>SC_FeastGalore</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>RawFungus</thing>
+                <countNeeded>75</countNeeded>
+            </li>
+            <li>
+                <thing>SC_DwarvenMilk</thing>
+                <countNeeded>45</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>80000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_MushroomSoup</thing>
+                <count>8</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_PotBoiling</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <!--Oven processes-->
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_RawToRockbread</defName>
+        <label>Bake rockbread</label>
+        <description>Turns 75 flour into 75 rockbread.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake flour into rockbread</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Rockbread</ThingDef>
+        </descriptionHyperlinks>
+        <ingredients>
+            <li>
+                <thing>SC_Flour</thing>
+                <countNeeded>75</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>60000</ticks>
+        <results>
+            <li>
+                <thing>SC_Rockbread</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_RawToMeatMeal</defName>
+        <label>Bake a meat oven meals</label>
+        <description>Turns 60 flour and 30 meat into 30 meals.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake flour and meat into oven meals</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_OvenMeal_Meat</ThingDef>
+        </descriptionHyperlinks>
+        <transfersIngredientList>true</transfersIngredientList>
+        <ingredients>
+            <li>
+                <thingCategory>MeatRaw</thingCategory>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_Flour</thing>
+                <countNeeded>60</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>90000</ticks>
+        <results>
+            <li>
+                <thing>SC_OvenMeal_Meat</thing>
+                <count>30</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_RawToVeganMeal</defName>
+        <label>Bake a vegetarian oven meal</label>
+        <description>Turns 60 flour and 30 vegetables into 30 vegetarian meals.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake flour and vegetables into oven meals</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_OvenMeal_Vegan</ThingDef>
+        </descriptionHyperlinks>
+        <transfersIngredientList>true</transfersIngredientList>
+        <ingredients>
+            <li>
+                <thingCategory>PlantFoodRaw</thingCategory>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_Flour</thing>
+                <countNeeded>60</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>90000</ticks>
+        <results>
+            <li>
+                <thing>SC_OvenMeal_Vegan</thing>
+                <count>30</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_DoughToPastry</defName>
+        <label>Bake pastries</label>
+        <description>Turns 60 pastry dough and 35 insect jelly into 75 jelly pastries</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake pastry dough and insect jelly into pastries</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Pastry</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_PastryArts</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_Raw_PastryDough</thing>
+                <countNeeded>60</countNeeded>
+            </li>
+            <li>
+                <thing>InsectJelly</thing>
+                <countNeeded>35</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_Pastry</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_DoughToBerryPie</defName>
+        <label>Bake a berry pie</label>
+        <description>Turns 30 pastry dough and 30 berries into pie (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake pastry dough and berries into pie</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_BerryPie</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_PastryArts</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_Raw_PastryDough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>RawBerries</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_BerryPie</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_DoughToChocolatePie</defName>
+        <label>Bake a chocolate pie</label>
+        <description>Turns 30 pastry dough and 30 chocolate into pie (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake pastry dough and chocolate into pie</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_ChocolatePie</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_PastryArts</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_Raw_PastryDough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>Chocolate</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_ChocolatePie</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_DoughToCheesePie</defName>
+        <label>Bake a cheesecake</label>
+        <description>Turns 30 pastry dough and 30 dwarven cheese into pie (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake pastry dough and dwarven cheese into pie</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_CheesePie</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_PastryArts</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_Raw_Dough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_DwarvenCheese</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_CheesePie</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_DoughToMeatRockpie</defName>
+        <label>Bake a meat rockpie</label>
+        <description>Turns 30 dough and 45 meat into rockpie (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake dough and meat into rockpie</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_MeatRockpie</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_BasicDough</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thingCategory>MeatRaw</thingCategory>
+                <countNeeded>45</countNeeded>
+            </li>
+            <li>
+                <thing>SC_Raw_Dough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_MeatRockpie</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_DoughToVeganRockpie</defName>
+        <label>Bake a vegetarian rockpie</label>
+        <description>Turns 30 dough and 45 vegetables into rockpie (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake dough and vegetables into rockpie</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_VeganRockpie</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_BasicDough</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thingCategory>PlantFoodRaw</thingCategory>
+                <countNeeded>45</countNeeded>
+            </li>
+            <li>
+                <thing>SC_Raw_Dough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_VeganRockpie</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_DoughToMushroomRockpie</defName>
+        <label>Bake a mushroom rockpie</label>
+        <description>Turns 30 dough and 45 fungus into rockpie (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake dough and fungus into rockpie</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_MushroomRockpie</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_BasicDough</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>RawFungus</thing>
+                <countNeeded>45</countNeeded>
+            </li>
+            <li>
+                <thing>SC_Raw_Dough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_MushroomRockpie</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <!-- Feast processes -->
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_RawToJellyGlazedShank</defName>
+        <label>Bake a jelly glazed shank</label>
+        <description>Turns 75 meat, 45 vegetables and 30 insect jelly into a jelly glazed shank (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake meat, vegetables and insect jelly into a jelly glazed shank</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Feast_JellyGlazedShank</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_FeastGalore</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thingCategory>MeatRaw</thingCategory>
+                <countNeeded>75</countNeeded>
+            </li>
+            <li>
+                <thingCategory>PlantFoodRaw</thingCategory>
+                <countNeeded>45</countNeeded>
+            </li>
+            <li>
+                <thing>InsectJelly</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>160000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_JellyGlazedShank</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_RawToRoastedMegascarab</defName>
+        <label>Bake a roasted megascarab</label>
+        <description>Turns 75 insect meat, 50 fungus and 30 berries into a roasted megascarab (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake insect meat, fungus and berries into a roasted megascarab</labelOverride>
+        <transfersIngredientList>true</transfersIngredientList>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Feast_RoastedMegascarab</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_FeastGalore</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>Meat_Megaspider</thing>
+                <countNeeded>75</countNeeded>
+            </li>
+            <li>
+                <thing>RawFungus</thing>
+                <countNeeded>50</countNeeded>
+            </li>
+            <li>
+                <thing>RawBerries</thing>
+                <countNeeded>25</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>160000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_RoastedMegascarab</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_RawToMushroomSoup</defName>
+        <label>Cook cream of mushroom soup</label>
+        <description>Turns 75 fungus and 45 dwarven milk into cream of mushroom soup (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Cook fungus and dwarven milk into cream of mushroom soup</labelOverride>
+        <transfersIngredientList>true</transfersIngredientList>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Feast_MushroomSoup</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_FeastGalore</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>RawFungus</thing>
+                <countNeeded>75</countNeeded>
+            </li>
+            <li>
+                <thing>SC_DwarvenMilk</thing>
+                <countNeeded>45</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>160000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_MushroomSoup</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_DoughToRockdoughPizza</defName>
+        <label>Bake rockdough pizza</label>
+        <description>Turns 30 dough, 10 dwarven cheese and 45 vegetables into rockdough pizza(8)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Cook dough, cheese and vegetables into rockdough pizza</labelOverride>
+        <transfersIngredientList>true</transfersIngredientList>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Feast_RockdoughPizza</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_FeastGalore</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_Raw_Dough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_DwarvenCheese</thing>
+                <countNeeded>10</countNeeded>
+            </li>
+            <li>
+                <thingCategory>PlantFoodRaw</thingCategory>
+                <countNeeded>45</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>80000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_RockdoughPizza</thing>
+                <count>8</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Microwave_ReheatJellyGlazedShank</defName>
+        <label>Reheat jelly glazed shank</label>
+        <description>Reheat jelly glazed shank, unfreezing it.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Reheat jelly glazed shank</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>SC_FrozenFeast_JellyGlazedShank</thing>
+                <countNeeded>16</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>10000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_JellyGlazedShank</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>false</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Reheat</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Microwave_ReheatRoastedMegascarab</defName>
+        <label>Reheat roasted megascarab</label>
+        <description>Reheat roasted megascarab, unfreezing it.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Reheat roasted megascarab</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>SC_FrozenFeast_RoastedMegascarab</thing>
+                <countNeeded>16</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>10000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_RoastedMegascarab</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>false</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Reheat</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Microwave_ReheatMushroomSoup</defName>
+        <label>Reheat cream of mushroom soup</label>
+        <description>Reheat cream of mushroom soup, unfreezing it.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Reheat cream of mushroom soup</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>SC_FrozenFeast_MushroomSoup</thing>
+                <countNeeded>16</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>10000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_MushroomSoup</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>false</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Reheat</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Microwave_ReheatRockdoughPizza</defName>
+        <label>Reheat rockdough pizza</label>
+        <description>Reheat rockdough pizza, unfreezing it.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Reheat rockdough pizza</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>SC_FrozenFeast_RockdoughPizza</thing>
+                <countNeeded>16</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>10000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_RockdoughPizza</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>false</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Reheat</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_Microwave_HeatMetal</defName>
+        <label>Heat steel</label>
+        <description>Heat steel into an explosion.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Heat steel into an explosion</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>Steel</thing>
+                <countNeeded>15</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>200</ticks>
+        <results>
+            <li>
+                <thing>SC_UnstableMatter</thing>
+                <count>1</count>
+            </li>
+        </results>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <useIngredients>true</useIngredients>
+        <autoExtract>true</autoExtract>
+        <effecterWhenWorking>false</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Reheat</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+</Defs>

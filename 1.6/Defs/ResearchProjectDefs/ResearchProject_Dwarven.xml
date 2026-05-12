@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>StonebornTab</defName>
+    <label>Stoneborn</label>
+    <generalTitle>Stoneborn research projects</generalTitle>
+    <generalDescription>Unlock stoneborn technologies, from cooking, to fermenting ales and wines, to even weaponry.</generalDescription>
+  </ResearchTabDef>
+
+  <ResearchProjectDef>
+    <defName>SC_DwarvenCrops</defName>
+    <label>fungus crops</label>
+    <tab>StonebornTab</tab>
+    <description>Plant various mushrooms engineered by the stoneborn for food.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.40</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_DwarvenCrops_Sweet</defName>
+    <label>sweet mushrooms</label>
+    <tab>StonebornTab</tab>
+    <description>Plant fungus engineered to produce sweet and luxurious things, like gemberries and chocobark.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.40</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_InsectFarming</defName>
+    <label>jelly farming</label>
+    <tab>StonebornTab</tab>
+    <description>Place juvenile queens into artificial hives for farming insect jelly.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.40</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->jelly farming</li>
+
+        <li>subject_story->discovered the ability to farm miniscule insectoids</li>
+        <li>subject_story->stole insect jelly from an insectoid hive for years</li>
+        <li>subject_story->had a pet insectiary</li>
+
+        <li>subject_gerund->farming jelly</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_KitchenFurnishing</defName>
+    <label>kitchen furnishing</label>
+    <tab>StonebornTab</tab>
+    <description>Build furniture for kitchens and feast halls.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.40</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_BasicBaking</defName>
+    <label>basic baking</label>
+    <tab>StonebornTab</tab>
+    <description>Build the dwarven kiln to begin baking goods from flour.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.30</researchViewY>
+    <discoveredLetterTitle>About: Baking</discoveredLetterTitle>
+    <discoveredLetterText>Your colony has discovered the wondrous world of stoneborn baking! By planting moldwheat, your colonists can harvest moldflour and bake it into rockbread, or use the oven to prepare simple stews!</discoveredLetterText>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->baking</li>
+
+        <li>subject_story->was invited to a stoneborn feast and became intrepidly curious</li>
+        <li>subject_story->constructed a simple clay oven to bake bread</li>
+        <li>subject_story->was part of a cooking entourage for a stoneborn underlord</li>
+
+        <li>subject_gerund->utilizing flour</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_BasicDough</defName>
+    <label>dough preparation</label>
+    <tab>StonebornTab</tab>
+    <description>Construct the preparation table to make dough out of dwarven milk and flour.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.30</researchViewY>
+    <prerequisites>
+      <li>SC_BasicBaking</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->dough</li>
+
+        <li>subject_story->discovered the incredibly properties of moldflour</li>
+        <li>subject_story->created the first rockpie, accidentally</li>
+        <li>subject_story->smacked the lights out of a bandit with a rockpie shell</li>
+
+        <li>subject_gerund->kneading dough</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_SalamiAndCheese</defName>
+    <label>aging and drying</label>
+    <tab>StonebornTab</tab>
+    <description>Prepare fresh cheese to let it age into proper dwarven cheese, or cure raw meat for storing or traveling.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.30</researchViewY>
+    <prerequisites>
+      <li>SC_BasicBaking</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->curing</li>
+
+        <li>subject_story->made enough cheese to feed a starving platewyrm</li>
+        <li>subject_story->accidentally let some cheese age for too long</li>
+        <li>subject_story->supplied an entire expedition with cured meat</li>
+        <li>subject_story->lived purely off of salted fish for years</li>
+
+        <li>subject_gerund->curing meat and cheese</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+
+  <ResearchProjectDef>
+    <defName>SC_PastryArts</defName>
+    <label>pastry arts</label>
+    <tab>StonebornTab</tab>
+    <description>Prepare pastry dough with dwarven milk and fungal flour, then bake it into pastries and pies.</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.20</researchViewY>
+    <prerequisites>
+      <li>SC_BasicDough</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->pastries</li>
+
+        <li>subject_story->satisfied the palate of the pickiest minefathe of the sector</li>
+        <li>subject_story->baked one of the best cakes known to stonebornkind</li>
+        <li>subject_story->cooked berry and chocolate pies for [ANYPAWN_possessive] entire fleet</li>
+
+        <li>subject_gerund->baking sweets and pastries</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_FeastGalore</defName>
+    <label>feasts galore</label>
+    <tab>StonebornTab</tab>
+    <description>Bake, roast and boil large feasts: meals that increase mood by a lot when warm, but get worse when frozen.</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.30</researchViewY>
+    <prerequisites>
+      <li>SC_SalamiAndCheese</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->feasts</li>
+
+        <li>subject_story->prepared a massive feast for an important stoneborn ceremony</li>
+        <li>subject_story->participated at a feast in the massive hall of Grugni</li>
+        <li>subject_story->invented roasted megascarab by leaving an oven on for too long</li>
+
+        <li>subject_gerund->cooking large feasts</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_Grilling</defName>
+    <label>grilling</label>
+    <tab>StonebornTab</tab>
+    <description>Grill various raw foods into skewers or burgers on the hot grill.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.20</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->grilling</li>
+
+        <li>subject_story->worked as a cook at a cave banquet</li>
+        <li>subject_story->tried hundreds of different food combinations for skewers</li>
+        <li>subject_story->was inspired by ancient texts to reinvent the burger</li>
+        <li>subject_story->was sued by Burger Baron for trying to copy the idea of the burger</li>
+
+        <li>subject_gerund->grilling burgers and skewers</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+</Defs>

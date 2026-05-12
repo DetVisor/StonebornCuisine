@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PrepareDough</defName>
+        <label>prepare dough</label>
+        <description>Make dough from flour and milk.</description>
+        <jobString>Kneading dough.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <researchPrerequisite>
+            <li>SC_BasicDough</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                        <li>Milk</li>
+                    </thingDefs>
+                </filter>
+                <count>1.5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Flour</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Raw_Dough>15</SC_Raw_Dough>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PrepareFreshCheese</defName>
+        <label>prepare fresh dwarven cheese</label>
+        <description>Make fresh dwarven cheese from milk.</description>
+        <jobString>Preparing fresh cheese.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisite>
+            <li>SC_SalamiAndCheese</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Raw_FreshCheese>15</SC_Raw_FreshCheese>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PreparePastryDough</defName>
+        <label>prepare pastry dough</label>
+        <description>Make pastry dough from flour, milk and insect jelly.</description>
+        <jobString>Kneading pastry dough.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <researchPrerequisite>
+            <li>SC_PastryArts</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                        <li>Milk</li>
+                    </thingDefs>
+                </filter>
+                <count>1.5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>InsectJelly</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Flour</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Raw_PastryDough>15</SC_Raw_PastryDough>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+</Defs>

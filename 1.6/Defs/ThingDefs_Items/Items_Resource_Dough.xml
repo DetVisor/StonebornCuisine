@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="OrganicProductBase" Name="DoughBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <stackLimit>30</stackLimit>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>0.1</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.5</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>AnimalProduct, Fungus</foodType>
+      <preferability>DesperateOnly</preferability>
+      <joy>0.02</joy>
+      <joyKind>Gluttonous</joyKind>
+      <ingestEffect>SC_EatBread</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>6</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DoughBase">
+    <defName>SC_Raw_Dough</defName>
+    <label>dough</label>
+    <description>Thick, rough dough made of flour and milk. Not good raw.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Dough</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <preferability>DesperateOnly</preferability>
+      <joy>0.05</joy>
+      <joyKind>Gluttonous</joyKind>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DoughBase">
+    <defName>SC_Raw_PastryDough</defName>
+    <label>pastry dough</label>
+    <description>Smooth dough made of flour, milk and insect jelly, folded many times over create layers. Not good raw.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PastryDough</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <preferability>DesperateOnly</preferability>
+      <joy>0.05</joy>
+      <joyKind>Gluttonous</joyKind>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

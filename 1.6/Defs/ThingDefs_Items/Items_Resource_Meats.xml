@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>DV_Thermalite_CustomMeat</defName>
+		<label>thermalite flesh</label>
+		<description>Raw meat from a thermalite.\n\nTender and palatable, unlike normal insect meat.</description>
+
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>True</rotDestroys>
+			</li>
+		</comps>
+
+		<graphicData>
+			<texPath>Things/Item/Resource/MeatFoodRaw/Meat_Insect</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(235,209,209)</color>
+		</graphicData>
+
+		<statBases>
+			<Mass>0.03</Mass>
+			<MarketValue>2</MarketValue>
+			<Nutrition>0.05</Nutrition>
+			<Flammability>0.5</Flammability>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+
+		<ingestible Inherit="False">
+			<specialThoughtDirect>AteRawFood</specialThoughtDirect>
+			<foodType>Meat</foodType>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>		
+		</ingestible>
+
+		<thingCategories>
+			<li>MeatRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

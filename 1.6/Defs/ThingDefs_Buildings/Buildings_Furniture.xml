@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="ShelfBase">
+        <defName>SC_FoodSpot</defName>
+        <label>meal spot</label>
+        <description>A spot designated for storing meals and foods, usually for large tables and feasts.</description>
+        <graphicData>
+            <texPath>Things/Buildings/Furniture/MealSpot</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <thingCategories IsNull="True" />
+        <rotatable>true</rotatable>
+        <statBases Inherit="False">
+            <WorkToBuild>0</WorkToBuild>
+            <Flammability>0</Flammability>
+        </statBases>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>false</useHitPoints>
+        <size>(1,1)</size>
+        <uiIconScale>1</uiIconScale>
+        <thingClass>Building_Storage</thingClass>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <clearBuildingArea>false</clearBuildingArea>
+        <stuffCategories Inherit="false" />
+        <minifiedDef IsNull="True" />
+        <building Inherit="False">
+            <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>false</ignoreStoredThingsBeauty>
+            <blueprintClass>Blueprint_Storage</blueprintClass>
+            <paintable>false</paintable>
+            <isEdifice>false</isEdifice>
+            <storageGroupTag>Shelf</storageGroupTag>
+            <maxItemsInCell>1</maxItemsInCell>
+            <fixedStorageSettings>
+                <filter>
+                    <disallowNotEverStorable>true</disallowNotEverStorable>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                        <li>AnimalProductRaw</li>
+                        <li>FoodMeals</li>
+                        <li>Drugs</li>
+                    </categories>
+                    <thingDefs>
+                        <li>SC_Feast_MushroomSoup</li>
+                        <li>SC_Feast_JellyGlazedShank</li>
+                        <li>SC_Feast_RoastedMegascarab</li>
+                        <li>SC_CheesePie</li>
+                        <li>SC_ChocolatePie</li>
+                        <li>SC_BerryPie</li>
+                        <li>SC_Pastry</li>
+                        <li>SC_DwarvenCheese</li>
+                        <li>SC_Rockbread</li>
+                        <li>Chocolate</li>
+                        <li>SC_MeatRockpie</li>
+                        <li>SC_VeganRockpie</li>
+                        <li>SC_MushroomRockpie</li>
+                        <li>SC_CuredMeat</li>
+                        <li>SC_InsectJerky</li>
+                    </thingDefs>
+                    <disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+                        <li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+                    </disallowedThingDefs>
+                    <specialFiltersToDisallow>
+                        <li>AllowLargeCorpses</li>
+                    </specialFiltersToDisallow>
+                </filter>
+            </fixedStorageSettings>
+            <defaultStorageSettings>
+                <priority>Preferred</priority>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Feast_MushroomSoup</li>
+                        <li>SC_Feast_JellyGlazedShank</li>
+                        <li>SC_Feast_RoastedMegascarab</li>
+                        <li>SC_CheesePie</li>
+                        <li>SC_ChocolatePie</li>
+                        <li>SC_BerryPie</li>
+                        <li>SC_Pastry</li>
+                        <li>SC_DwarvenCheese</li>
+                        <li>SC_Rockbread</li>
+                        <li>Chocolate</li>
+                        <li>SC_MeatRockpie</li>
+                        <li>SC_VeganRockpie</li>
+                        <li>SC_MushroomRockpie</li>
+                        <li>SC_CuredMeat</li>
+                        <li>SC_InsectJerky</li>
+                    </thingDefs>
+                </filter>
+            </defaultStorageSettings>
+        </building>
+        <designationHotKey>Misc12</designationHotKey>
+    </ThingDef>
+
+    <ThingDef ParentName="TableGatherSpotBase">
+        <defName>SC_Table3x8c</defName>
+        <label>table (3x8)</label>
+        <graphicData>
+            <texPath>Things/Buildings/Furniture/Table3x7</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(5,10)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>SC_KitchenFurnishing</li>
+        </researchPrerequisites>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>2</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+        </statBases>
+        <size>(3,8)</size>
+        <costStuffCount>125</costStuffCount>
+        <building>
+            <buildingSizeCategory>Medium</buildingSizeCategory>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="TableGatherSpotBase">
+        <defName>SC_Counter1x5c</defName>
+        <label>counter (1x5)</label>
+        <graphicData>
+            <texPath>Things/Buildings/Furniture/Counter1x5</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,7)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>SC_KitchenFurnishing</li>
+        </researchPrerequisites>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>2</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+        </statBases>
+        <size>(1,5)</size>
+        <costStuffCount>125</costStuffCount>
+        <building>
+            <buildingSizeCategory>Medium</buildingSizeCategory>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="TableGatherSpotBase">
+        <defName>SC_Counter1x3c</defName>
+        <label>counter (1x3)</label>
+        <graphicData>
+            <texPath>Things/Buildings/Furniture/Counter1x3</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,5)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>SC_KitchenFurnishing</li>
+        </researchPrerequisites>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>2</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+        </statBases>
+        <size>(1,3)</size>
+        <costStuffCount>125</costStuffCount>
+        <building>
+            <buildingSizeCategory>Medium</buildingSizeCategory>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureWithQualityBase">
+        <defName>SC_Bench1x3c</defName>
+        <label>bench (1x3)</label>
+        <description>A simple platform on which to sit. Not very comfortable, but much better than nothing. Can be used at tables, work stations, and elsewhere.</description>
+        <replaceTags>
+            <li>Chair</li>
+        </replaceTags>
+        <graphicData>
+            <texPath>Things/Buildings/Furniture/Bench1x3</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2.9,4.9)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+            <shadowData>
+                <volume>(0.3, 0.23, 2.5)</volume>
+            </shadowData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>SC_KitchenFurnishing</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <WorkToBuild>450</WorkToBuild>
+            <Mass>3</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>0</Beauty>
+            <Comfort>0.5</Comfort>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+        </statBases>
+        <size>(1,3)</size>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>25</costStuffCount>
+        <pathCost>30</pathCost>
+        <uiOrder>2400</uiOrder>
+        <fillPercent>0.20</fillPercent>
+        <building>
+            <isSittable>true</isSittable>
+            <multiSittable>true</multiSittable>
+            <paintable>true</paintable>
+        </building>
+        <uiIconOffset>(0, -0.05)</uiIconOffset>
+        <comps>
+            <li Class="CompProperties_Styleable" />
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureWithQualityBase">
+        <defName>SC_Bench1x5c</defName>
+        <label>bench (1x5)</label>
+        <description>A simple platform on which to sit. Not very comfortable, but much better than nothing. Can be used at tables, work stations, and elsewhere.</description>
+        <replaceTags>
+            <li>Chair</li>
+        </replaceTags>
+        <graphicData>
+            <texPath>Things/Buildings/Furniture/Bench1x5</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2.9,6.9)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+            <shadowData>
+                <volume>(0.3, 0.23, 4.5)</volume>
+            </shadowData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>SC_KitchenFurnishing</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <WorkToBuild>450</WorkToBuild>
+            <Mass>3</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>0</Beauty>
+            <Comfort>0.5</Comfort>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+        </statBases>
+        <size>(1,5)</size>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>25</costStuffCount>
+        <pathCost>30</pathCost>
+        <uiOrder>2400</uiOrder>
+        <fillPercent>0.20</fillPercent>
+        <building>
+            <isSittable>true</isSittable>
+            <multiSittable>true</multiSittable>
+            <paintable>true</paintable>
+        </building>
+        <uiIconOffset>(0, -0.05)</uiIconOffset>
+        <comps>
+            <li Class="CompProperties_Styleable" />
+        </comps>
+    </ThingDef>
+
+</Defs>
