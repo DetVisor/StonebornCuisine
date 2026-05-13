@@ -433,7 +433,7 @@
           <li>SC_CureMeat</li>
           <li>SC_CureInsectMeat</li>
           <li>SC_CureHumanMeat</li>
-          <li>SC_CureFish</li>
+          <li MayRequire="Ludeon.RimWorld.Odyssey">SC_CureFish</li>
         </processes>
       </li>
     </comps>

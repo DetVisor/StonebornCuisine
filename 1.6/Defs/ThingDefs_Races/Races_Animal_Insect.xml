@@ -102,7 +102,7 @@
         <TemperateSwamp>0.43</TemperateSwamp>
       </wildBiomes>
       <specialTrainables>
-        <li>Dig</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">Dig</li>
       </specialTrainables>
       <lifeStageAges>
         <li>
