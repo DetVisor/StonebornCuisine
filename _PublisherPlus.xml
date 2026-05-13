@@ -3,6 +3,7 @@
   <Excluded>
     <exclude>.git</exclude>
     <exclude>Previews</exclude>
+    <exclude>StonebornCuisine.zip</exclude>
     <exclude>Textures\Things\Buildings\Furniture\rect19376.png</exclude>
     <exclude>Textures\Things\Item\Resource\MeatDough.png</exclude>
     <exclude>Textures\Things\Item\Resource\Salami</exclude>
