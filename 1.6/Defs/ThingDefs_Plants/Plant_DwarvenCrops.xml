@@ -42,6 +42,13 @@
     </plant>
   </ThingDef>
 
+  <ThingCategoryDef>
+    <defName>SC_FlourRaw</defName>
+    <label>flour</label>
+    <parent>FoodRaw</parent>
+    <iconPath>UI/Icons/ThingCategories/SC_FlourRaw</iconPath>
+  </ThingCategoryDef>
+
   <ThingDef ParentName="RoughPlantBase">
     <defName>SC_Flour</defName>
     <label>fungal flour</label>
@@ -51,6 +58,9 @@
       <texPath>Things/Item/Resource/Flour</texPath>
       <drawSize>1.1</drawSize>
     </graphicData>
+    <thingCategories>
+      <li>SC_FlourRaw</li>
+    </thingCategories>
     <stackLimit>150</stackLimit>
     <statBases>
       <MarketValue>1.1</MarketValue>

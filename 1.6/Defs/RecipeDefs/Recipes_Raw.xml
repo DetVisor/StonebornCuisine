@@ -27,9 +27,9 @@
             </li>
             <li>
                 <filter>
-                    <thingDefs>
-                        <li>SC_Flour</li>
-                    </thingDefs>
+                    <categories>
+                        <li>SC_FlourRaw</li>
+                    </categories>
                 </filter>
                 <count>25</count>
             </li>
@@ -109,9 +109,9 @@
             </li>
             <li>
                 <filter>
-                    <thingDefs>
-                        <li>SC_Flour</li>
-                    </thingDefs>
+                    <categories>
+                        <li>SC_FlourRaw</li>
+                    </categories>
                 </filter>
                 <count>25</count>
             </li>

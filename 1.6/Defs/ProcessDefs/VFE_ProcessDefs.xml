@@ -12,7 +12,7 @@
         <priorityInBillList>0</priorityInBillList>
         <ingredients>
             <li>
-                <thing>SC_Flour</thing>
+                <thingCategory>SC_FlourRaw</thingCategory>
                 <countNeeded>45</countNeeded>
             </li>
         </ingredients>
@@ -46,7 +46,7 @@
                 <countNeeded>30</countNeeded>
             </li>
             <li>
-                <thing>SC_Flour</thing>
+                <thingCategory>SC_FlourRaw</thingCategory>
                 <countNeeded>60</countNeeded>
             </li>
         </ingredients>
@@ -79,7 +79,7 @@
                 <countNeeded>30</countNeeded>
             </li>
             <li>
-                <thing>SC_Flour</thing>
+                <thingCategory>SC_FlourRaw</thingCategory>
                 <countNeeded>60</countNeeded>
             </li>
         </ingredients>
@@ -147,7 +147,7 @@
         </descriptionHyperlinks>
         <ingredients>
             <li>
-                <thing>SC_Flour</thing>
+                <thingCategory>SC_FlourRaw</thingCategory>
                 <countNeeded>75</countNeeded>
             </li>
         </ingredients>
@@ -183,7 +183,7 @@
                 <countNeeded>30</countNeeded>
             </li>
             <li>
-                <thing>SC_Flour</thing>
+                <thingCategory>SC_FlourRaw</thingCategory>
                 <countNeeded>60</countNeeded>
             </li>
         </ingredients>
@@ -219,7 +219,7 @@
                 <countNeeded>30</countNeeded>
             </li>
             <li>
-                <thing>SC_Flour</thing>
+                <thingCategory>SC_FlourRaw</thingCategory>
                 <countNeeded>60</countNeeded>
             </li>
         </ingredients>
