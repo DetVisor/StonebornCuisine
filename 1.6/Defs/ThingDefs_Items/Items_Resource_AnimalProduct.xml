@@ -39,7 +39,7 @@
   <ThingDef ParentName="EggUnfertBase">
     <defName>SC_EggCreamgrubUnfertilized</defName>
     <label>creamgrub egg (unfert.)</label>
-    <description>An unfertilized chicken egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <description>An unfertilized creamgrub egg. It can be eaten raw, but it's much, much better cooked.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CreamgrubEgg</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -52,7 +52,7 @@
   <ThingDef ParentName="EggFertBase">
     <defName>SC_EggCreamgrubFertilized</defName>
     <label>creamgrub egg (fert.)</label>
-    <description>A fertilized chicken egg. If all goes well, it should hatch into a chick. It can be eaten raw, but it's much better cooked.</description>
+    <description>A fertilized creamgrub egg. If all goes well, it should hatch into a larva. It can be eaten raw, but it's much better cooked.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Resource/CreamgrubEgg</texPath>

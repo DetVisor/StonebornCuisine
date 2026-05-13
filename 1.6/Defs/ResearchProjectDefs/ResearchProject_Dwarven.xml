@@ -117,6 +117,12 @@
     <label>aging and drying</label>
     <tab>StonebornTab</tab>
     <description>Prepare fresh cheese to let it age into proper dwarven cheese, or cure raw meat for storing or traveling.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SC_CuredMeat</ThingDef>
+      <ThingDef MayRequire="Ludeon.RimWorld.Odyssey">SC_SaltedFish</ThingDef>
+      <ThingDef>SC_InsectJerky</ThingDef>
+      <ThingDef>SC_DriedHuman</ThingDef>
+    </descriptionHyperlinks>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <researchViewX>2.00</researchViewX>

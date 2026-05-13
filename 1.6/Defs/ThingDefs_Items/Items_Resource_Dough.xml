@@ -64,7 +64,7 @@
   <ThingDef ParentName="DoughBase">
     <defName>SC_Raw_PastryDough</defName>
     <label>pastry dough</label>
-    <description>Smooth dough made of flour, milk and insect jelly, folded many times over create layers. Not good raw.</description>
+    <description>Smooth dough made of flour, milk and insect jelly, folded many times over to create layers. Not good raw.</description>
     <graphicData>
       <texPath>Things/Item/Resource/PastryDough</texPath>
       <graphicClass>Graphic_Single</graphicClass>

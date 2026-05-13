@@ -100,6 +100,10 @@
                     <thingDefs>
                         <li>InsectJelly</li>
                     </thingDefs>
+                    <categories>
+                        <li>EggsUnfertilized</li>
+                        <li>EggsFertilized</li>
+                    </categories>
                 </filter>
                 <count>15</count>
             </li>

@@ -92,6 +92,7 @@
       <preferability>MealFine</preferability>
       <ingestEffect>SC_EatBread</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
+      <tasteThought>SC_Thought_AteSweets</tasteThought>
       <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
       <joy>0.16</joy>
       <joyKind>Gluttonous</joyKind>
@@ -138,6 +139,7 @@
       <preferability>MealFine</preferability>
       <ingestEffect>SC_EatBread</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
+      <tasteThought>SC_Thought_AteSweets</tasteThought>
       <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
       <joy>0.22</joy>
       <joyKind>Gluttonous</joyKind>
@@ -184,6 +186,7 @@
       <preferability>MealFine</preferability>
       <ingestEffect>SC_EatBread</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
+      <tasteThought>SC_Thought_AteSweets</tasteThought>
       <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
       <joy>0.22</joy>
       <joyKind>Gluttonous</joyKind>
@@ -230,6 +233,7 @@
       <preferability>MealFine</preferability>
       <ingestEffect>SC_EatBread</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
+      <tasteThought>SC_Thought_AteSweets</tasteThought>
       <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
       <joy>0.22</joy>
       <joyKind>Gluttonous</joyKind>
@@ -369,7 +373,7 @@
     <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
 
-  <ThingDef ParentName="OrganicProductBase">
+  <ThingDef MayRequire="Ludeon.RimWorld.Odyssey" ParentName="OrganicProductBase">
     <defName>SC_SaltedFish</defName>
     <label>salted fish</label>
     <description>Degutted and salted fish. Dried by hanging it off a rack for a prolonged amount of time.\n\nIt can still be used for dishes, but can also be eaten raw.</description>

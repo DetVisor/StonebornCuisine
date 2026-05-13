@@ -373,6 +373,12 @@
     <defName>SC_CuringRack</defName>
     <label>curing rack</label>
     <description>A wooden rack to hang meat or fish to dry and age.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SC_CuredMeat</ThingDef>
+      <ThingDef MayRequire="Ludeon.RimWorld.Odyssey">SC_SaltedFish</ThingDef>
+      <ThingDef>SC_InsectJerky</ThingDef>
+      <ThingDef>SC_DriedHuman</ThingDef>
+    </descriptionHyperlinks>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Buildings/Production/SalamiRack</texPath>
