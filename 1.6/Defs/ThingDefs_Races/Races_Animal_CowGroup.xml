@@ -4,7 +4,7 @@
   <ThingDef ParentName="AnimalThingBase" Name="RockbullBase">
     <defName>SC_Rockbull</defName>
     <label>rockbull</label>
-    <description>A stocky, naturally armored descendant of modern cows, selectively bred to be powerful and fierce. Rockbulls evolved to be able to eat anything, due to the scarce plant life in their cavern habitats, and are commonly found as part of stoneborn caravans or deepfarms.\n\nTheir four hefty horns make them a danger for apex predators as well as overconfident tamers: with their powerful legs, they can ram and stab anything they consider a threat.</description>
+    <description>A stocky bovine selectively bred for durability. Rockbulls are able to eat anything, due to the scarce plant life in their habitats, and are commonly found as part of stoneborn caravans or deepfarms.\n\nTheir four hefty horns and muscular legs make them a danger for any predators and overconfident tamers.</description>
     <descriptionHyperlinks>
       <ThingDef>SC_DwarvenMilk</ThingDef>
     </descriptionHyperlinks>
@@ -48,10 +48,12 @@
       <lifeExpectancy>50</lifeExpectancy>
       <manhunterOnDamageChance>0.2</manhunterOnDamageChance>
       <wildBiomes>
-        <TemperateForest>0.76</TemperateForest>
+        <Grasslands MayRequire="Ludeon.RimWorld.Odyssey">0.6</Grasslands>
+        <Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.52</Glowforest>
+        <TemperateForest>0.50</TemperateForest>
         <TemperateSwamp>0.52</TemperateSwamp>
-        <BorealForest>0.8</BorealForest>
-        <Tundra>0.6</Tundra>
+        <BorealForest>0.6</BorealForest>
+        <Tundra>0.5</Tundra>
       </wildBiomes>
       <lifeStageAges>
         <li>
@@ -84,6 +86,7 @@
     <tradeTags>
       <li>AnimalStoneborn</li>
       <li>AnimalFarm</li>
+      <li>AnimalFighter</li>
     </tradeTags>
     <tools>
       <li>
@@ -141,7 +144,7 @@
   <ThingDef ParentName="RockbullBase">
     <defName>SC_RockbullAlbino</defName>
     <label>rockbull</label>
-    <description>A stocky, naturally armored descendant of modern cows, selectively bred to be powerful and fierce. Rockbulls evolved to be able to eat anything, due to the scarce plant life in their cavern habitats, and are commonly found as part of stoneborn caravans or deepfarms.\n\nTheir four hefty horns make them a danger for apex predators as well as overconfident tamers: with their powerful legs, they can ram and stab anything they consider a threat.</description>
+    <description>A stocky bovine selectively bred for durability. Rockbulls are able to eat anything, due to the scarce plant life in their habitats, and are commonly found as part of stoneborn caravans or deepfarms.\n\nTheir four hefty horns and muscular legs make them a danger for any predators and overconfident tamers.</description>
     <statBases>
       <MarketValue>800</MarketValue>
     </statBases>
@@ -160,6 +163,9 @@
         <li>SC_Rockbull</li>
       </crossAggroWith>
     </race>
+    <tradeTags Inherit="False">
+      <li>AnimalExotic</li>
+    </tradeTags>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">

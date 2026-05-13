@@ -4,7 +4,7 @@
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>SC_DwarvenMilk</defName>
-    <label>cave milk</label>
+    <label>dwarven milk</label>
     <description>Milk from a cave animal, of stoneborn origin.</description>
     <graphicData>
       <texPath>Things/Item/Resource/DwarvenMilk</texPath>

@@ -39,7 +39,6 @@
         <labelOverride>Bake flour and meat into oven meals</labelOverride>
         <priorityInBillList>0</priorityInBillList>
         <useIngredients>true</useIngredients>
-        <transfersIngredientList>true</transfersIngredientList>
         <ingredients>
             <li>
                 <thingCategory>MeatRaw</thingCategory>
@@ -72,7 +71,6 @@
         <labelOverride>Bake flour and vegetables into oven meals</labelOverride>
         <priorityInBillList>0</priorityInBillList>
         <useIngredients>true</useIngredients>
-        <transfersIngredientList>true</transfersIngredientList>
         <ingredients>
             <li>
                 <thingCategory>PlantFoodRaw</thingCategory>
@@ -103,7 +101,6 @@
         <description>Turns 75 fungus and 45 dwarven milk into cream of mushroom soup (16)</description>
         <spawnOnInteractionCell>true</spawnOnInteractionCell>
         <labelOverride>Cook fungus and dwarven milk into cream of mushroom soup</labelOverride>
-        <transfersIngredientList>true</transfersIngredientList>
         <priorityInBillList>0</priorityInBillList>
         <researchPrerequisites>
             <li>SC_FeastGalore</li>
@@ -176,7 +173,6 @@
         <descriptionHyperlinks>
             <ThingDef>SC_OvenMeal_Meat</ThingDef>
         </descriptionHyperlinks>
-        <transfersIngredientList>true</transfersIngredientList>
         <ingredients>
             <li>
                 <thingCategory>MeatRaw</thingCategory>
@@ -212,7 +208,6 @@
         <descriptionHyperlinks>
             <ThingDef>SC_OvenMeal_Vegan</ThingDef>
         </descriptionHyperlinks>
-        <transfersIngredientList>true</transfersIngredientList>
         <ingredients>
             <li>
                 <thingCategory>PlantFoodRaw</thingCategory>
@@ -554,7 +549,6 @@
         <description>Turns 75 insect meat, 50 fungus and 30 berries into a roasted megascarab (16)</description>
         <spawnOnInteractionCell>true</spawnOnInteractionCell>
         <labelOverride>Bake insect meat, fungus and berries into a roasted megascarab</labelOverride>
-        <transfersIngredientList>true</transfersIngredientList>
         <priorityInBillList>0</priorityInBillList>
         <descriptionHyperlinks>
             <ThingDef>SC_Feast_RoastedMegascarab</ThingDef>

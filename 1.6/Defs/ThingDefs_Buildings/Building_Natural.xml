@@ -5,7 +5,7 @@
         <defName>SC_MoleroachNest</defName>
         <label>Moleroach burrow</label>
         <thingClass>Building</thingClass>
-        <description>A box with soft material made to hold eggs. Egg-laying animals will lay eggs in egg boxes if they can. Your haulers will take all the eggs out only when the box is full, to save time. The box also protects eggs from deteriorating outdoors, though it does not protect from temperature damage.</description>
+        <description>A small burrow dug out by a moleroach. Moleroach hens will try to lay their eggs in here if they can. Your haulers will take all the eggs out only when the box is full, to save time. The hole also protects eggs from deteriorating outdoors, though it does not protect from temperature damage.</description>
         <drawerType>MapMeshAndRealTime</drawerType>
         <fillPercent>0.3</fillPercent>
         <tickerType>Normal</tickerType>
@@ -40,7 +40,7 @@
         <uiOrder>2060</uiOrder>
         <rotatable>false</rotatable>
         <building>
-            <claimable>true</claimable>
+            <claimable>false</claimable>
             <deconstructible>true</deconstructible>
             <repairable>true</repairable>
             <paintable>false</paintable>

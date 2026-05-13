@@ -12,6 +12,7 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>400</workAmount>
         <researchPrerequisite>
             <li>SC_Grilling</li>
         </researchPrerequisite>
@@ -32,7 +33,7 @@
             </disallowedThingDefs>
         </defaultIngredientFilter>
         <products>
-            <SC_Skewer_Meat>4</SC_Skewer_Meat>
+            <SC_Skewer_Meat>5</SC_Skewer_Meat>
         </products>
         <workSkill>Cooking</workSkill>
         <displayPriority>100</displayPriority>
@@ -49,6 +50,7 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>400</workAmount>
         <researchPrerequisite>
             <li>SC_Grilling</li>
         </researchPrerequisite>
@@ -63,7 +65,7 @@
             </li>
         </ingredients>
         <products>
-            <SC_Skewer_Insect>4</SC_Skewer_Insect>
+            <SC_Skewer_Insect>5</SC_Skewer_Insect>
         </products>
         <workSkill>Cooking</workSkill>
         <displayPriority>100</displayPriority>
@@ -80,6 +82,7 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>400</workAmount>
         <researchPrerequisite>
             <li>SC_Grilling</li>
         </researchPrerequisite>
@@ -94,7 +97,7 @@
             </li>
         </ingredients>
         <products>
-            <SC_Skewer_Vegetarian>4</SC_Skewer_Vegetarian>
+            <SC_Skewer_Vegetarian>5</SC_Skewer_Vegetarian>
         </products>
         <defaultIngredientFilter>
             <disallowedThingDefs>
@@ -116,6 +119,7 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>400</workAmount>
         <researchPrerequisite>
             <li>SC_Grilling</li>
         </researchPrerequisite>
@@ -130,7 +134,146 @@
             </li>
         </ingredients>
         <products>
-            <SC_Skewer_Fungus>4</SC_Skewer_Fungus>
+            <SC_Skewer_Fungus>5</SC_Skewer_Fungus>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookMeatSkewerBulk</defName>
+        <label>grill meat skewer x4</label>
+        <description>Grill meat on a skewer.</description>
+        <jobString>Grilling meat.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>650</workAmount>
+        <researchPrerequisite>
+            <li>SC_Grilling</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Skewer_Meat>20</SC_Skewer_Meat>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookInsectSkewerBulk</defName>
+        <label>grill insect meat skewer x4</label>
+        <description>Grill insect meat on a skewer.</description>
+        <jobString>Grilling insect meat.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>650</workAmount>
+        <researchPrerequisite>
+            <li>SC_Grilling</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Megaspider</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Skewer_Insect>20</SC_Skewer_Insect>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookVegSkewerBulk</defName>
+        <label>grill vegetable skewer x4</label>
+        <description>Grill vegetables on a skewer.</description>
+        <jobString>Grilling vegetables.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>650</workAmount>
+        <researchPrerequisite>
+            <li>SC_Grilling</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Skewer_Vegetarian>20</SC_Skewer_Vegetarian>
+        </products>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>RawFungus</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookFungusSkewerBulk</defName>
+        <label>grill fungus skewer x4</label>
+        <description>Grill fungus on a skewer.</description>
+        <jobString>Grilling fungus.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>650</workAmount>
+        <researchPrerequisite>
+            <li>SC_Grilling</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawFungus</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Skewer_Fungus>20</SC_Skewer_Fungus>
         </products>
         <workSkill>Cooking</workSkill>
         <displayPriority>100</displayPriority>

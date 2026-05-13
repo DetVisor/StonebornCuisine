@@ -4,7 +4,7 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>SC_Creamgrub</defName>
     <label>creamgrub</label>
-    <description>A bioengineered grub the size of a sheep. These eusocial insects were originally the larval stage of a giant moth species native to Grugni, but they were selectively bred and tweaked to skip any metamorphosis. Creamgrubs still produce silk, which can be harvested. Their bodies are also composed of "dwarven milk", and will yield it upon slaughter.</description>
+    <description>A bioengineered grub the size of a sheep. Creamgrubs produce creamsilk, originally used for the cocoons of their adult stages. Their bodies are filled to the brim with dwarven milk, which can be gently removed upon death.</description>
     <statBases>
       <MoveSpeed>1.5</MoveSpeed>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
@@ -94,8 +94,9 @@
       <trainability>None</trainability>
       <foodType>OmnivoreRoughAnimal</foodType>
       <wildBiomes>
-        <TropicalSwamp>0.72</TropicalSwamp>
+        <Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.8</Glowforest>
         <TropicalSwamp>0.67</TropicalSwamp>
+        <TropicalSwamp>0.56</TropicalSwamp>
         <TropicalRainforest>0.43</TropicalRainforest>
         <AridShrubland>0.55</AridShrubland>
         <TemperateForest>0.43</TemperateForest>
@@ -130,7 +131,9 @@
       </headPosPerRotation>
     </race>
     <tradeTags>
+      <li>AnimalFarm</li>
       <li>AnimalInsect</li>
+      <li>AnimalStoneborn</li>
     </tradeTags>
   </ThingDef>
 

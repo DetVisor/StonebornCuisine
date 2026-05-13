@@ -30,7 +30,7 @@
   <ThingDef ParentName="BaseThermalite" Name="BaseMoleroach">
     <defName>SC_Insect_Moleroach</defName>
     <label>moleroach</label>
-    <description>A medium-sized bioengineered insectoid the size of a lamb. Moleroaches are non-eusocial, reproducing normally through egg-laying. They're often utilized by stoneborn for their value as both meat providers and egg layers, as their eggs are large and nutrient-rich, and moleroach hens lay them often enough to sustain colonies.</description>
+    <description>A medium-sized, non-eusocial bioengineered insectoid the size of a lamb. They're often utilized by stoneborn for their value as both meat providers and egg layers, as their eggs are large and nutrient-rich, and moleroach hens lay them often enough to sustain colonies. Moleroaches will also build burrows to lay their eggs in.</description>
     <statBases>
       <MoveSpeed>4</MoveSpeed>
       <ComfyTemperatureMin>-25</ComfyTemperatureMin>
@@ -93,8 +93,10 @@
       <lifeExpectancy>4</lifeExpectancy>
       <trainability>Advanced</trainability>
       <wildBiomes>
-        <AridShrubland>0.76</AridShrubland>
-        <Desert>0.66</Desert>
+        <LavaField MayRequire="Ludeon.RimWorld.Odyssey">0.8</LavaField>
+        <Scarlands MayRequire="Ludeon.RimWorld.Odyssey">0.7</Scarlands>
+        <AridShrubland>0.666</AridShrubland>
+        <Desert>0.52</Desert>
         <ExtremeDesert>0.44</ExtremeDesert>
         <TemperateForest>0.43</TemperateForest>
         <TemperateSwamp>0.43</TemperateSwamp>
@@ -132,13 +134,15 @@
     </race>
     <tradeTags>
       <li>AnimalFarm</li>
+      <li>AnimalInsect</li>
+      <li>AnimalStoneborn</li>
     </tradeTags>
   </ThingDef>
 
   <ThingDef ParentName="BaseMoleroach">
     <defName>SC_Insect_MoleroachBlue</defName>
     <label>moleroach</label>
-    <description>A medium-sized bioengineered insectoid the size of a lamb. Thermalites were designed to aid in colonization efforts, taking the place of more fragile animals like ducks or chickens. Due to this, they aren't eusocial like other insectoids, instead reproducing through normal mating and egg-laying. The shiny, translucent eggs are edible and are quite popular for many unique dishes, especially paired with seafood, or the Thermalite's own meat.</description>
+    <description>A medium-sized, non-eusocial bioengineered insectoid the size of a lamb. They're often utilized by stoneborn for their value as both meat providers and egg layers, as their eggs are large and nutrient-rich, and moleroach hens lay them often enough to sustain colonies. Moleroaches will also build burrows to lay their eggs in.</description>
     <statBases>
       <MarketValue>400</MarketValue>
     </statBases>
@@ -150,6 +154,9 @@
         <li>SC_Insect_Moleroach</li>
       </crossAggroWith>
     </race>
+    <tradeTags Inherit="False">
+      <li>AnimalExotic</li>
+    </tradeTags>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">

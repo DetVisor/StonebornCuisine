@@ -128,7 +128,7 @@
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.30</researchViewY>
     <prerequisites>
-      <li>SC_BasicBaking</li>
+      <li>SC_BasicDough</li>
     </prerequisites>
     <generalRules>
       <rulesStrings>

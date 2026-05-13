@@ -6,7 +6,7 @@
         <label>grill cheese rockburger</label>
         <description>Grill meat and cheese into a cheese rockburger.</description>
         <jobString>Grilling rockburger.</jobString>
-        <workAmount>500</workAmount>
+        <workAmount>750</workAmount>
         <workSpeedStat>CookSpeed</workSpeedStat>
         <requiredGiverWorkType>Cooking</requiredGiverWorkType>
         <effectWorking>Cook</effectWorking>
@@ -60,7 +60,7 @@
         <label>grill veggie rockburger</label>
         <description>Grill veggie into a veggie rockburger.</description>
         <jobString>Grilling rockburger.</jobString>
-        <workAmount>500</workAmount>
+        <workAmount>750</workAmount>
         <workSpeedStat>CookSpeed</workSpeedStat>
         <requiredGiverWorkType>Cooking</requiredGiverWorkType>
         <effectWorking>Cook</effectWorking>
@@ -100,7 +100,7 @@
         <label>grill cave rockburger</label>
         <description>Grill insect meat and fungus into a cave rockburger.</description>
         <jobString>Grilling rockburger.</jobString>
-        <workAmount>500</workAmount>
+        <workAmount>750</workAmount>
         <workSpeedStat>CookSpeed</workSpeedStat>
         <requiredGiverWorkType>Cooking</requiredGiverWorkType>
         <effectWorking>Cook</effectWorking>

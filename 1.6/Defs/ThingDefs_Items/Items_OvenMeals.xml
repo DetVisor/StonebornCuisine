@@ -38,7 +38,7 @@
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Ingredients">
-        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
       </li>
       <li Class="CompProperties_FoodPoisonable" />
     </comps>
@@ -81,7 +81,7 @@
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Ingredients">
-        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
       </li>
       <li Class="CompProperties_FoodPoisonable" />
     </comps>

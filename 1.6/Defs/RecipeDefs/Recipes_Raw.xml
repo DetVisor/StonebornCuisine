@@ -11,7 +11,7 @@
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
-        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>1200</workAmount>
         <researchPrerequisite>
             <li>SC_BasicDough</li>
         </researchPrerequisite>
@@ -23,7 +23,7 @@
                         <li>Milk</li>
                     </thingDefs>
                 </filter>
-                <count>1.5</count>
+                <count>25</count>
             </li>
             <li>
                 <filter>
@@ -31,7 +31,7 @@
                         <li>SC_FlourRaw</li>
                     </categories>
                 </filter>
-                <count>25</count>
+                <count>45</count>
             </li>
         </ingredients>
         <products>
@@ -51,6 +51,7 @@
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>800</workAmount>
         <researchPrerequisite>
             <li>SC_SalamiAndCheese</li>
         </researchPrerequisite>
@@ -81,7 +82,7 @@
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
-        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <workAmount>1800</workAmount>
         <researchPrerequisite>
             <li>SC_PastryArts</li>
         </researchPrerequisite>
@@ -93,7 +94,7 @@
                         <li>Milk</li>
                     </thingDefs>
                 </filter>
-                <count>1.5</count>
+                <count>25</count>
             </li>
             <li>
                 <filter>
@@ -113,7 +114,7 @@
                         <li>SC_FlourRaw</li>
                     </categories>
                 </filter>
-                <count>25</count>
+                <count>45</count>
             </li>
         </ingredients>
         <products>

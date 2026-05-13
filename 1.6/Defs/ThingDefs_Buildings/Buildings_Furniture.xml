@@ -10,6 +10,9 @@
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
+        <researchPrerequisites>
+            <li>SC_KitchenFurnishing</li>
+        </researchPrerequisites>
         <thingCategories IsNull="True" />
         <rotatable>true</rotatable>
         <statBases Inherit="False">
@@ -26,7 +29,7 @@
         <stuffCategories Inherit="false" />
         <minifiedDef IsNull="True" />
         <building Inherit="False">
-            <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
             <ignoreStoredThingsBeauty>false</ignoreStoredThingsBeauty>
             <blueprintClass>Blueprint_Storage</blueprintClass>
             <paintable>false</paintable>
@@ -39,25 +42,42 @@
                     <categories>
                         <li>PlantFoodRaw</li>
                         <li>AnimalProductRaw</li>
+                        <li>SC_FlourRaw</li>
                         <li>FoodMeals</li>
                         <li>Drugs</li>
                     </categories>
                     <thingDefs>
-                        <li>SC_Feast_MushroomSoup</li>
                         <li>SC_Feast_JellyGlazedShank</li>
                         <li>SC_Feast_RoastedMegascarab</li>
+                        <li>SC_Feast_JellyGlazedShank</li>
+                        <li>SC_Feast_RockdoughPizza</li>
+
+                        <li>SC_Skewer_Meat</li>
+                        <li>SC_Skewer_Vegetarian</li>
+
                         <li>SC_CheesePie</li>
                         <li>SC_ChocolatePie</li>
                         <li>SC_BerryPie</li>
                         <li>SC_Pastry</li>
-                        <li>SC_DwarvenCheese</li>
-                        <li>SC_Rockbread</li>
                         <li>Chocolate</li>
+
                         <li>SC_MeatRockpie</li>
                         <li>SC_VeganRockpie</li>
                         <li>SC_MushroomRockpie</li>
+
                         <li>SC_CuredMeat</li>
                         <li>SC_InsectJerky</li>
+                        <li MayRequire="Ludeon.RimWorld.Odyssey">SC_SaltedFish</li>
+                        <li>SC_DriedHuman</li>
+
+                        <li>SC_Burger_Caveburger</li>
+                        <li>SC_Burger_Cheeseburger</li>
+                        <li>SC_Burger_Veggieburger</li>
+
+                        <li>SC_Skewer_Meat</li>
+                        <li>SC_Skewer_Vegetarian</li>
+                        <li>SC_Skewer_Fungus</li>
+                        <li>SC_Skewer_Insect</li>
                     </thingDefs>
                     <disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
                         <li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
@@ -71,26 +91,41 @@
                 <priority>Preferred</priority>
                 <filter>
                     <thingDefs>
-                        <li>SC_Feast_MushroomSoup</li>
                         <li>SC_Feast_JellyGlazedShank</li>
                         <li>SC_Feast_RoastedMegascarab</li>
+                        <li>SC_Feast_JellyGlazedShank</li>
+                        <li>SC_Feast_RockdoughPizza</li>
+
+                        <li>SC_Skewer_Meat</li>
+                        <li>SC_Skewer_Vegetarian</li>
+
                         <li>SC_CheesePie</li>
                         <li>SC_ChocolatePie</li>
                         <li>SC_BerryPie</li>
                         <li>SC_Pastry</li>
-                        <li>SC_DwarvenCheese</li>
-                        <li>SC_Rockbread</li>
                         <li>Chocolate</li>
+
                         <li>SC_MeatRockpie</li>
                         <li>SC_VeganRockpie</li>
                         <li>SC_MushroomRockpie</li>
+
                         <li>SC_CuredMeat</li>
                         <li>SC_InsectJerky</li>
+                        <li MayRequire="Ludeon.RimWorld.Odyssey">SC_SaltedFish</li>
+                        <li>SC_DriedHuman</li>
+
+                        <li>SC_Burger_Caveburger</li>
+                        <li>SC_Burger_Cheeseburger</li>
+                        <li>SC_Burger_Veggieburger</li>
+
+                        <li>SC_Skewer_Meat</li>
+                        <li>SC_Skewer_Vegetarian</li>
+                        <li>SC_Skewer_Fungus</li>
+                        <li>SC_Skewer_Insect</li>
                     </thingDefs>
                 </filter>
             </defaultStorageSettings>
         </building>
-        <designationHotKey>Misc12</designationHotKey>
     </ThingDef>
 
     <ThingDef ParentName="TableGatherSpotBase">

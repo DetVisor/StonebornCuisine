@@ -19,6 +19,9 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
+    <researchPrerequisites>
+      <li>SC_Grilling</li>
+    </researchPrerequisites>
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
     <costList>
@@ -50,6 +53,11 @@
       <li>SC_CookVegSkewer</li>
       <li>SC_CookFungusSkewer</li>
       <li>SC_CookInsectSkewer</li>
+
+      <li>SC_CookMeatSkewerBulk</li>
+      <li>SC_CookVegSkewerBulk</li>
+      <li>SC_CookFungusSkewerBulk</li>
+      <li>SC_CookInsectSkewerBulk</li>
 
       <li>SC_CookCheeseburger</li>
       <li>SC_CookVeggieburger</li>
