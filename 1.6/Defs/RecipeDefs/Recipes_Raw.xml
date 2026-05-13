@@ -21,6 +21,7 @@
                     <thingDefs>
                         <li>SC_DwarvenMilk</li>
                         <li>Milk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
                     </thingDefs>
                 </filter>
                 <count>25</count>
@@ -60,6 +61,7 @@
                 <filter>
                     <thingDefs>
                         <li>SC_DwarvenMilk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
                     </thingDefs>
                 </filter>
                 <count>5</count>
@@ -92,6 +94,7 @@
                     <thingDefs>
                         <li>SC_DwarvenMilk</li>
                         <li>Milk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
                     </thingDefs>
                 </filter>
                 <count>25</count>
