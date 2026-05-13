@@ -91,7 +91,7 @@
     <defName>SC_BasicDough</defName>
     <label>dough preparation</label>
     <tab>StonebornTab</tab>
-    <description>Construct the preparation table to make dough out of dwarven milk and flour.</description>
+    <description>Construct the preparation table to make dough out of milk and flour.</description>
     <baseCost>1200</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>1.00</researchViewX>
@@ -149,7 +149,7 @@
     <defName>SC_PastryArts</defName>
     <label>pastry arts</label>
     <tab>StonebornTab</tab>
-    <description>Prepare pastry dough with dwarven milk and fungal flour, then bake it into pastries and pies.</description>
+    <description>Prepare pastry dough with milk, flour and insect jelly/eggs, then bake it into pastries and pies.</description>
     <baseCost>2200</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>2.00</researchViewX>
@@ -161,7 +161,7 @@
       <rulesStrings>
         <li>subject->pastries</li>
 
-        <li>subject_story->satisfied the palate of the pickiest minefathe of the sector</li>
+        <li>subject_story->satisfied the palate of the pickiest minefather of the sector</li>
         <li>subject_story->baked one of the best cakes known to stonebornkind</li>
         <li>subject_story->cooked berry and chocolate pies for [ANYPAWN_possessive] entire fleet</li>
 
@@ -200,7 +200,7 @@
     <label>grilling</label>
     <tab>StonebornTab</tab>
     <description>Grill various raw foods into skewers or burgers on the hot grill.</description>
-    <baseCost>1500</baseCost>
+    <baseCost>1200</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>1.00</researchViewX>
     <researchViewY>2.20</researchViewY>
