@@ -201,7 +201,7 @@
       <purpose>Food</purpose>
       <growMinGlow>0</growMinGlow>
       <growOptimalGlow>0</growOptimalGlow>
-      <diesToLight>true</diesToLight>
+      <diesToLight>false</diesToLight>
       <blockAdjacentSow>true</blockAdjacentSow>
       <sowResearchPrerequisites Inherit="False">
         <li>SC_DwarvenCrops_Sweet</li>
