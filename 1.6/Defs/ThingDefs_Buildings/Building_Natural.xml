@@ -20,7 +20,7 @@
         </graphicData>
         <altitudeLayer>Building</altitudeLayer>
         <statBases>
-            <MaxHitPoints>50</MaxHitPoints>
+            <MaxHitPoints>15</MaxHitPoints>
             <WorkToBuild>2000</WorkToBuild>
             <Flammability>1</Flammability>
             <Mass>3</Mass>
@@ -40,7 +40,7 @@
         <uiOrder>2060</uiOrder>
         <rotatable>false</rotatable>
         <building>
-            <claimable>false</claimable>
+            <claimable>true</claimable>
             <deconstructible>true</deconstructible>
             <repairable>true</repairable>
             <paintable>false</paintable>
