@@ -501,6 +501,7 @@
     <recipes>
       <li>SC_PrepareDough</li>
       <li>SC_PreparePastryDough</li>
+      <li>SC_PrepareFreshCheese</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
