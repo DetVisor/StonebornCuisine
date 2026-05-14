@@ -7,6 +7,8 @@
     <exclude>Textures\Things\Buildings\Furniture\rect19376.png</exclude>
     <exclude>Textures\Things\Item\Resource\MeatDough.png</exclude>
     <exclude>Textures\Things\Item\Resource\Salami</exclude>
+    <exclude>Textures\Things\Item\Resource\SweetDough.png</exclude>
+    <exclude>Textures\Things\Item\Resource\VeggieDough.png</exclude>
     <exclude>Textures\Things\Pawn\Animal\Moleroach\Page 153.png</exclude>
     <exclude>Textures\Things\Plant\Bunshroom\Page 32.png</exclude>
     <exclude>Textures\UI\Markers</exclude>

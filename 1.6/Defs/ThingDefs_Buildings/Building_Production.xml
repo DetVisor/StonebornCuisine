@@ -152,8 +152,8 @@
     <comps>
       <li Class="CompProperties_DamageOnInterval">
         <damageDef>Deterioration</damageDef>
-        <damage>15</damage>
-        <ticksBetweenDamage>30000</ticksBetweenDamage>
+        <damage>30</damage>
+        <ticksBetweenDamage>45000</ticksBetweenDamage>
       </li>
       <li Class="CompProperties_Effecter">
         <effecterDef>SC_HiveFlyersEffect</effecterDef>
@@ -171,11 +171,6 @@
         <spawnCountOnSpawn>3</spawnCountOnSpawn>
         <spawnMtbHours>4</spawnMtbHours>
         <spawnRadius>1</spawnRadius>
-      </li>
-      <li Class="CompProperties_Maintainable">
-        <ticksHealthy>60000</ticksHealthy>
-        <ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
-        <damagePerTickRare>10</damagePerTickRare>
       </li>
     </comps>
   </ThingDef>
