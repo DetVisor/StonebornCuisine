@@ -140,6 +140,7 @@
     <passability>PassThroughOnly</passability>
     <killedLeavings>
       <InsectJelly>30</InsectJelly>
+      <SC_JuvenileQueen>1</SC_JuvenileQueen>
     </killedLeavings>
     <designationCategory>Production</designationCategory>
     <uiOrder>2790</uiOrder>
@@ -152,17 +153,17 @@
     <comps>
       <li Class="CompProperties_DamageOnInterval">
         <damageDef>Deterioration</damageDef>
-        <damage>30</damage>
-        <ticksBetweenDamage>45000</ticksBetweenDamage>
+        <damage>10</damage>
+        <ticksBetweenDamage>70000</ticksBetweenDamage>
       </li>
       <li Class="CompProperties_Effecter">
         <effecterDef>SC_HiveFlyersEffect</effecterDef>
       </li>
       <li Class="CompProperties_Spawner">
         <thingToSpawn>InsectJelly</thingToSpawn>
-        <spawnCount>20</spawnCount>
+        <spawnCount>12</spawnCount>
         <spawnIntervalRange>26000~30000</spawnIntervalRange>
-        <spawnMaxAdjacent>80</spawnMaxAdjacent>
+        <spawnMaxAdjacent>60</spawnMaxAdjacent>
         <spawnForbidden>false</spawnForbidden>
         <saveKeysPrefix>jelly</saveKeysPrefix>
       </li>
@@ -288,7 +289,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Buildings/Production/PortablePot/PortablePot</texPath>
-      <drawSize>1.2</drawSize>
+      <drawSize>1.1</drawSize>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <researchPrerequisites>
