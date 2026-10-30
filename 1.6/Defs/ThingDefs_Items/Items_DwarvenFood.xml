@@ -10,7 +10,7 @@
     <thingClass>ThingWithComps</thingClass>
     <techLevel>Neolithic</techLevel>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFoods</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/RockBread</texPath>
@@ -71,7 +71,7 @@
     <description>Sweet, soft and warm treats glazed with insect jelly. They're a great dessert and a valuable product to sell.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenDesserts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Pastry</texPath>
@@ -118,7 +118,7 @@
     <description>Sweet, warm pie made with berries. Warms the soul and heart.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenDesserts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Pies/BerryPie</texPath>
@@ -165,7 +165,7 @@
     <description>Smooth, delicious pie made with chocolate. Warms the soul and heart.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenDesserts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Pies/ChocolatePie</texPath>
@@ -212,7 +212,7 @@
     <description>Soft, springy cheesecake made with dwarven cheese. Warms the soul and heart.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenDesserts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Pies/CheesePie</texPath>
@@ -253,8 +253,159 @@
     <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
 
-  <!--Dwarven Cheese-->
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_Spongecake</defName>
+    <label>spongecake</label>
+    <description>Fluffy spongecake, with a layer of bitter nectar. Warms the soul and heart.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenDesserts</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Pies/Spongecake</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>8</stackLimit>
+    <statBases>
+      <MarketValue>9</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>0.20</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>SC_EatBread</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <tasteThought>SC_Thought_AteSweets</tasteThought>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <joy>0.22</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
 
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_ButterTarts</defName>
+    <label>butter tarts</label>
+    <description>Sweet, soft and warm treats glazed with insect jelly. They're a great dessert and a valuable product to sell.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenDesserts</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/ButterTarts</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>150</stackLimit>
+    <statBases>
+      <MarketValue>7</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>0.20</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>SC_EatBread</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <tasteThought>SC_Thought_AteSweets</tasteThought>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <joy>0.16</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>8</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>4</defaultNumToIngestAtOnce>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>6</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_Pancakes</defName>
+    <label>pancakes</label>
+    <description>Flour, milk and butter mixed into batter, baked on a pan and served with sweet syrup.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenDesserts</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Pancakes/Pancakes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>32</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <tasteThought>SC_Thought_AteSweets</tasteThought>
+      <ingestEffect>SC_EatBread</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <joy>0.16</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>SC_FeastVapors</effecterDef>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+
+  <!--Dwarven Cheese-->
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>SC_DwarvenCheese</defName>
@@ -271,7 +422,7 @@
     </graphicData>
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MarketValue>6</MarketValue>
+      <MarketValue>1</MarketValue>
       <Mass>0.8</Mass>
       <Flammability>0</Flammability>
       <WorkToMake>900</WorkToMake>
@@ -517,7 +668,7 @@
     <description>Meat mixed with spices and herbs, thickened with flour and baked into a hard rockbread shell, which moistens with baking.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFoods</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Pies/MeatRockpie</texPath>
@@ -569,7 +720,7 @@
     <description>Assorted vegetables diced and mixed with herbs, thickened with flour and baked into a hard rockbread shell, which moistens with baking.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFoods</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Pies/VeganRockpie</texPath>
@@ -621,7 +772,7 @@
     <description>Fungus sliced and mixed with spices, thickened with flour and baked into a hard rockbread shell, which moistens with baking</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFoods</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Pies/MushroomRockpie</texPath>
@@ -675,7 +826,7 @@
     <description>The thigh or shank of an animal, scored, spiced and oven baked to perfection. During baking it's glazed with a tangy sauce made from insect jelly.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFeasts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/JellyGlazedShank</texPath>
@@ -737,7 +888,7 @@
     <description>The thigh or shank of an animal, scored, spiced and oven baked to perfection. During baking it's glazed with a tangy sauce made from insect jelly.\n\nThis feast has been refridgerated or frozen, and isn't as tasty anymore.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFeasts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/FrozenJellyGlazedShank</texPath>
@@ -790,7 +941,7 @@
     <description>A fresh megascarab, expertly cut and cleaned, then roasted in the oven along with fungus and spices. The shell keeps the meat inside delicate and moist.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFeasts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/RoastedMegascarab</texPath>
@@ -852,7 +1003,7 @@
     <description>A fresh megascarab, expertly cut and cleaned, then roasted in the oven along with fungus and spices. The shell keeps the meat inside delicate and moist.\n\nThis feast has been refridgerated or frozen, and isn't as tasty anymore.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFeasts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/FrozenRoastedMegascarab</texPath>
@@ -905,7 +1056,7 @@
     <description>A simple roux of dwarven milk, mixed with fungus and herbs, slow-cooked in the oven and then served with softened rockbread slices. This is the most common meal eaten by stoneborn miners.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFeasts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/CreamOfMushroomSoup</texPath>
@@ -967,7 +1118,7 @@
     <description>A simple roux of dwarven milk, mixed with fungus and herbs, slow-cooked in the oven and then served with softened rockbread slices.\n\nThis feast has been refridgerated or frozen, and isn't as tasty anymore.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFeasts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/FrozenCreamOfMushroomSoup</texPath>
@@ -1020,7 +1171,7 @@
     <description>Dough spread out and hammered into shape, topped with sauce first, then with dwarven cheese, and various vegetables. Sliced right out the oven for the best cheese pulls.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFeasts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/RockdoughPizza</texPath>
@@ -1082,7 +1233,7 @@
     <description>Dough spread out and hammered into shape, topped with sauce first, then with dwarven cheese, and various vegetables. Sliced right out the oven for the best cheese pulls.\n\nThis feast has been refridgerated or frozen, and isn't as tasty anymore.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFeasts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/FrozenRockdoughPizza</texPath>
@@ -1129,13 +1280,240 @@
     <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
 
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_Feast_CrustedFillet</defName>
+    <label>crusted fillet</label>
+    <description>A fine fillet, seared lightly, then wrapped firstly in a mushroom duxelles, followed by a layer of pastry dough. The dough is then basted with melted butter right before baking.\n\n&lt;color=#6e6e6eff&gt;One of Gorestone Ramsay's signature dishes, a direct quote from a recipe holovid: "Look at it.. I'm ready to die, and go to heaven.."&lt;/color&gt;</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFeasts</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Feasts/CrustedFillet</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1.4</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal, Meat</foodType>
+      <preferability>MealLavish</preferability>
+      <tasteThought>SC_Thought_AteFeast</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>SC_FeastSteam</effecterDef>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>12</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="VEF.Cooking.CompProperties_TempTransforms">
+        <minSafeTemperature>10</minSafeTemperature>
+        <maxSafeTemperature>2000</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+        <thingToTransformInto>SC_FrozenFeast_JellyGlazedShank</thingToTransformInto>
+      </li>
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_FrozenFeast_CrustedFillet</defName>
+    <label>crusted fillet (cold)</label>
+    <description>A fine fillet, seared lightly, then wrapped firstly in a mushroom duxelles, followed by a layer of pastry dough. The dough is then basted with melted butter right before baking.\n\nThis feast has been refridgerated or frozen, and isn't as tasty anymore.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFeasts</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Feasts/FrozenCrustedFillet</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1.4</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal, Meat</foodType>
+      <preferability>MealFine</preferability>
+      <tasteThought>SC_Thought_AteFrozenFeast</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>12</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_Feast_IceCream</defName>
+    <label>ice cream</label>
+    <description>The thigh or shank of an animal, scored, spiced and oven baked to perfection. During baking it's glazed with a tangy sauce made from insect jelly.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFeasts</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Feasts/IceCream</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1.4</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealLavish</preferability>
+      <tasteThought>SC_Thought_AteSweets</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>SC_FeastSparkles</effecterDef>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>12</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="VEF.Cooking.CompProperties_TempTransforms">
+        <minSafeTemperature>-2000</minSafeTemperature>
+        <maxSafeTemperature>10</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+        <thingToTransformInto>SC_MeltedFeast_IceCream</thingToTransformInto>
+      </li>
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_MeltedFeast_IceCream</defName>
+    <label>ice cream (melted)</label>
+    <description>The thigh or shank of an animal, scored, spiced and oven baked to perfection. During baking it's glazed with a tangy sauce made from insect jelly.\n\nThis feast has been refridgerated or frozen, and isn't as tasty anymore.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFeasts</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Feasts/MeltedIceCream</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1.4</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>12</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
   <!-- Skewers -->
 
   <ThingDef ParentName="OrganicProductBase" Name="SkewerBase" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
     <techLevel>Neolithic</techLevel>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenGrills</li>
     </thingCategories>
     <socialPropernessMatters>true</socialPropernessMatters>
     <graphicData>
@@ -1224,10 +1602,10 @@
     </graphicData>
   </ThingDef>
 
-  <ThingDef ParentName="OrganicProductBase" Name="BurgerBase" Abstract="True">
+  <ThingDef ParentName="OrganicProductBase" Name="RockBurgerBase" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenGrills</li>
     </thingCategories>
     <socialPropernessMatters>true</socialPropernessMatters>
     <stackLimit>16</stackLimit>
@@ -1260,7 +1638,7 @@
     <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
 
-  <ThingDef ParentName="BurgerBase">
+  <ThingDef ParentName="RockBurgerBase">
     <defName>SC_Burger_Cheeseburger</defName>
     <label>cheese rockburger</label>
     <description>Meat minced and grilled to perfect medium rare, then topped with dwarven cheese.</description>
@@ -1274,7 +1652,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="BurgerBase">
+  <ThingDef ParentName="RockBurgerBase">
     <defName>SC_Burger_Veggieburger</defName>
     <label>veggie rockburger</label>
     <description>Vegetables minced and formed into a patty, then grilled and topped with fresh vegetables.</description>
@@ -1288,7 +1666,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="BurgerBase">
+  <ThingDef ParentName="RockBurgerBase">
     <defName>SC_Burger_Caveburger</defName>
     <label>cave rockburger</label>
     <description>Insect meat minced and grilled fully, then topped with sliced caramelized fungus.</description>
@@ -1302,5 +1680,188 @@
     </ingestible>
   </ThingDef>
 
+  <ThingDef ParentName="OrganicProductBase" Name="RockSandwichBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>900</WorkToMake>
+      <DeteriorationRate>1.2</DeteriorationRate>
+      <Nutrition>1.2</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestSound>Meal_Eat</ingestSound>
+      <baseIngestTicks>100</baseIngestTicks>
+      <chairSearchRadius>0</chairSearchRadius>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="RockSandwichBase">
+    <defName>SC_Sandwich_MeatSandwich</defName>
+    <label>meat rockwich</label>
+    <description>Raw slices of meat finely cut and placed within two slices of rockbread.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Sandwiches/MeatSandwich</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <ingestible>
+      <foodType>Meal, Meat</foodType>
+      <ingestEffect>EatMeat</ingestEffect>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="RockSandwichBase">
+    <defName>SC_Sandwich_VeggieSandwich</defName>
+    <label>veggie rockwich</label>
+    <description>Seasoned vegetables placed within two slices of rockbread.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Sandwiches/VegSandwich</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <ingestible>
+      <foodType>Meal, VegetableOrFruit</foodType>
+      <ingestEffect>EatVegetarian</ingestEffect>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="RockSandwichBase">
+    <defName>SC_Sandwich_CheeseSandwich</defName>
+    <label>grilled cheese</label>
+    <description>Dwarven cheese placed within two slices of rockbread, then grilled.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Sandwiches/CheeseSandwich</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <ingestEffect>SC_EatBread</ingestEffect>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_Brickloaf</defName>
+    <label>brickloaf</label>
+    <description>A large sheet of hard focaccia cut into manageable bricks. Last for an incredibly long time.</description>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Resource/Brickloaf</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>0.4</MarketValue>
+      <Mass>0.8</Mass>
+      <SharpDamageMultiplier>0.22</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.35</BluntDamageMultiplier>
+      <Flammability>0</Flammability>
+      <WorkToMake>1200</WorkToMake>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Nutrition>0.08</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>SC_EatBread</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+    </ingestible>
+    <equipmentType>Primary</equipmentType>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>loaf</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+    <smeltable>false</smeltable>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_Omelette</defName>
+    <label>omelette</label>
+    <description>Assorted diced vegetables mixed with milk and eggs, then cooked in a pan.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Omelettes/Omelette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal, Fungus, VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
 
 </Defs>

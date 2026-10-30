@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookCheeseSandwich</defName>
+        <label>grill cheese rockwich</label>
+        <description>Grill rockbread and cheese into a cheese rockwich.</description>
+        <jobString>Grilling rockwich.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_BasicBaking</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenCheese</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Rockbread</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Sandwich_CheeseSandwich>4</SC_Sandwich_CheeseSandwich>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookVeggieSandwich</defName>
+        <label>prepare veggie rockwich</label>
+        <description>Place veggies into rockbread to make a veggie rockwich.</description>
+        <jobString>Preparing rockwich.</jobString>
+        <workAmount>400</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_BasicBaking</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Rockbread</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Sandwich_VeggieSandwich>4</SC_Sandwich_VeggieSandwich>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookMeatSandwich</defName>
+        <label>prepare meat rockwich</label>
+        <description>Place meat into rockbread to make a meat rockwich.</description>
+        <jobString>Preparing rockwich.</jobString>
+        <workAmount>400</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_BasicBaking</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Rockbread</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Sandwich_MeatSandwich>4</SC_Sandwich_MeatSandwich>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+</Defs>

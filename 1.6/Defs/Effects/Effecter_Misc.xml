@@ -82,6 +82,40 @@
     </children>
   </EffecterDef>
 
+    <EffecterDef>
+    <defName>SC_FeastSparkles</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_DrifterEmoteChance</subEffecterClass>
+        <scale>0.1~0.3</scale>
+        <chancePerTick>0.001</chancePerTick>
+        <positionRadius>0.5</positionRadius>
+        <burstCount>2</burstCount>
+        <moteDef>Mote_FeastSparkles</moteDef>
+        <speed>0</speed>
+        <rotation>0</rotation>
+        <angle>0</angle>
+      </li>
+    </children>
+  </EffecterDef>
+
+    <EffecterDef>
+    <defName>SC_FeastVapors</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <fleckDef>SC_SmokeGrowing</fleckDef>
+        <scale>0.8~1.1</scale>
+        <rotationRate>15~30</rotationRate>
+        <speed>0.3~0.35</speed>
+        <angle>32~40</angle>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+        <positionOffset>(0, 0, 0.5)</positionOffset>
+        <positionRadius>0.2</positionRadius>
+      </li>
+    </children>
+  </EffecterDef>
+
   <FleckDef ParentName="FleckBase_Thrown">
     <defName>SC_SmokeGrowing</defName>
     <graphicData>

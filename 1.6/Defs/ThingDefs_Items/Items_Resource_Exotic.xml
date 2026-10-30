@@ -29,7 +29,7 @@
     </tradeTags>
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>10</daysToRotStart>
+        <daysToRotStart>30</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>

@@ -62,6 +62,9 @@
       <li>SC_CookCheeseburger</li>
       <li>SC_CookVeggieburger</li>
       <li>SC_CookCaveburger</li>
+
+      <li>SC_CookCheeseSandwich</li>
+      <li>SC_CookOmelette</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -81,20 +84,30 @@
       </li>
       <li Class="CompProperties_FireOverlay">
         <fireSize>1</fireSize>
-        <offset>(0,-2,0)</offset>
+        <offset>(0,-0.8,0)</offset>
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
         <heatPerSecond>4</heatPerSecond>
       </li>
-      <li Class="CompProperties_MoteEmitter">
-        <mote>SC_Mote_HotGrillLogs</mote>
-        <maintain>True</maintain>
-        <saveKeysPrefix>glow</saveKeysPrefix>
+      <li Class="CompProperties_DrawAdditionalGraphics">
+        <graphics>
+          <li>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <texPath>Things/Buildings/Production/DwarvenGrill/DwarvenGrill_Logs</texPath>
+            <drawSize>(4.6,2.6)</drawSize>
+            <drawOffset>(0, -0.9, 0)</drawOffset>
+          </li>
+        </graphics>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>5</glowRadius>
         <glowColor>(184,136,83,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>SC_KitchenCabinet</li>
+        </linkableFacilities>
       </li>
     </comps>
     <placeWorkers>
@@ -161,8 +174,8 @@
       </li>
       <li Class="CompProperties_Spawner">
         <thingToSpawn>InsectJelly</thingToSpawn>
-        <spawnCount>12</spawnCount>
-        <spawnIntervalRange>26000~30000</spawnIntervalRange>
+        <spawnCount>6</spawnCount>
+        <spawnIntervalRange>90000~100000</spawnIntervalRange>
         <spawnMaxAdjacent>60</spawnMaxAdjacent>
         <spawnForbidden>false</spawnForbidden>
         <saveKeysPrefix>jelly</saveKeysPrefix>
@@ -229,13 +242,14 @@
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>12</heatPerSecond>
+        <heatPerSecond>6</heatPerSecond>
       </li>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
         <notWorkingKey>SC_KilnNotWorking</notWorkingKey>
         <processes>
           <li>SC_RawToRockbread</li>
+          <li>SC_DoughToBrickloaf</li>
 
           <li>SC_DoughToMeatRockpie</li>
           <li>SC_DoughToVeganRockpie</li>
@@ -252,6 +266,7 @@
           <li>SC_RawToRoastedMegascarab</li>
           <li>SC_RawToMushroomSoup</li>
           <li>SC_DoughToRockdoughPizza</li>
+          <li>SC_RawToCrustedFillet</li>
         </processes>
         <progressBarOffset>(0,4,-1)</progressBarOffset>
         <alwaysShowProgressBar>true</alwaysShowProgressBar>
@@ -498,6 +513,15 @@
       <li>SC_PrepareDough</li>
       <li>SC_PreparePastryDough</li>
       <li>SC_PrepareFreshCheese</li>
+      <li>SC_MakeButter</li>
+
+      <li>SC_PrepareIceCream</li>
+
+      <li>SC_CookMeatSandwich</li>
+      <li>SC_CookVeggieSandwich</li>
+
+      <li>SC_PrepareBitterstrug</li>
+      <li>SC_PrepareBitterstrugBulk</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -510,6 +534,13 @@
     <placeWorkers>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>SC_KitchenCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
   </ThingDef>
 
   <!-- Stop snooping, you dog. -->

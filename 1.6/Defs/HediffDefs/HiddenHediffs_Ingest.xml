@@ -8,8 +8,8 @@
         <icon>Things/Mote/ThoughtSymbol/Joy_Low</icon>
         <stages>
             <li>
-                <label>ate a rockpie</label>
-                <description>What a filling, hearty meal!</description>
+                <label>ate a sweet treat</label>
+                <description>What a lovely sugary snack!</description>
                 <baseMoodEffect>6</baseMoodEffect>
             </li>
         </stages>

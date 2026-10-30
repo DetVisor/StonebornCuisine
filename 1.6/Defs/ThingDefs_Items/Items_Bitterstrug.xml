@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>SC_Bitterstrug</defName>
+        <label>bitterstrug</label>
+        <description>A tangy drink brewed with concentrated bitter nectar. Bitterstrug, also called "dwarven coffee", is an energizing beverage often drank in the early mornings, right before getting to work in the mines or in the forge. It's bitter with a fruity note, and doesn't need any sugar.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Bitterstrug</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>3</MarketValue>
+            <Mass>0.1</Mass>
+        </statBases>
+        <techLevel>Medieval</techLevel>
+        <ingestible>
+            <joyKind>Chemical</joyKind>
+            <joy>0.40</joy>
+            <drugCategory>Social</drugCategory>
+            <foodType>Fluid</foodType>
+            <baseIngestTicks>80</baseIngestTicks>
+            <ingestSound>Ingest_Beer</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Drink {0}</ingestCommandString>
+            <ingestReportString>Drinking {0}.</ingestReportString>
+            <useEatingSpeedStat>true</useEatingSpeedStat>
+            <chairSearchRadius>10</chairSearchRadius>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SC_BitterstrugRush</hediffDef>
+                    <severity>0.5</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_OffsetNeed">
+                    <need>Rest</need>
+                    <offset>0.2</offset>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>SC_BitterProduction</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <SC_BitterNectar>5</SC_BitterNectar>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <addictiveness>0.0</addictiveness>
+                <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+                <needLevelOffset>0.9</needLevelOffset>
+                <isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+                <listOrder>200</listOrder>
+                <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+                <largeOverdoseChance>0.0</largeOverdoseChance>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <HediffDef>
+        <defName>SC_BitterstrugRush</defName>
+        <hediffClass>Hediff_High</hediffClass>
+        <label>bitterstrug rush</label>
+        <labelNoun>a bitterstrug rush</labelNoun>
+        <description>Bitterstrug's in the belly. It's quite energizing and puts a pep in the step.</description>
+        <defaultLabelColor>(207,78,119)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.75</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <painFactor>0.1</painFactor>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.50</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <RestFallRateFactor>0.8</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>SC_BitterstrugRush_Thought</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SC_BitterstrugRush</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>high on bitterstrug</label>
+                <description>I feel so energized! I could do anything!</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

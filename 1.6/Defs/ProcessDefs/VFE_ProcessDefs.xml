@@ -163,6 +163,40 @@
         <sustainerDef>SC_Recipe_Bake</sustainerDef>
     </PipeSystem.ProcessDef>
 
+        <PipeSystem.ProcessDef>
+        <defName>SC_DoughToBrickloaf</defName>
+        <label>Bake brickloaf</label>
+        <description>Turns 40 dough into 75 brickloaf.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake dough into brickloaf</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Brickloaf</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_BasicDough</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_Raw_Dough</thing>
+                <countNeeded>40</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>80000</ticks>
+        <results>
+            <li>
+                <thing>SC_Brickloaf</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
     <PipeSystem.ProcessDef>
         <defName>SC_RawToMeatMeal</defName>
         <label>Bake a meat oven meals</label>
@@ -260,6 +294,45 @@
         <results>
             <li>
                 <thing>SC_Pastry</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+        <PipeSystem.ProcessDef>
+        <defName>SC_DoughToTarts</defName>
+        <label>Bake butter tarts</label>
+        <description>Turns 60 pastry dough and 30 dwarven butter into 75 butter tarts</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake pastry dough and butter into tarts</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Pastry</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_ButterChurning</li>
+            <li>SC_PastryArts</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_Raw_PastryDough</thing>
+                <countNeeded>60</countNeeded>
+            </li>
+            <li>
+                <thing>SC_DwarvenButter</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_ButterTarts</thing>
                 <count>75</count>
             </li>
         </results>
@@ -667,6 +740,54 @@
         <sustainerDef>SC_Recipe_Bake</sustainerDef>
     </PipeSystem.ProcessDef>
 
+        <PipeSystem.ProcessDef>
+        <defName>SC_RawToCrustedFillet</defName>
+        <label>Bake a crusted fillet</label>
+        <description>Turns 75 meat, 30 pastry dough, 30 fungus and 15 dwarven butter into a crusted fillet (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake meat, pastry dough, fungus and butter into a crusted fillet</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_Feast_CrustedFillet</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_FeastGalore</li>
+            <li>SC_PastryArts</li>
+            <li>SC_ButterChurning</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thingCategory>MeatRaw</thingCategory>
+                <countNeeded>75</countNeeded>
+            </li>
+            <li>
+                <thing>SC_Raw_PastryDough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>RawFungus</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_DwarvenButter</thing>
+                <countNeeded>15</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>160000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_CrustedFillet</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
     <PipeSystem.ProcessDef>
         <defName>SC_Microwave_ReheatJellyGlazedShank</defName>
         <label>Reheat jelly glazed shank</label>
@@ -778,6 +899,36 @@
         <sustainerWhenWorking>true</sustainerWhenWorking>
         <sustainerDef>SC_Recipe_Reheat</sustainerDef>
     </PipeSystem.ProcessDef>
+
+    
+    <PipeSystem.ProcessDef>
+        <defName>SC_Microwave_ReheatCrustedFillet</defName>
+        <label>Reheat crusted fillet</label>
+        <description>Reheat crusted fillet, unfreezing it.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Reheat crusted fillet</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>SC_FrozenFeast_CrustedFillet</thing>
+                <countNeeded>16</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>10000</ticks>
+        <results>
+            <li>
+                <thing>SC_Feast_CrustedFillet</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>false</effecterWhenWorking>
+        <effecterDef>SC_PotCooking</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Reheat</sustainerDef>
+    </PipeSystem.ProcessDef>
+
 
     <PipeSystem.ProcessDef>
         <defName>SC_Microwave_HeatMetal</defName>

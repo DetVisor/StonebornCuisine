@@ -36,6 +36,40 @@
     <allowedArchonexusCount>80</allowedArchonexusCount>
   </ThingDef>
 
+    <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_DwarvenButter</defName>
+    <label>dwarven butter</label>
+    <description>Butter produced from dwarven milk. Earthier than normal butter, and somewhat sweet.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/DwarvenButter</texPath>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>3</MarketValue>      <!-- Can be used like meat in recipes -->
+      <Mass>0.045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+      <Nutrition>0.07</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>12</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>AnimalProduct</foodType>
+      <babiesCanIngest>true</babiesCanIngest>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>
+
   <ThingDef ParentName="EggUnfertBase">
     <defName>SC_EggCreamgrubUnfertilized</defName>
     <label>creamgrub egg (unfert.)</label>

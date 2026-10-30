@@ -52,6 +52,53 @@
     </generalRules>
   </ResearchProjectDef>
 
+    <ResearchProjectDef>
+    <defName>SC_ButterChurning</defName>
+    <label>butter churning</label>
+    <tab>StonebornTab</tab>
+    <description>Produce butter with milk and fungus, for various cooking applications.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.20</researchViewY>
+    <prerequisites>
+      <li>SC_PastryArts</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->butter churning</li>
+
+        <li>subject_story->discovered that cream goes through various stages when churned</li>
+        <li>subject_story->accidentally made butter in a cart</li>
+        <li>subject_story->used butter to bake cookies</li>
+
+        <li>subject_gerund->churning butter</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+      <ResearchProjectDef>
+    <defName>SC_BitterProduction</defName>
+    <label>bitter production</label>
+    <tab>StonebornTab</tab>
+    <description>Grow bitterpot plants, harvest nectar and brew it into bitterstrug.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>0.40</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->bitterbarrel growth</li>
+
+        <li>subject_story->lived on bitter nectar for weeks</li>
+        <li>subject_story->used bitterstrug to wake up every morning</li>
+        <li>subject_story->created the best spongecake in the sector</li>
+
+        <li>subject_gerund->brewing bitterstrug</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
   <ResearchProjectDef>
     <defName>SC_KitchenFurnishing</defName>
     <label>kitchen furnishing</label>
@@ -217,5 +264,6 @@
       </rulesStrings>
     </generalRules>
   </ResearchProjectDef>
+  
 
 </Defs>

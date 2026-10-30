@@ -32,14 +32,14 @@
         <eggUnfertilizedDef>SC_EggCreamgrubUnfertilized</eggUnfertilizedDef>
         <eggFertilizedDef>SC_EggCreamgrubFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
-        <eggLayIntervalDays>1.33</eggLayIntervalDays>
+        <eggLayIntervalDays>3.33</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
         <eggCountRange>1~2</eggCountRange>
       </li>
       <li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct">
         <resourceDef>SC_Creamsilk</resourceDef>
         <gatheringIntervalDays>8</gatheringIntervalDays>
-        <resourceAmount>40</resourceAmount>
+        <resourceAmount>30</resourceAmount>
         <customResourceString>SC_CreamgrubResourceString</customResourceString>
         <isRandom>false</isRandom>
       </li>
@@ -82,12 +82,12 @@
       <fleshType>Insectoid</fleshType>
       <bloodDef>SC_Filth_Milk</bloodDef>
       <meatMarketValue>0.5</meatMarketValue>
-      <manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+      <manhunterOnDamageChance>0</manhunterOnDamageChance>
       <soundEating>Insectoid_Eat</soundEating>
       <canBeVacuumBurnt>true</canBeVacuumBurnt>
       <body>BeetleLikeWithClaw</body>
       <baseHungerRate>0.33</baseHungerRate>
-      <baseBodySize>0.9</baseBodySize>
+      <baseBodySize>1</baseBodySize>
       <baseHealthScale>1.4</baseHealthScale>
       <specificMeatDef>SC_DwarvenMilk</specificMeatDef>
       <lifeExpectancy>6</lifeExpectancy>
@@ -133,7 +133,7 @@
       <li Class="DV_Cuisine.CompProperties_OnDeathEffects">
         <effecter IsNull="True" />
 		<spawnThing>SC_DwarvenMilk</spawnThing>
-		<spawnAmount>70</spawnAmount>
+		<spawnAmount>45</spawnAmount>
 		<multiplyByBodySize>true</multiplyByBodySize>
       </li>
     </comps>

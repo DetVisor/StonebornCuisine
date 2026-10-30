@@ -5,7 +5,7 @@
         <xpath>Defs/ThingDef[defName = "Hive"]</xpath>
         <value>
             <killedLeavingsRanges>
-                <SC_JuvenileQueen>1~2</SC_JuvenileQueen>
+                <SC_JuvenileQueen>0~1</SC_JuvenileQueen>
             </killedLeavingsRanges>
         </value>
     </Operation>

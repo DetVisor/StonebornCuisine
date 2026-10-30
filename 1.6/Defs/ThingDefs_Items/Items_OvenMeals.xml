@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <Defs>
+
+  <ThingCategoryDef>
+    <defName>DV_DwarvenFoods</defName>
+    <label>stoneborn food</label>
+    <parent>Foods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DV_DwarvenDesserts</defName>
+    <label>desserts</label>
+    <parent>DV_DwarvenFoods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DV_DwarvenFeasts</defName>
+    <label>feasts</label>
+    <parent>DV_DwarvenFoods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+  </ThingCategoryDef>
+
+    <ThingCategoryDef>
+    <defName>DV_DwarvenGrills</defName>
+    <label>grills</label>
+    <parent>DV_DwarvenFoods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+  </ThingCategoryDef>
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>SC_OvenMeal_Meat</defName>
@@ -8,7 +39,7 @@
     <description>A simple stew made of meat and water.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFoods</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Meal/Oven</texPath>
@@ -51,7 +82,7 @@
     <description>A simple stew made of vegetables and water.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFoods</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Meal/VeganOven</texPath>
