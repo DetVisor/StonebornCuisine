@@ -599,6 +599,7 @@
     </ThingDef>
 
     <ThingDef ParentName="BuildingBase">
+		<thingClass>DV_Cuisine.FlippableBuilding</thingClass>
         <defName>SC_KitchenClutter</defName>
         <label>kitchen clutter</label>
         <description>Assorted clutter for kitchens: pots, bottles, spices.</description>
