@@ -59,58 +59,13 @@
                     <disallowNotEverStorable>true</disallowNotEverStorable>
                     <categories>
                         <li>PlantFoodRaw</li>
+                        <li>MeatRaw</li>
                         <li>AnimalProductRaw</li>
                         <li>SC_FlourRaw</li>
                         <li>DV_DwarvenFoods</li>
                         <li>FoodMeals</li>
                         <li>Drugs</li>
                     </categories>
-                    <thingDefs>
-                        <li>SC_Feast_JellyGlazedShank</li>
-                        <li>SC_Feast_RoastedMegascarab</li>
-                        <li>SC_Feast_MushroomSoup</li>
-                        <li>SC_Feast_RockdoughPizza</li>
-                        <li>SC_Feast_CrustedFillet</li>
-
-                        <li>SC_CheesePie</li>
-                        <li>SC_ChocolatePie</li>
-                        <li>SC_BerryPie</li>
-                        <li>SC_Spongecake</li>
-                        <li>SC_Pastry</li>
-                        <li>SC_ButterTarts</li>
-                        
-                        <li>Chocolate</li>
-                        <li>InsectJelly</li>
-                        <li>SC_BitterNectar</li>
-                        <li>SC_DwarvenButter</li>
-                        <li>SC_AssortedHerbs</li>
-
-                        <li>SC_MeatRockpie</li>
-                        <li>SC_VeganRockpie</li>
-                        <li>SC_MushroomRockpie</li>
-
-                        <li>SC_CuredMeat</li>
-                        <li>SC_InsectJerky</li>
-                        <li MayRequire="Ludeon.RimWorld.Odyssey">SC_SaltedFish</li>
-                        <li>SC_DriedHuman</li>
-
-                        <li>SC_Burger_Caveburger</li>
-                        <li>SC_Burger_Cheeseburger</li>
-                        <li>SC_Burger_Veggieburger</li>
-
-                        <li>SC_EggsNBacon</li>
-                        <li>SC_GrilledSteak</li>
-                        <li>SC_Omelette</li>
-                        <li>SC_Poutine</li>
-                        <li>SC_Cheesesteak</li>
-
-                        <li>SC_Bitterstrug</li>
-
-                        <li>SC_Skewer_Meat</li>
-                        <li>SC_Skewer_Vegetarian</li>
-                        <li>SC_Skewer_Fungus</li>
-                        <li>SC_Skewer_Insect</li>
-                    </thingDefs>
                     <disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
                         <li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
                     </disallowedThingDefs>
@@ -122,52 +77,21 @@
             <defaultStorageSettings>
                 <priority>Preferred</priority>
                 <filter>
-                    <thingDefs>
-                        <li>SC_Feast_JellyGlazedShank</li>
-                        <li>SC_Feast_RoastedMegascarab</li>
-                        <li>SC_Feast_MushroomSoup</li>
-                        <li>SC_Feast_RockdoughPizza</li>
-                        <li>SC_Feast_CrustedFillet</li>
-
-                        <li>SC_CheesePie</li>
-                        <li>SC_ChocolatePie</li>
-                        <li>SC_BerryPie</li>
-                        <li>SC_Spongecake</li>
-                        <li>SC_Pastry</li>
-                        <li>SC_ButterTarts</li>
-                        
-                        <li>Chocolate</li>
-                        <li>InsectJelly</li>
-                        <li>SC_BitterNectar</li>
-                        <li>SC_DwarvenButter</li>
-                        <li>SC_AssortedHerbs</li>
-
-                        <li>SC_MeatRockpie</li>
-                        <li>SC_VeganRockpie</li>
-                        <li>SC_MushroomRockpie</li>
-
-                        <li>SC_CuredMeat</li>
-                        <li>SC_InsectJerky</li>
-                        <li MayRequire="Ludeon.RimWorld.Odyssey">SC_SaltedFish</li>
-                        <li>SC_DriedHuman</li>
-
-                        <li>SC_Burger_Caveburger</li>
-                        <li>SC_Burger_Cheeseburger</li>
-                        <li>SC_Burger_Veggieburger</li>
-
-                        <li>SC_EggsNBacon</li>
-                        <li>SC_GrilledSteak</li>
-                        <li>SC_Omelette</li>
-                        <li>SC_Poutine</li>
-                        <li>SC_Cheesesteak</li>
-
-                        <li>SC_Bitterstrug</li>
-
-                        <li>SC_Skewer_Meat</li>
-                        <li>SC_Skewer_Vegetarian</li>
-                        <li>SC_Skewer_Fungus</li>
-                        <li>SC_Skewer_Insect</li>
-                    </thingDefs>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                        <li>MeatRaw</li>
+                        <li>AnimalProductRaw</li>
+                        <li>SC_FlourRaw</li>
+                        <li>DV_DwarvenFoods</li>
+                        <li>FoodMeals</li>
+                        <li>Drugs</li>
+                    </categories>
+                    <disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+                        <li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+                    </disallowedThingDefs>
+                    <specialFiltersToDisallow>
+                        <li>AllowLargeCorpses</li>
+                    </specialFiltersToDisallow>
                 </filter>
             </defaultStorageSettings>
         </building>

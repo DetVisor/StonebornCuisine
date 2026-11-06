@@ -303,7 +303,7 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>SC_ButterTarts</defName>
     <label>butter tarts</label>
-    <description>Sweet, soft and warm treats glazed with insect jelly. They're a great dessert and a valuable product to sell.</description>
+    <description>Puffy, flaky tarts with a distinct butter flavor and a gooey buttery filling. They're a great dessert and a valuable product to sell.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
       <li>DV_DwarvenDesserts</li>
@@ -413,7 +413,7 @@
     <description>Soft, smooth cheese inside of a hard waxy shell. The result of a long dry-aging process.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
+      <li>DV_DwarvenFoods</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/DwarvenCheese</texPath>
@@ -489,7 +489,6 @@
     <description>Cleaned and salted meat. Cured by hanging it off a rack for a prolonged amount of time.\n\nIt can still be used for dishes, but can also be eaten raw.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
       <li>MeatRaw</li>
       <li>DV_CuredFood</li>
     </thingCategories>
@@ -534,7 +533,6 @@
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
       <li>Fish</li>
-      <li>Foods</li>
       <li>DV_CuredFood</li>
     </thingCategories>
     <graphicData>
@@ -578,7 +576,6 @@
     <description>Treated human flesh.  Dried by hanging it off a rack for a prolonged amount of time.\n\nIt can still be used for dishes, but can also be eaten raw.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
       <li>MeatRaw</li>
       <li>DV_CuredFood</li>
     </thingCategories>
@@ -624,7 +621,6 @@
     <description>Marinated insect meat. Cured by hanging it off a rack for a prolonged amount of time.\n\nIt can still be used for dishes, but can also be eaten raw.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>Foods</li>
       <li>MeatRaw</li>
       <li>DV_CuredFood</li>
     </thingCategories>
@@ -1402,10 +1398,10 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>SC_Feast_IceCream</defName>
     <label>ice cream</label>
-    <description>The thigh or shank of an animal, scored, spiced and oven baked to perfection. During baking it's glazed with a tangy sauce made from insect jelly.</description>
+    <description>Creamy, sweet cold cream. Nourishes the soul.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>DV_DwarvenFeasts</li>
+      <li>DV_DwarvenDesserts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/IceCream</texPath>
@@ -1420,7 +1416,7 @@
       <Flammability>0.3</Flammability>
       <WorkToMake>900</WorkToMake>
       <DeteriorationRate>1.6</DeteriorationRate>
-      <Nutrition>1.4</Nutrition>
+      <Nutrition>0.6</Nutrition>
     </statBases>
     <tickerType>Normal</tickerType>
     <ingestible>
@@ -1463,10 +1459,10 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>SC_MeltedFeast_IceCream</defName>
     <label>ice cream (melted)</label>
-    <description>The thigh or shank of an animal, scored, spiced and oven baked to perfection. During baking it's glazed with a tangy sauce made from insect jelly.\n\nThis feast has been refridgerated or frozen, and isn't as tasty anymore.</description>
+    <description>Creamy, sweet cold cream. Nourishes the soul.\n\nThis feast has been let out in the heat for too long and has melted. It can be refrozen.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>DV_DwarvenFeasts</li>
+      <li>DV_DwarvenDesserts</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Feasts/MeltedIceCream</texPath>
@@ -1481,7 +1477,7 @@
       <Flammability>0.3</Flammability>
       <WorkToMake>900</WorkToMake>
       <DeteriorationRate>1.6</DeteriorationRate>
-      <Nutrition>1.4</Nutrition>
+      <Nutrition>0.6</Nutrition>
     </statBases>
     <tickerType>Normal</tickerType>
     <ingestible>
@@ -1774,6 +1770,9 @@
     <label>brickloaf</label>
     <description>A large sheet of hard focaccia cut into manageable bricks. Last for an incredibly long time.</description>
     <techLevel>Neolithic</techLevel>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Brickloaf</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

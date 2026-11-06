@@ -317,7 +317,7 @@
         <labelOverride>Bake pastry dough and butter into tarts</labelOverride>
         <priorityInBillList>0</priorityInBillList>
         <descriptionHyperlinks>
-            <ThingDef>SC_Pastry</ThingDef>
+            <ThingDef>SC_ButterTarts</ThingDef>
         </descriptionHyperlinks>
         <researchPrerequisites>
             <li>SC_ButterChurning</li>
@@ -465,12 +465,12 @@
     <PipeSystem.ProcessDef>
         <defName>SC_DoughToSpongecake</defName>
         <label>Bake a spongecake</label>
-        <description>Turns 30 pastry dough and 30 bitter nectar into pie (16)</description>
+        <description>Turns 30 pastry dough and 30 bitter nectar into spongecake (16)</description>
         <spawnOnInteractionCell>true</spawnOnInteractionCell>
-        <labelOverride>Bake pastry dough and bitter nectar into pie</labelOverride>
+        <labelOverride>Bake pastry dough and bitter nectar into spongecake</labelOverride>
         <priorityInBillList>0</priorityInBillList>
         <descriptionHyperlinks>
-            <ThingDef>SC_CheesePie</ThingDef>
+            <ThingDef>SC_Spongecake</ThingDef>
         </descriptionHyperlinks>
         <researchPrerequisites>
             <li>SC_PastryArts</li>

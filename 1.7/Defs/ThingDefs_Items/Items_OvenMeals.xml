@@ -36,7 +36,23 @@
   <ThingCategoryDef>
     <defName>DV_CuredFood</defName>
     <label>cured meat</label>
-    <parent>Foods</parent>
+    <parent>DV_DwarvenFoods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+  </ThingCategoryDef>
+
+    <ThingCategoryDef>
+    <defName>DV_DwarvenIngredient</defName>
+    <label>ingredients</label>
+    <parent>DV_DwarvenFoods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DV_PrimeCuts</defName>
+    <label>prime cuts</label>
+    <parent>DV_DwarvenFoods</parent>
     <resourceReadoutRoot>true</resourceReadoutRoot>
     <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
   </ThingCategoryDef>

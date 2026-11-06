@@ -65,7 +65,7 @@
       <babiesCanIngest>true</babiesCanIngest>
     </ingestible>
     <thingCategories>
-      <li>AnimalProductRaw</li>
+      <li>DV_DwarvenIngredient</li>
     </thingCategories>
     <allowedArchonexusCount>80</allowedArchonexusCount>
   </ThingDef>

@@ -73,6 +73,7 @@
     </comps>
     <thingCategories>
       <li>PlantMatter</li>
+      <li>DV_DwarvenIngredient</li>
     </thingCategories>
     <ingestible>
       <preferability>DesperateOnly</preferability>
@@ -344,6 +345,7 @@
     </comps>
     <thingCategories>
       <li>PlantMatter</li>
+      <li>DV_DwarvenIngredient</li>
     </thingCategories>
     <tradeTags>
       <li>SC_CookingIngredient</li>
@@ -417,6 +419,7 @@
     </ingestible>
     <thingCategories>
       <li>PlantMatter</li>
+      <li>DV_DwarvenIngredient</li>
     </thingCategories>
     <tradeTags>
       <li>SC_CookingIngredient</li>

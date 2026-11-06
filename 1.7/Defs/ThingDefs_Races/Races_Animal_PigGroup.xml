@@ -19,7 +19,7 @@
         <onlyWhenTamed>true</onlyWhenTamed>
         <customThingToDig>
           <li MayRequire="det.epochspyrinth">DV_Pyrinth</li>
-          <li MayRequire="det.sbdelights">DV_</li>
+          <li MayRequire="det.sbdelights">SD_Glimmerquartz</li>
           <li>Jade</li>
         </customThingToDig>
         <customAmountToDig>

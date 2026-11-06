@@ -18,6 +18,7 @@
         </statBases>
         <thingCategories>
             <li>MeatRaw</li>
+            <li>DV_PrimeCuts</li>
         </thingCategories>
         <ingestible>
             <foodType>Meat</foodType>
@@ -52,6 +53,7 @@
         </statBases>
         <thingCategories>
             <li>MeatRaw</li>
+            <li>DV_PrimeCuts</li>
         </thingCategories>
         <ingestible>
             <foodType>Meat</foodType>
@@ -69,7 +71,7 @@
         </comps>
     </ThingDef>
 
-        <ThingDef ParentName="OrganicProductBase">
+    <ThingDef ParentName="OrganicProductBase">
         <defName>SC_MegaslothBelly</defName>
         <label>megasloth belly</label>
         <description>Slabs of meat from the soft belly of a megasloth. Renowned for the thick layer of fatty tissue.\n\n&lt;color=#6e6e6eff&gt;Being primarily herbivorous, the meat of megasloths acquires an intense, aromatic flavor, which only grows stronger as the animal ages. Some venators swear by megasloth belly as the most delicious raw meat one could get their fangs on.&lt;/color&gt;</description>
@@ -86,6 +88,7 @@
         </statBases>
         <thingCategories>
             <li>MeatRaw</li>
+            <li>DV_PrimeCuts</li>
         </thingCategories>
         <ingestible>
             <foodType>Meat</foodType>
@@ -103,7 +106,7 @@
         </comps>
     </ThingDef>
 
-        <ThingDef ParentName="OrganicProductBase">
+    <ThingDef ParentName="OrganicProductBase">
         <defName>SC_ThrumboRib</defName>
         <label>thrumbo rib</label>
         <description>The large ribs of a graceful thrumbo, separated into single chops.\n\n&lt;color=#6e6e6eff&gt;Traditionally, tribal societies surround thrumbos in folklore and myth, thus their flesh is only eaten upon the natural passing of the animal. This ritual feast can last up to a week, in which the tribe will eat every piece of the thrumbo: after grand dances and celebrations, an honorable burial is held for the clean skeleton of the animal.&lt;/color&gt;</description>
@@ -120,6 +123,7 @@
         </statBases>
         <thingCategories>
             <li>MeatRaw</li>
+            <li>DV_PrimeCuts</li>
         </thingCategories>
         <ingestible>
             <foodType>Meat</foodType>
