@@ -1866,7 +1866,7 @@
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Ingredients">
-        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
         <splitTransferableFoodKind>true</splitTransferableFoodKind>
       </li>
       <li Class="CompProperties_FoodPoisonable" />
@@ -1917,7 +1917,7 @@
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Ingredients">
-        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
         <splitTransferableFoodKind>true</splitTransferableFoodKind>
       </li>
       <li Class="CompProperties_FoodPoisonable" />
@@ -1968,7 +1968,7 @@
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Ingredients">
-        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
         <splitTransferableFoodKind>true</splitTransferableFoodKind>
       </li>
       <li Class="CompProperties_FoodPoisonable" />
@@ -2250,7 +2250,7 @@
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>SC_ThrumboChop</defName>
-    <label>sweet thrumbo tomahwak</label>
+    <label>thrumbo tomahwak</label>
     <description>A hefty rib covered in a sweet, minty sauce, served along sauteed vegetables.</description>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>

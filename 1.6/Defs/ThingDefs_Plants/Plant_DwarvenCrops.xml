@@ -375,7 +375,7 @@
     <ingestible />
     <plant>
       <sowResearchPrerequisites Inherit="False">
-        <li>SC_DwarvenCrops</li>
+        <li>SC_BasicDough</li>
       </sowResearchPrerequisites>
       <maxMeshCount>4</maxMeshCount>
       <harvestTag>Standard</harvestTag>
