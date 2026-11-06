@@ -2,19 +2,19 @@
 <Configuration>
   <Excluded>
     <exclude>.git</exclude>
+    <exclude>1.6\Source</exclude>
+    <exclude>1.7\Source</exclude>
     <exclude>About\img1.png</exclude>
     <exclude>About\img2.png</exclude>
     <exclude>About\img3.png</exclude>
     <exclude>About\img4.png</exclude>
     <exclude>Previews</exclude>
-    <exclude>StonebornCuisine.zip</exclude>
     <exclude>Textures\Things\Buildings\Furniture\rect19376.png</exclude>
     <exclude>Textures\Things\Buildings\Natural\CreamgrubNest.png</exclude>
     <exclude>Textures\Things\Item\Resource\MeatDough.png</exclude>
     <exclude>Textures\Things\Item\Resource\Salami</exclude>
     <exclude>Textures\Things\Item\Resource\SweetDough.png</exclude>
     <exclude>Textures\Things\Item\Resource\VeggieDough.png</exclude>
-    <exclude>Textures\Things\Pawn\Animal\Moleroach\Page 153.png</exclude>
     <exclude>Textures\Things\Plant\Bunshroom\Page 32.png</exclude>
     <exclude>Textures\UI\Markers</exclude>
   </Excluded>
