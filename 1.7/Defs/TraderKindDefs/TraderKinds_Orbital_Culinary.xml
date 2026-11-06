@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <TraderKindDef>
+        <defName>SC_Orbital_Culinary</defName>
+        <label>culinary trader</label>
+        <orbital>true</orbital>
+        <faction MayRequire="det.stoneborn">OutlanderRoughStoneborn</faction>
+        <stockGenerators>
+
+            <!-- Resources -->
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>Silver</thingDef>
+                <countRange>2000~4000</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>WoodLog</thingDef>
+                <countRange>150~300</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>SC_Rockbread</thingDef>
+                <countRange>100~300</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>SC_Flour</thingDef>
+                <countRange>150~600</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>SC_AssortedHerbs</thingDef>
+                <countRange>100~400</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>RawFungus</thingDef>
+                <countRange>100~400</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>SC_DwarvenButter</thingDef>
+                <totalPriceRange>-70~100</totalPriceRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>Chocolate</thingDef>
+                <totalPriceRange>-70~100</totalPriceRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>InsectJelly</thingDef>
+                <countRange>50~200</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>SC_BitterNectar</thingDef>
+                <countRange>-100~200</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>SC_DwarvenMilk</thingDef>
+                <totalPriceRange>-70~200</totalPriceRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>Dye</thingDef>
+                <countRange>30~60</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>MedicineIndustrial</thingDef>
+                <countRange>20~30</countRange>
+            </li>
+            <li Class="StockGenerator_Category">
+                <categoryDef>DV_CuredFood</categoryDef>
+                <thingDefCountRange>1~2</thingDefCountRange>
+                <totalPriceRange>2200~4000</totalPriceRange>
+                <excludedThingDefs>
+                    <li>SC_DriedHuman</li>
+                </excludedThingDefs>
+            </li>
+            <li Class="StockGenerator_Category">
+                <categoryDef>ResourcesRaw</categoryDef>
+                <excludedThingDefs>
+                    <li>Silver</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">GravlitePanel</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">BlocksVacstone</li>
+                </excludedThingDefs>
+                <thingDefCountRange>2~4</thingDefCountRange>
+                <totalPriceRange>800~1500</totalPriceRange>
+            </li>
+            <li Class="StockGenerator_Category">
+                <categoryDef>FoodRaw</categoryDef>
+                <thingDefCountRange>2~4</thingDefCountRange>
+                <totalPriceRange>800~1500</totalPriceRange>
+                <excludedCategories>
+                    <li>EggsFertilized</li>
+                </excludedCategories>
+            </li>
+            <li Class="StockGenerator_Category">
+                <categoryDef>DV_DwarvenDesserts</categoryDef>
+                <thingDefCountRange>1~2</thingDefCountRange>
+                <countRange>15~30</countRange>
+            </li>
+            <li Class="StockGenerator_Category">
+                <categoryDef>DV_DwarvenGrills</categoryDef>
+                <thingDefCountRange>1~2</thingDefCountRange>
+                <countRange>15~30</countRange>
+            </li>
+
+            <!-- Drugs -->
+            <!-- none -->
+
+            <!-- Techprints -->
+            <!-- none -->
+
+            <!-- Books -->
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>Novel</thingDef>
+                <countRange>1~1</countRange>
+            </li>
+
+            <!-- Weapons -->
+            <!-- none -->
+
+            <!-- Apparel -->
+            <!-- none -->
+
+            <!-- Implants -->
+            <!-- none -->
+
+            <!-- Buildings -->
+            <!-- none -->
+
+            <!-- Exotic -->
+            <!-- none -->
+
+            <!-- Slaves -->
+            <!-- none -->
+
+            <!-- Animals -->
+            <li Class="StockGenerator_Animals">
+                <maxWildness>0.70</maxWildness>
+                <checkTemperature>false</checkTemperature>
+                <tradeTagsSell>
+                    <li>AnimalStoneborn</li>
+                </tradeTagsSell>
+                <tradeTagsBuy>
+                    <li>AnimalExotic</li>
+                </tradeTagsBuy>
+                <kindCountRange>2~3</kindCountRange>
+                <countRange>10~20</countRange>
+                <createMatingPair>
+                    <li>AnimalStoneborn</li>
+                </createMatingPair>
+            </li>
+
+            <!-- Cultist apparel -->
+            <!-- none -->
+
+            <!-- Cultist apparel -->
+            <!-- none -->
+
+            <!-- Buying -->
+            <li Class="StockGenerator_BuyExpensiveSimple" />
+            <li Class="StockGenerator_BuyTradeTag">
+                <tag>Art</tag>
+            </li>
+            <li Class="StockGenerator_BuyTradeTag">
+                <tag>MusicalInstrument</tag>
+            </li>
+            <li Class="StockGenerator_BuyTradeTag">
+                <tag>GravshipUpgrade</tag>
+            </li>
+
+        </stockGenerators>
+    </TraderKindDef>
+
+
+</Defs>

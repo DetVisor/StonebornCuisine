@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>SC_Molemutt</defName>
+    <label>molemutt</label>
+    <devNote>pig-1</devNote>
+    <description>A stoneborn's best friend. Molemutts are completely blind, utilizing their prehensile snouts and sensitive whiskers to navigate caverns. They have short, strong legs that give them a sleek profile, perfect for diving within insect burrows. Their weak jaws aren't comparable to their fully canine equivalents, but they make up for it with powerful front digging claws.\n\n&lt;color=#6e6e6eff&gt;Legends tell that the first stoneborn settlers used to ride dire molemutts across the mossy plains of Grugni, chasing giant beasts in large groups for their meat and pelt.&lt;/color&gt;</description>
+    <statBases>
+      <MoveSpeed>3</MoveSpeed>
+      <MarketValue>180</MarketValue>
+      <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+      <FilthRate>2</FilthRate>
+      <Wildness>0</Wildness>
+    </statBases>
+    <uiIconScale>2.25</uiIconScale>
+    <comps>
+      <li Class="VEF.AnimalBehaviours.CompProperties_DigPeriodically">
+        <onlyWhenTamed>true</onlyWhenTamed>
+        <customThingToDig>
+          <li MayRequire="det.epochspyrinth">DV_Pyrinth</li>
+          <li MayRequire="det.sbdelights">DV_</li>
+          <li>Jade</li>
+        </customThingToDig>
+        <customAmountToDig>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>3</li>
+          <li>3</li>
+          <li>3</li>
+          <li>3</li>
+          <li>3</li>
+          <li>3</li>
+          <li>5</li>
+          <li>5</li>
+          <li>5</li>
+          <li>5</li>
+          <li>5</li>
+          <li>5</li>
+        </customAmountToDig>
+        <ticksToDig>60000</ticksToDig>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left claws</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>9.4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>8</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right claws</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>9.4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>8</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <capacities>
+          <li>ToxicBite</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.6</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <animalType>Canine</animalType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <petness>0.8</petness>
+      <baseBodySize>0.85</baseBodySize>
+      <baseHealthScale>0.7</baseHealthScale>
+      <baseHungerRate>0.32</baseHungerRate>
+      <foodType>OmnivoreRoughAnimal, OvivoreAnimal</foodType>
+      <trainability>Advanced</trainability>
+      <specialTrainables MayRequire="Ludeon.RimWorld.Odyssey">
+        <li>Dig</li>
+        <li>Comfort</li>
+      </specialTrainables>
+      <meatLabel>molemutt meat</meatLabel>
+      <leatherDef>Leather_Light</leatherDef>
+      <nuzzleMtbHours>15</nuzzleMtbHours>
+      <nameOnTameChance>1</nameOnTameChance>
+      <gestationPeriodDays>8</gestationPeriodDays>
+      <wildBiomes>
+        <ColdBog>0.4</ColdBog>
+        <BorealForest>0.4</BorealForest>
+        <Tundra>0.35</Tundra>
+      </wildBiomes>
+      <litterSizeCurve>
+        <points>
+          <li>(1, 0)</li>
+          <li>(1.6, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(4, 0.4)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.3333</minAge>
+          <soundWounded>Pawn_DogSmall_Injured</soundWounded>
+          <soundDeath>Pawn_DogSmall_Dead</soundDeath>
+          <soundCall>Pawn_DogSmall_Call</soundCall>
+          <soundAngry>Pawn_DogSmall_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.4)</li>
+        <li>(0.27, 0, 0.18)</li>
+        <li>(0.0, 0, 0.1)</li>
+        <li>(-0.27, 0, 0.18)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalPet</li>
+      <li>AnimalStoneborn</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>SC_Molemutt</defName>
+    <label>molemutt</label>
+    <race>SC_Molemutt</race>
+    <combatPower>60</combatPower>
+    <ecoSystemWeight>0.5</ecoSystemWeight>
+    <wildGroupSize>4~5</wildGroupSize>
+    <lifeStages>
+      <li>
+        <label>molemutt rascal</label>
+        <labelPlural>molemutt rascals</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Molemutt/MolemuttRascal</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.2, 0.2)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Molemutt/Dessicated_MolemuttRascal</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Molemutt/Molemutt</texPath>
+          <drawSize>1.1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Molemutt/Dessicated_Molemutt</texPath>
+          <drawSize>1.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Molemutt/Molemutt</texPath>
+          <drawSize>1.3</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Molemutt/Dessicated_Molemutt</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+
+</Defs>

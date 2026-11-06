@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <TerrainDef ParentName="FloorBase">
+        <defName>SC_PreparedSoil</defName>
+        <label>prepared soil</label>
+        <description>A spreadable form of gravel for growing fungal crops underground. It must be placed under overhead mountain so the dank coolness of the depths can nourish the fungal spores.</description>
+        <texturePath>Terrain/Surfaces/TilledFungalDirt</texturePath>
+        <edgeType>FadeRough</edgeType>
+        <renderPrecedence>320</renderPrecedence>
+        <pathCost>2</pathCost>
+        <fertility>0.7</fertility>
+        <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+        <researchPrerequisites>
+            <li>SC_DwarvenCrops</li>
+        </researchPrerequisites>
+        <statBases>
+            <Beauty>-1</Beauty>
+            <Cleanliness>-1</Cleanliness>
+            <WorkToBuild>1000</WorkToBuild>
+        </statBases>
+        <designationHotKey>Misc6</designationHotKey>
+    </TerrainDef>
+
+</Defs>

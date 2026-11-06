@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PrepareIceCream</defName>
+        <label>prepare ice cream</label>
+        <description>Mix milk and insect jelly thoroughly into melted ice cream.</description>
+        <jobString>Preparing ice cream.</jobString>
+        <workAmount>1500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_FeastGalore</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                        <li>Milk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>InsectJelly</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_MeltedFeast_IceCream>16</SC_MeltedFeast_IceCream>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookOmelette</defName>
+        <label>cook omelette</label>
+        <description>Cook eggs, vegetables and herbs into an omelette.</description>
+        <jobString>Cooking omelette.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_BasicBaking</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>EggsUnfertilized</li>
+                        <li>EggsFertilized</li>
+                    </categories>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_AssortedHerbs</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Omelette>4</SC_Omelette>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookSteak</defName>
+        <label>cook grilled steak</label>
+        <description>Cook meat and herbs into a steak.</description>
+        <jobString>Grilling steak.</jobString>
+        <workAmount>650</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_BasicBaking</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>35</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_AssortedHerbs</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_GrilledSteak>4</SC_GrilledSteak>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookEggsNBacon</defName>
+        <label>cook eggs n' bacon</label>
+        <description>Cook eggs with cured meat.</description>
+        <jobString>Cooking eggs n' bacon.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites Inherit="False">
+            <li>SC_Grilling</li>
+            <li>SC_SalamiAndCheese</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>EggsUnfertilized</li>
+                        <li>EggsFertilized</li>
+                    </categories>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_CuredMeat</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_EggsNBacon>4</SC_EggsNBacon>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookPancakes</defName>
+        <label>cook pancakes</label>
+        <description>Cook milk, flour and butter into pancakes.</description>
+        <jobString>Cooking pancakes.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_ButterChurning</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                        <li>Milk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Flour</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenButter</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Pancakes>16</SC_Pancakes>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PrepareBitterstrug</defName>
+        <label>prepare bitterstrug</label>
+        <description>Concentrate bitter nectar and mix it with water to make bittestrug.</description>
+        <jobString>Preparing bitterstrug.</jobString>
+        <workAmount>400</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_BitterProduction</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_BitterNectar</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Bitterstrug>5</SC_Bitterstrug>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PrepareBitterstrugBulk</defName>
+        <label>prepare bitterstrug x4</label>
+        <description>Concentrate bitter nectar in bulk and mix it with water to make bittestrug.</description>
+        <jobString>Preparing bulk bitterstrug.</jobString>
+        <workAmount>700</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_BitterProduction</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_BitterNectar</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Bitterstrug>20</SC_Bitterstrug>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookPoutine</defName>
+        <label>cook poutine</label>
+        <description>Cook vegetables and cheese into poutine.</description>
+        <jobString>Cooking poutine.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_SalamiAndCheese</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>PlantFoodRaw</li>
+                    </categories>
+                </filter>
+                <count>45</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenCheese</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Poutine>4</SC_Poutine>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_CookCheesesteak</defName>
+        <label>cook cheesesteak</label>
+        <description>Cook meat, cheese and bread into cheesesteak.</description>
+        <jobString>Cooking cheesesteak.</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <researchPrerequisites>
+            <li>SC_Grilling</li>
+            <li>SC_SalamiAndCheese</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>45</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenCheese</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_Rockbread</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <defaultIngredientFilter>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <SC_Cheesesteak>4</SC_Cheesesteak>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+</Defs>

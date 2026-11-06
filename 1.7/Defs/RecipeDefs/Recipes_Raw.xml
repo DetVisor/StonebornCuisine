@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PrepareDough</defName>
+        <label>prepare dough</label>
+        <description>Make dough from flour and milk.</description>
+        <jobString>Kneading dough.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>1200</workAmount>
+        <researchPrerequisite>
+            <li>SC_BasicDough</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                        <li>Milk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawFungus</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Raw_Dough>15</SC_Raw_Dough>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PrepareFreshCheese</defName>
+        <label>prepare fresh dwarven cheese</label>
+        <description>Make fresh dwarven cheese from milk.</description>
+        <jobString>Preparing fresh cheese.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>800</workAmount>
+        <researchPrerequisite>
+            <li>SC_SalamiAndCheese</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Raw_FreshCheese>15</SC_Raw_FreshCheese>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_PreparePastryDough</defName>
+        <label>prepare pastry dough</label>
+        <description>Make pastry dough from flour, milk and insect jelly.</description>
+        <jobString>Kneading pastry dough.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>1800</workAmount>
+        <researchPrerequisite>
+            <li>SC_PastryArts</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                        <li>Milk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenButter</li>
+                    </thingDefs>
+                    <thingDefs>
+                        <li>InsectJelly</li>
+                    </thingDefs>
+                    <categories>
+                        <li>EggsUnfertilized</li>
+                        <li>EggsFertilized</li>
+                    </categories>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>SC_FlourRaw</li>
+                    </categories>
+                </filter>
+                <count>45</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_Raw_PastryDough>15</SC_Raw_PastryDough>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef ParentName="CookMealBase">
+        <defName>SC_MakeButter</defName>
+        <label>churn butter</label>
+        <description>Make dwarven butter from milk.</description>
+        <jobString>Churning butter.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>1200</workAmount>
+        <researchPrerequisite>
+            <li>SC_ButterChurning</li>
+        </researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SC_DwarvenMilk</li>
+                        <li>Milk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawFungus</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <SC_DwarvenButter>30</SC_DwarvenButter>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <displayPriority>100</displayPriority>
+    </RecipeDef>
+
+</Defs>

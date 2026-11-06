@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName = "Tundra"]/wildPlants</xpath>
+        <value>
+            <SC_Plant_WildWhiskerwort>0.05</SC_Plant_WildWhiskerwort>
+        </value>
+    </Operation>
+
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName = "BorealForest"]/wildPlants</xpath>
+        <value>
+            <SC_Plant_WildWhiskerwort>0.05</SC_Plant_WildWhiskerwort>
+        </value>
+    </Operation>
+
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName = "TemperateForest"]/wildPlants</xpath>
+        <value>
+            <SC_Plant_WildWhiskerwort>0.04</SC_Plant_WildWhiskerwort>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName = "TemperateSwamp"]/wildPlants</xpath>
+        <value>
+            <SC_Plant_WildWhiskerwort>0.03</SC_Plant_WildWhiskerwort>
+        </value>
+    </Operation>
+
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName = "TropicalRainforest"]/wildPlants</xpath>
+        <value>
+            <SC_Plant_WildWhiskerwort>0.02</SC_Plant_WildWhiskerwort>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName = "TropicalSwamp"]/wildPlants</xpath>
+        <value>
+            <SC_Plant_WildWhiskerwort>0.02</SC_Plant_WildWhiskerwort>
+        </value>
+    </Operation>
+
+</Patch>

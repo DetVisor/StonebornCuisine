@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <SoundDef>
+        <defName>SC_Recipe_Bake</defName>
+        <sustain>True</sustain>
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <sustainStartSound>DV_Bake_Start</sustainStartSound>
+        <subSounds>
+            <li>
+                <muteWhenPaused>True</muteWhenPaused>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Cooking/OvenSustainer</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>11.68263~11.68263</volumeRange>
+                <pitchRange>1~1.013529</pitchRange>
+                <distRange>10~38</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>SC_Recipe_PotBoiling</defName>
+        <sustain>True</sustain>
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <sustainStartSound>DV_Bake_Start</sustainStartSound>
+        <subSounds>
+            <li>
+                <muteWhenPaused>True</muteWhenPaused>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Cooking/PotBoiling</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>6.68263~7.68263</volumeRange>
+                <pitchRange>1~1.013529</pitchRange>
+                <distRange>10~25</distRange>
+            </li>
+            <li>
+                <muteWhenPaused>True</muteWhenPaused>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Cooking/OvenSustainer</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>11.68263~11.68263</volumeRange>
+                <pitchRange>1~1.013529</pitchRange>
+                <distRange>10~38</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>DV_Bake_Start</defName>
+        <context>MapOnly</context>
+
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Cooking/OvenStart</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>9.162788~9.162788</volumeRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>SC_Recipe_Reheat</defName>
+        <sustain>True</sustain>
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <sustainStartSound>SC_Reheat_Start</sustainStartSound>
+        <sustainStopSound>SC_Reheat_End</sustainStopSound>
+        <subSounds>
+            <li>
+                <muteWhenPaused>True</muteWhenPaused>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Cooking/MicrowaveSustainer</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>5.68263~5.68263</volumeRange>
+                <pitchRange>1~1.013529</pitchRange>
+                <distRange>10~38</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>SC_Reheat_Start</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Cooking/MicrowaveStart</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>6.162788~6.162788</volumeRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>SC_Reheat_End</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Cooking/MicrowaveDing</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>9.162788~9.162788</volumeRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+</Defs>
