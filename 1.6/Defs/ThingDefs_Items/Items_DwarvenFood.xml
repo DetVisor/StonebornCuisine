@@ -356,7 +356,7 @@
       <li>DV_DwarvenDesserts</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Resource/Pancakes/Pancakes</texPath>
+      <texPath>Things/Item/Resource/Misc/Pancakes</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <socialPropernessMatters>true</socialPropernessMatters>
@@ -491,6 +491,7 @@
     <thingCategories>
       <li>Foods</li>
       <li>MeatRaw</li>
+      <li>DV_CuredFood</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Cured/CuredMeat</texPath>
@@ -534,6 +535,7 @@
     <thingCategories>
       <li>Fish</li>
       <li>Foods</li>
+      <li>DV_CuredFood</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Cured/SaltedFish</texPath>
@@ -578,6 +580,7 @@
     <thingCategories>
       <li>Foods</li>
       <li>MeatRaw</li>
+      <li>DV_CuredFood</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Cured/DryHuman</texPath>
@@ -623,6 +626,7 @@
     <thingCategories>
       <li>Foods</li>
       <li>MeatRaw</li>
+      <li>DV_CuredFood</li>
     </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Cured/InsectJerky</texPath>
@@ -1602,6 +1606,8 @@
     </graphicData>
   </ThingDef>
 
+  <!-- Rockburgers -->
+
   <ThingDef ParentName="OrganicProductBase" Name="RockBurgerBase" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
@@ -1679,6 +1685,8 @@
       <ingestEffect>SC_EatBread</ingestEffect>
     </ingestible>
   </ThingDef>
+
+  <!-- Rockwiches -->
 
   <ThingDef ParentName="OrganicProductBase" Name="RockSandwichBase" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
@@ -1759,6 +1767,8 @@
     </ingestible>
   </ThingDef>
 
+  <!-- Misc. -->
+
   <ThingDef ParentName="OrganicProductBase">
     <defName>SC_Brickloaf</defName>
     <label>brickloaf</label>
@@ -1822,7 +1832,7 @@
       <li>DV_DwarvenFoods</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Resource/Omelettes/Omelette</texPath>
+      <texPath>Things/Item/Resource/Misc/Omelette</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <socialPropernessMatters>true</socialPropernessMatters>
@@ -1851,6 +1861,436 @@
       </outcomeDoers>
     </ingestible>
     <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_GrilledSteak</defName>
+    <label>grilled steak</label>
+    <description>A hefty cut of meat, grilled to a perfect medium rare.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Misc/GrilledSteak</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal, Fungus, VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_EggsNBacon</defName>
+    <label>eggs n' bacon</label>
+    <description>Sunny side up eggs with a side of greasy, salty bacon.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Misc/EggsNBacon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal, Fungus, VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_Poutine</defName>
+    <label>poutine</label>
+    <description>Soft potato chips draped with gravy and topped with cheese curds.\n\n&lt;color=#6e6e6eff&gt;Through every corner stoneborn have spread, many cultural foods have been picked up and adopted by chefs, including many old Earth recipes.&lt;/color&gt;</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Misc/Poutine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal, VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_Cheesesteak</defName>
+    <label>cheesesteak</label>
+    <description>Warm rockbread, sliced open and stuffed with hot meat and melted cheese.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Misc/Cheesesteak</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal, VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <!-- Prime cut meals -->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_RockbullRoast</defName>
+    <label>rockbull roast</label>
+    <description>A tender, flavorful roast rubbed with herbs that melts in the mouth.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/PrimeCuts/Meals/RockbullRoast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>SC_FeastVapors</effecterDef>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_CountryFriedMuffalo</defName>
+    <label>country-fried muffalo</label>
+    <description>A crispy breaded steak served with a side of mashed potatoes and smooth gravy.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/PrimeCuts/Meals/CountryFriedMuffalo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal, VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>SC_FeastVapors</effecterDef>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_CrispyMegasloth</defName>
+    <label>crispy megasloth belly</label>
+    <description>Fatty belly crisped up for a long time inside an oven, plated with a sweet and spicy sauce.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/PrimeCuts/Meals/CrispyMegasloth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal, VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>SC_FeastVapors</effecterDef>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SC_ThrumboChop</defName>
+    <label>sweet thrumbo tomahwak</label>
+    <description>A hefty rib covered in a sweet, minty sauce, served along sauteed vegetables.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>DV_DwarvenFoods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/PrimeCuts/Meals/ThrumboChop</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stackLimit>16</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.20</Mass>
+      <Flammability>0.3</Flammability>
+      <WorkToMake>600</WorkToMake>
+      <DeteriorationRate>1.6</DeteriorationRate>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <foodType>Meal, VegetableOrFruit</foodType>
+      <preferability>MealFine</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>9</optimalityOffsetHumanlikes>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>+0.1</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Effecter">
+        <effecterDef>SC_FeastVapors</effecterDef>
+      </li>
       <li Class="CompProperties_Rottable">
         <daysToRotStart>10</daysToRotStart>
         <rotDestroys>true</rotDestroys>

@@ -18,8 +18,8 @@
       <li Class="VEF.AnimalBehaviours.CompProperties_DigPeriodically">
         <onlyWhenTamed>true</onlyWhenTamed>
         <customThingToDig>
-          <li>RawFungus</li>
-          <li>InsectJelly</li>
+          <li MayRequire="det.epochspyrinth">DV_Pyrinth</li>
+          <li MayRequire="det.sbdelights">DV_</li>
           <li>Jade</li>
         </customThingToDig>
         <customAmountToDig>
@@ -47,7 +47,7 @@
           <li>5</li>
           <li>5</li>
         </customAmountToDig>
-        <ticksToDig>40000</ticksToDig>
+        <ticksToDig>60000</ticksToDig>
       </li>
     </comps>
     <tools>
@@ -119,16 +119,17 @@
       <trainability>Advanced</trainability>
       <specialTrainables MayRequire="Ludeon.RimWorld.Odyssey">
         <li>Dig</li>
+        <li>Comfort</li>
       </specialTrainables>
       <meatLabel>molemutt meat</meatLabel>
-      <leatherDef>Leather_Heavy</leatherDef>
+      <leatherDef>Leather_Light</leatherDef>
       <nuzzleMtbHours>15</nuzzleMtbHours>
       <nameOnTameChance>1</nameOnTameChance>
       <gestationPeriodDays>8</gestationPeriodDays>
       <wildBiomes>
-        <ColdBog>0.6</ColdBog>
-        <BorealForest>0.5</BorealForest>
-        <Tundra>0.5</Tundra>
+        <ColdBog>0.4</ColdBog>
+        <BorealForest>0.4</BorealForest>
+        <Tundra>0.35</Tundra>
       </wildBiomes>
       <litterSizeCurve>
         <points>

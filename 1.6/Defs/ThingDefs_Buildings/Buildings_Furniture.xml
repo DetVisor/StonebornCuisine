@@ -7,10 +7,10 @@
         <description>A spot designated for storing meals and foods, usually for large tables and feasts.</description>
         <graphicData>
             <texPath>Things/Buildings/Furniture/MealSpot/MealSpot_Spot</texPath>
-            <graphicClass>Graphic_Multi</graphicClass>
+            <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,1)</drawSize>
         </graphicData>
-        <researchPrerequisites>
+        <researchPrerequisites Inherit="False">
             <li>SC_KitchenFurnishing</li>
         </researchPrerequisites>
         <thingCategories IsNull="True" />
@@ -19,6 +19,7 @@
             <WorkToBuild>0</WorkToBuild>
             <Flammability>0</Flammability>
         </statBases>
+        <defaultPlacingRot>North</defaultPlacingRot>
         <scatterableOnMapGen>false</scatterableOnMapGen>
         <useHitPoints>false</useHitPoints>
         <size>(1,1)</size>
@@ -32,11 +33,17 @@
             <li Class="VEF.Buildings.CompProperties_RandomBuildingGraphic">
                 <randomGraphics>
                     <li>Things/Buildings/Furniture/MealSpot/MealSpot_Spot</li>
-                    <li>Things/Buildings/Furniture/MealSpot/MealSpot_Empty</li>
                     <li>Things/Buildings/Furniture/MealSpot/MealSpot_Plate</li>
                     <li>Things/Buildings/Furniture/MealSpot/MealSpot_Paper</li>
+                    <li>Things/Buildings/Furniture/MealSpot/MealSpot_Empty</li>
                 </randomGraphics>
                 <startAsRandom>false</startAsRandom>
+                <optionalNames>
+                    <li>Simple meal spot</li>
+                    <li>Wooden plate</li>
+                    <li>Baking paper</li>
+                    <li>Transparent</li>
+                </optionalNames>
             </li>
         </comps>
         <building Inherit="False">
@@ -63,15 +70,20 @@
                         <li>SC_Feast_RoastedMegascarab</li>
                         <li>SC_Feast_MushroomSoup</li>
                         <li>SC_Feast_RockdoughPizza</li>
-
-                        <li>SC_Skewer_Meat</li>
-                        <li>SC_Skewer_Vegetarian</li>
+                        <li>SC_Feast_CrustedFillet</li>
 
                         <li>SC_CheesePie</li>
                         <li>SC_ChocolatePie</li>
                         <li>SC_BerryPie</li>
+                        <li>SC_Spongecake</li>
                         <li>SC_Pastry</li>
+                        <li>SC_ButterTarts</li>
+                        
                         <li>Chocolate</li>
+                        <li>InsectJelly</li>
+                        <li>SC_BitterNectar</li>
+                        <li>SC_DwarvenButter</li>
+                        <li>SC_AssortedHerbs</li>
 
                         <li>SC_MeatRockpie</li>
                         <li>SC_VeganRockpie</li>
@@ -85,6 +97,14 @@
                         <li>SC_Burger_Caveburger</li>
                         <li>SC_Burger_Cheeseburger</li>
                         <li>SC_Burger_Veggieburger</li>
+
+                        <li>SC_EggsNBacon</li>
+                        <li>SC_GrilledSteak</li>
+                        <li>SC_Omelette</li>
+                        <li>SC_Poutine</li>
+                        <li>SC_Cheesesteak</li>
+
+                        <li>SC_Bitterstrug</li>
 
                         <li>SC_Skewer_Meat</li>
                         <li>SC_Skewer_Vegetarian</li>
@@ -107,15 +127,20 @@
                         <li>SC_Feast_RoastedMegascarab</li>
                         <li>SC_Feast_MushroomSoup</li>
                         <li>SC_Feast_RockdoughPizza</li>
-
-                        <li>SC_Skewer_Meat</li>
-                        <li>SC_Skewer_Vegetarian</li>
+                        <li>SC_Feast_CrustedFillet</li>
 
                         <li>SC_CheesePie</li>
                         <li>SC_ChocolatePie</li>
                         <li>SC_BerryPie</li>
+                        <li>SC_Spongecake</li>
                         <li>SC_Pastry</li>
+                        <li>SC_ButterTarts</li>
+                        
                         <li>Chocolate</li>
+                        <li>InsectJelly</li>
+                        <li>SC_BitterNectar</li>
+                        <li>SC_DwarvenButter</li>
+                        <li>SC_AssortedHerbs</li>
 
                         <li>SC_MeatRockpie</li>
                         <li>SC_VeganRockpie</li>
@@ -129,6 +154,14 @@
                         <li>SC_Burger_Caveburger</li>
                         <li>SC_Burger_Cheeseburger</li>
                         <li>SC_Burger_Veggieburger</li>
+
+                        <li>SC_EggsNBacon</li>
+                        <li>SC_GrilledSteak</li>
+                        <li>SC_Omelette</li>
+                        <li>SC_Poutine</li>
+                        <li>SC_Cheesesteak</li>
+
+                        <li>SC_Bitterstrug</li>
 
                         <li>SC_Skewer_Meat</li>
                         <li>SC_Skewer_Vegetarian</li>
@@ -372,7 +405,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>SC_BrickloafWall</defName>
         <label>brickloaf wall</label>
-        <description>An impassable wall made out of just raw clay. Not the most durable, but it takes little effort to build. Capable of holding up a roof.</description>
+        <description>An impassable wall made out of brickloaf. Not durable, but it takes little effort to build. Capable of holding up a roof.</description>
         <thingClass>Building</thingClass>
         <category>Building</category>
         <noRightClickDraftAttack>true</noRightClickDraftAttack>
@@ -471,6 +504,7 @@
     <ThingDef ParentName="ArtableFurnitureBase">
         <defName>SC_KitchenCabinet</defName>
         <label>kitchen cabinet</label>
+        <description>A cabinet with drawers and cupboards. Increases work speed when placed near prep. tables, hot grills and carving tables.</description>
         <graphicData>
             <texPath>Things/Buildings/Furniture/KitchenCabinet/KitchenCabinet1</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -484,7 +518,7 @@
             </damageData>
         </graphicData>
         <researchPrerequisites>
-            <li>SC_KitchenFurnishing</li>
+            <li>SC_KitchenAppliances</li>
         </researchPrerequisites>
         <comps>
             <li Class="CompProperties_Facility">
@@ -501,6 +535,12 @@
                     <li>Things/Buildings/Furniture/KitchenCabinet/KitchenCabinet4</li>
                 </randomGraphics>
                 <startAsRandom>false</startAsRandom>
+                <optionalNames>
+                    <li>Pot and cutting board</li>
+                    <li>Flour and carrots</li>
+                    <li>Sacks and plates</li>
+                    <li>Herbs and meat</li>
+                </optionalNames>
             </li>
         </comps>
         <statBases>
@@ -526,6 +566,7 @@
     <ThingDef ParentName="TableGatherSpotBase">
         <defName>SC_KitchenIsland2x2c</defName>
         <label>kitchen island (2x2)</label>
+        <description>A tiled surface for doing kitchen work. Can also be used as a table.</description>
         <graphicData>
             <texPath>Things/Buildings/Furniture/KitchenIsland2x2</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -564,6 +605,7 @@
     <ThingDef ParentName="TableGatherSpotBase">
         <defName>SC_KitchenIsland2x3c</defName>
         <label>kitchen island (2x3)</label>
+        <description>A tiled surface for doing kitchen work. Can also be used as a table.</description>
         <graphicData>
             <texPath>Things/Buildings/Furniture/KitchenIsland2x3</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -599,7 +641,7 @@
     </ThingDef>
 
     <ThingDef ParentName="BuildingBase">
-		<thingClass>DV_Cuisine.FlippableBuilding</thingClass>
+        <thingClass>DV_Cuisine.FlippableBuilding</thingClass>
         <defName>SC_KitchenClutter</defName>
         <label>kitchen clutter</label>
         <description>Assorted clutter for kitchens: pots, bottles, spices.</description>
@@ -607,7 +649,6 @@
         <graphicData>
             <texPath>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_Board1</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>Transparent</shaderType>
             <drawSize>(1.1,1.1)</drawSize>
         </graphicData>
         <researchPrerequisites>
@@ -661,26 +702,122 @@
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_Dough1</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_Dough2</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_Tray</li>
+                    <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_Tray_Turn</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_TrayDough</li>
+                    <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_TrayDough_Turn</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_Mittens</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_BakingTools</li>
+                    <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_BakingTools_Turn2</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_BakingTools_Turn</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_Flour1</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_Flour2</li>
 
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_KnifeSet</li>
+                    <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_KnifeSet_Turn2</li>
                     <li>Things/Buildings/Furniture/KitchenClutter/KitchenClutter_KnifeSet_Turn</li>
                 </randomGraphics>
                 <startAsRandom>false</startAsRandom>
                 <disableRandomButton>true</disableRandomButton>
+
+                <optionalNames>
+                    <li>Empty board</li>
+                    <li>Empty board (vertical)</li>
+                    <li>Board with cured meat</li>
+                    <li>Board with cured meat (vertical)</li>
+                    <li>Board with rockbread</li>
+                    <li>Board with rockbread (vertical)</li>
+
+                    <li>Bottles</li>
+                    <li>Bottles</li>
+
+                    <li>Tankards</li>
+                    <li>Tankards</li>
+                    <li>Tankards</li>
+                    <li>Tankards</li>
+
+                    <li>Spice bowls</li>
+                    <li>Grinders</li>
+                    <li>Spice bowls and grinder</li>
+                    <li>Herb bowls</li>
+
+                    <li>Pot</li>
+                    <li>Pan</li>
+                    <li>Pan (horizontal)</li>
+
+                    <li>Dough balls</li>
+                    <li>Flattened pastry dough</li>
+                    <li>Empty tray</li>
+                    <li>Empty tray (vertical)</li>
+                    <li>Tray with dough</li>
+                    <li>Tray with dough (vertical)</li>
+                    <li>Oven mittens</li>
+                    <li>Baking tools</li>
+                    <li>Oven mittens</li>
+                    <li>Baking tools</li>
+                    <li>Baking tools (horizontal)</li>
+                    <li>Baking tools (flipped)</li>
+                    <li>Flour sack</li>
+                    <li>Flour sack</li>
+
+                    <li>Knife set</li>
+                    <li>Knife set (horizontal)</li>
+                    <li>Knife set (flipped)</li>
+                </optionalNames>
             </li>
         </comps>
     </ThingDef>
 
     <ThingDef ParentName="FurnitureBase">
+        <defName>SC_HerbPot</defName>
+        <label>herb pot</label>
+        <description>A square pot for planting herbs for cooking purposes.</description>
+        <thingClass>Building_PlantGrower</thingClass>
+        <graphicData>
+            <texPath>Things/Buildings/Furniture/HerbPot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2.9,2.9)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.35, 0.3)</volume>
+                <offset>(0, 0, -0.28)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.20</fillPercent>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <WorkToBuild>250</WorkToBuild>
+            <Mass>2</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <costList>
+            <WoodLog>15</WoodLog>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+        </comps>
+        <fertility>1.0</fertility>
+        <uiOrder>2600</uiOrder>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <researchPrerequisites>
+            <li>SC_KitchenAppliances</li>
+        </researchPrerequisites>
+        <building>
+            <defaultPlantToGrow>SC_Plant_HerbGuild</defaultPlantToGrow>
+            <sowTag>Herbal</sowTag>
+            <paintable>false</paintable>
+        </building>
+        <rotatable>false</rotatable>
+        <uiIconOffset>(0, -0.05)</uiIconOffset>
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureBase">
         <defName>SC_KitchenHearth</defName>
         <label>kitchen hearth</label>
-        <description>A bowl-shaped furnishing used to hold a fire. Will light the surroundings and create heat.</description>
+        <description>A large stone furnishing used to store fire. Will light the surroundings and create heat.</description>
         <category>Building</category>
         <tickerType>Normal</tickerType>
         <drawerType>RealtimeOnly</drawerType>
@@ -763,6 +900,8 @@
                             <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
                             <li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
                             <li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
+                            <li MayRequire="det.epochspyrinth">DV_PyrinthBrazier</li>
+                            <li MayRequire="det.epochspyrinth">DV_PyrinthLamp</li>
                         </defs>
                         <offsetPerBuilding>0.02</offsetPerBuilding>
                         <radius>9.9</radius>
@@ -775,11 +914,11 @@
             </li>
         </comps>
         <canOverlapZones>false</canOverlapZones>
-        <altitudeLayer>MoteLow</altitudeLayer>
+        <altitudeLayer>BuildingBelowTop</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <pathCost>42</pathCost>
         <researchPrerequisites>
-            <li>SC_KitchenFurnishing</li>
+            <li>SC_KitchenAppliances</li>
         </researchPrerequisites>
         <building>
             <paintable>true</paintable>
@@ -789,10 +928,12 @@
     <ThingDef ParentName="BuildingBase">
         <defName>SC_RoastingSpit</defName>
         <label>roasting spit</label>
+        <description>A metal spit with legs and a handle to spin it. Purely decorative.</description>
         <drawerType>MapMeshAndRealTime</drawerType>
         <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <tickerType>Normal</tickerType>
         <graphicData>
-            <texPath>Things/Buildings/Furniture/RoastingSpit/RoastingSpit</texPath>
+            <texPath>Things/Buildings/Furniture/RoastingSpit/RoastingSpit_Moleroach</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(4,3)</drawSize>
             <damageData>
@@ -804,16 +945,21 @@
         </graphicData>
         <designationCategory>Furniture</designationCategory>
         <researchPrerequisites>
-            <li>SC_KitchenFurnishing</li>
+            <li>SC_KitchenAppliances</li>
         </researchPrerequisites>
         <comps>
             <li Class="VEF.Buildings.CompProperties_RandomBuildingGraphic">
                 <randomGraphics>
-                    <li>Things/Buildings/Furniture/RoastingSpit/RoastingSpit</li>
                     <li>Things/Buildings/Furniture/RoastingSpit/RoastingSpit_Moleroach</li>
                     <li>Things/Buildings/Furniture/RoastingSpit/RoastingSpit_Drog</li>
+                    <li>Things/Buildings/Furniture/RoastingSpit/RoastingSpit_Crestel</li>
                 </randomGraphics>
                 <startAsRandom>false</startAsRandom>
+                <optionalNames>
+                    <li>Roasted Moleroach</li>
+                    <li>Roasted Drog (BnM)</li>
+                    <li>Roasted Crestel (BnM)</li>
+                </optionalNames>
             </li>
             <li Class="CompProperties_DrawAdditionalGraphics">
                 <graphics>
@@ -824,6 +970,9 @@
                         <drawOffset>(0, -2, 0)</drawOffset>
                     </li>
                 </graphics>
+            </li>
+            <li Class="CompProperties_Effecter">
+                <effecterDef>SC_SpitVapors</effecterDef>
             </li>
         </comps>
         <statBases>
@@ -836,12 +985,51 @@
         </statBases>
         <size>(2,1)</size>
         <costList>
-            <Steel>50</Steel>
+            <Steel>25</Steel>
         </costList>
         <building>
             <paintable>false</paintable>
             <isEdifice>false</isEdifice>
-            <paintable>false</paintable>
+            <buildingSizeCategory>Medium</buildingSizeCategory>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureBase">
+        <defName>SC_KitchenSink</defName>
+        <label>kitchen sink</label>
+        <description>A surface with a basin, faucet and drain. Increases the cleanliness of rooms.</description>
+        <graphicData>
+            <texPath>Things/Buildings/Furniture/KitchenSink/KitchenSink</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(4,3)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>SC_KitchenAppliances</li>
+        </researchPrerequisites>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>2</Beauty>
+            <Cleanliness>8</Cleanliness>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+        </statBases>
+        <size>(2,1)</size>
+        <costStuffCount>90</costStuffCount>
+        <stuffCategories Inherit="False">
+            <li>Stony</li>
+            <li>Metallic</li>
+        </stuffCategories>
+        <building>
+            <paintable>true</paintable>
             <buildingSizeCategory>Medium</buildingSizeCategory>
         </building>
     </ThingDef>

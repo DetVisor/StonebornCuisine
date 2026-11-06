@@ -104,7 +104,7 @@
             <li>
                 <label>high on bitterstrug</label>
                 <description>I feel so energized! I could do anything!</description>
-                <baseMoodEffect>3</baseMoodEffect>
+                <baseMoodEffect>1</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>

@@ -14,7 +14,7 @@
       <MaxHitPoints>50</MaxHitPoints>
       <Mass>0.3</Mass>
       <Beauty>0</Beauty>
-      <MarketValue>450</MarketValue>
+      <MarketValue>150</MarketValue>
     </statBases>
     <graphicData>
       <texPath>Things/Special/QueenMaggot</texPath>

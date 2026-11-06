@@ -33,4 +33,21 @@
         </requiredCapacities>
         <prioritizeSustains>true</prioritizeSustains>
     </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>SC_DoBillsCarve</defName>
+        <label>carve corpse</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Cooking</workType>
+        <priorityInType>100</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SC_CarvingTable</li>
+        </fixedBillGiverDefs>
+        <verb>carve at</verb>
+        <gerund>carving at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
 </Defs>

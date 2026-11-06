@@ -1,4 +1,140 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>SC_RockbullTenderloin</defName>
+        <label>rockbull tenderloin</label>
+        <description>Thick chunks of meat from the most tender part of a rockbull. Quite prized, as most other parts of the animal tend to be quite tough and chewy.\n\n&lt;color=#6e6e6eff&gt;Stoneborn royal hall etiquette considers rockbull tenderloin as the finest cut to serve to an underlord, but many underlords often prefer more exotic game, like crestel or baskar.&lt;/color&gt;</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/PrimeCuts/Raw/RockbullTenderloin</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>0.08</Mass>
+            <MarketValue>4</MarketValue>
+            <Nutrition>0.14</Nutrition>
+            <Flammability>1</Flammability>
+            <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
+        <ingestible>
+            <foodType>Meat</foodType>
+            <preferability>DesperateOnly</preferability>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>RawMeat_Eat</ingestSound>
+            <specialThoughtDirect>AteRawFood</specialThoughtDirect>
+            <specialThoughtAsIngredient>SC_AteCookedPrimeCut</specialThoughtAsIngredient>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>5</daysToRotStart>
+                <rotDestroys>True</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>SC_MuffaloT-bone</defName>
+        <label>muffalo T-bone</label>
+        <description>Cuts of meat from the short loin of a muffalo, including the titular T-shaped bone.\n\n&lt;color=#6e6e6eff&gt;On the rim, settlers favor the t-bone as a cut with both delicate meat on one side, and beefier flesh on the other. This duality is seen as a metaphor for life on rimworlds: tender, yet tough.&lt;/color&gt;</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/PrimeCuts/Raw/MuffaloTBone</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>0.08</Mass>
+            <MarketValue>4</MarketValue>
+            <Nutrition>0.1</Nutrition>
+            <Flammability>14</Flammability>
+            <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
+        <ingestible>
+            <foodType>Meat</foodType>
+            <preferability>DesperateOnly</preferability>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>RawMeat_Eat</ingestSound>
+            <specialThoughtDirect>AteRawFood</specialThoughtDirect>
+            <specialThoughtAsIngredient>SC_AteCookedPrimeCut</specialThoughtAsIngredient>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>5</daysToRotStart>
+                <rotDestroys>True</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+        <ThingDef ParentName="OrganicProductBase">
+        <defName>SC_MegaslothBelly</defName>
+        <label>megasloth belly</label>
+        <description>Slabs of meat from the soft belly of a megasloth. Renowned for the thick layer of fatty tissue.\n\n&lt;color=#6e6e6eff&gt;Being primarily herbivorous, the meat of megasloths acquires an intense, aromatic flavor, which only grows stronger as the animal ages. Some venators swear by megasloth belly as the most delicious raw meat one could get their fangs on.&lt;/color&gt;</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/PrimeCuts/Raw/MegaslothBelly</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>0.08</Mass>
+            <MarketValue>4</MarketValue>
+            <Nutrition>0.1</Nutrition>
+            <Flammability>14</Flammability>
+            <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
+        <ingestible>
+            <foodType>Meat</foodType>
+            <preferability>DesperateOnly</preferability>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>RawMeat_Eat</ingestSound>
+            <specialThoughtDirect>AteRawFood</specialThoughtDirect>
+            <specialThoughtAsIngredient>SC_AteCookedPrimeCut</specialThoughtAsIngredient>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>5</daysToRotStart>
+                <rotDestroys>True</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
+        <ThingDef ParentName="OrganicProductBase">
+        <defName>SC_ThrumboRib</defName>
+        <label>thrumbo rib</label>
+        <description>The large ribs of a graceful thrumbo, separated into single chops.\n\n&lt;color=#6e6e6eff&gt;Traditionally, tribal societies surround thrumbos in folklore and myth, thus their flesh is only eaten upon the natural passing of the animal. This ritual feast can last up to a week, in which the tribe will eat every piece of the thrumbo: after grand dances and celebrations, an honorable burial is held for the clean skeleton of the animal.&lt;/color&gt;</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/PrimeCuts/Raw/ThrumboRib</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>0.08</Mass>
+            <MarketValue>4</MarketValue>
+            <Nutrition>0.15</Nutrition>
+            <Flammability>14</Flammability>
+            <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
+        <ingestible>
+            <foodType>Meat</foodType>
+            <preferability>DesperateOnly</preferability>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>RawMeat_Eat</ingestSound>
+            <specialThoughtDirect>AteRawFood</specialThoughtDirect>
+            <specialThoughtAsIngredient>SC_AteCookedPrimeCut</specialThoughtAsIngredient>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>5</daysToRotStart>
+                <rotDestroys>True</rotDestroys>
+            </li>
+        </comps>
+    </ThingDef>
+
 </Defs>

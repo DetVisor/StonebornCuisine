@@ -12,8 +12,8 @@
     <defName>SC_DwarvenCrops</defName>
     <label>fungus crops</label>
     <tab>StonebornTab</tab>
-    <description>Plant various mushrooms engineered by the stoneborn for food.</description>
-    <baseCost>800</baseCost>
+    <description>Plant various plants engineered by the stoneborn for cooking.</description>
+    <baseCost>300</baseCost>
     <techLevel>Neolithic</techLevel>
     <researchViewX>0.00</researchViewX>
     <researchViewY>0.40</researchViewY>
@@ -24,7 +24,7 @@
     <label>sweet mushrooms</label>
     <tab>StonebornTab</tab>
     <description>Plant fungus engineered to produce sweet and luxurious things, like gemberries and chocobark.</description>
-    <baseCost>800</baseCost>
+    <baseCost>350</baseCost>
     <techLevel>Neolithic</techLevel>
     <researchViewX>1.00</researchViewX>
     <researchViewY>0.40</researchViewY>
@@ -35,7 +35,7 @@
     <label>jelly farming</label>
     <tab>StonebornTab</tab>
     <description>Place juvenile queens into artificial hives for farming insect jelly.</description>
-    <baseCost>1000</baseCost>
+    <baseCost>550</baseCost>
     <techLevel>Neolithic</techLevel>
     <researchViewX>2.00</researchViewX>
     <researchViewY>0.40</researchViewY>
@@ -52,12 +52,12 @@
     </generalRules>
   </ResearchProjectDef>
 
-    <ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>SC_ButterChurning</defName>
     <label>butter churning</label>
     <tab>StonebornTab</tab>
     <description>Produce butter with milk and fungus, for various cooking applications.</description>
-    <baseCost>1000</baseCost>
+    <baseCost>650</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>3.00</researchViewX>
     <researchViewY>2.20</researchViewY>
@@ -77,14 +77,14 @@
     </generalRules>
   </ResearchProjectDef>
 
-      <ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>SC_BitterProduction</defName>
     <label>bitter production</label>
     <tab>StonebornTab</tab>
     <description>Grow bitterpot plants, harvest nectar and brew it into bitterstrug.</description>
-    <baseCost>1200</baseCost>
+    <baseCost>650</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>4.00</researchViewX>
+    <researchViewX>3.00</researchViewX>
     <researchViewY>0.40</researchViewY>
     <generalRules>
       <rulesStrings>
@@ -104,10 +104,36 @@
     <label>kitchen furnishing</label>
     <tab>StonebornTab</tab>
     <description>Build furniture for kitchens and feast halls.</description>
-    <baseCost>500</baseCost>
+    <baseCost>250</baseCost>
     <techLevel>Medieval</techLevel>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>0.40</researchViewY>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>0.80</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_KitchenAppliances</defName>
+    <label>kitchen appliances</label>
+    <tab>StonebornTab</tab>
+    <description>Build functional appliances for kitchens and feast halls.</description>
+    <baseCost>350</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>1.80</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SC_PrimeCuisine</defName>
+    <label>prime cuisine</label>
+    <tab>StonebornTab</tab>
+    <prerequisites>
+      <li>SC_BasicBaking</li>
+      <li>SC_Grilling</li>
+    </prerequisites>
+    <description>Build the carving table and harvest prime cuts from specific animals.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.20</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -115,7 +141,7 @@
     <label>basic baking</label>
     <tab>StonebornTab</tab>
     <description>Build the dwarven kiln to begin baking goods from flour.</description>
-    <baseCost>1200</baseCost>
+    <baseCost>600</baseCost>
     <techLevel>Neolithic</techLevel>
     <researchViewX>0.00</researchViewX>
     <researchViewY>1.30</researchViewY>
@@ -139,7 +165,7 @@
     <label>dough preparation</label>
     <tab>StonebornTab</tab>
     <description>Construct the preparation table to make dough out of milk and flour.</description>
-    <baseCost>1200</baseCost>
+    <baseCost>1000</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>1.00</researchViewX>
     <researchViewY>1.30</researchViewY>
@@ -170,7 +196,7 @@
       <ThingDef>SC_InsectJerky</ThingDef>
       <ThingDef>SC_DriedHuman</ThingDef>
     </descriptionHyperlinks>
-    <baseCost>1500</baseCost>
+    <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.30</researchViewY>
@@ -197,7 +223,7 @@
     <label>pastry arts</label>
     <tab>StonebornTab</tab>
     <description>Prepare pastry dough with milk, flour and insect jelly/eggs, then bake it into pastries and pies.</description>
-    <baseCost>2200</baseCost>
+    <baseCost>1500</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>2.00</researchViewX>
     <researchViewY>2.20</researchViewY>
@@ -222,7 +248,7 @@
     <label>feasts galore</label>
     <tab>StonebornTab</tab>
     <description>Bake, roast and boil large feasts: meals that increase mood by a lot when warm, but get worse when frozen.</description>
-    <baseCost>2200</baseCost>
+    <baseCost>2000</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>3.00</researchViewX>
     <researchViewY>1.30</researchViewY>
@@ -247,9 +273,9 @@
     <label>grilling</label>
     <tab>StonebornTab</tab>
     <description>Grill various raw foods into skewers or burgers on the hot grill.</description>
-    <baseCost>1200</baseCost>
+    <baseCost>800</baseCost>
     <techLevel>Medieval</techLevel>
-    <researchViewX>1.00</researchViewX>
+    <researchViewX>0.00</researchViewX>
     <researchViewY>2.20</researchViewY>
     <generalRules>
       <rulesStrings>
@@ -264,6 +290,6 @@
       </rulesStrings>
     </generalRules>
   </ResearchProjectDef>
-  
+
 
 </Defs>

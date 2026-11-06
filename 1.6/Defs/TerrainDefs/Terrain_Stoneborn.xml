@@ -14,9 +14,6 @@
         <researchPrerequisites>
             <li>SC_DwarvenCrops</li>
         </researchPrerequisites>
-        <placeWorkers>
-            <li>Placeworker_OnlyUnderThickRoof</li>
-        </placeWorkers>
         <statBases>
             <Beauty>-1</Beauty>
             <Cleanliness>-1</Cleanliness>

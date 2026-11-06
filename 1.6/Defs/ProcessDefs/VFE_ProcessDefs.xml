@@ -98,7 +98,7 @@
     <PipeSystem.ProcessDef>
         <defName>SC_Pot_RawToMushroomSoup</defName>
         <label>Cook cream of mushroom soup</label>
-        <description>Turns 75 fungus and 45 dwarven milk into cream of mushroom soup (16)</description>
+        <description>Turns 75 fungus, 45 dwarven milk and 25 herbs into cream of mushroom soup (16)</description>
         <spawnOnInteractionCell>true</spawnOnInteractionCell>
         <labelOverride>Cook fungus and dwarven milk into cream of mushroom soup</labelOverride>
         <priorityInBillList>0</priorityInBillList>
@@ -113,6 +113,10 @@
             <li>
                 <thing>SC_DwarvenMilk</thing>
                 <countNeeded>45</countNeeded>
+            </li>
+            <li>
+                <thing>SC_AssortedHerbs</thing>
+                <countNeeded>25</countNeeded>
             </li>
         </ingredients>
         <ticks>80000</ticks>
@@ -163,7 +167,7 @@
         <sustainerDef>SC_Recipe_Bake</sustainerDef>
     </PipeSystem.ProcessDef>
 
-        <PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
         <defName>SC_DoughToBrickloaf</defName>
         <label>Bake brickloaf</label>
         <description>Turns 40 dough into 75 brickloaf.</description>
@@ -305,7 +309,7 @@
         <sustainerDef>SC_Recipe_Bake</sustainerDef>
     </PipeSystem.ProcessDef>
 
-        <PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
         <defName>SC_DoughToTarts</defName>
         <label>Bake butter tarts</label>
         <description>Turns 60 pastry dough and 30 dwarven butter into 75 butter tarts</description>
@@ -459,11 +463,50 @@
     </PipeSystem.ProcessDef>
 
     <PipeSystem.ProcessDef>
+        <defName>SC_DoughToSpongecake</defName>
+        <label>Bake a spongecake</label>
+        <description>Turns 30 pastry dough and 30 bitter nectar into pie (16)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake pastry dough and bitter nectar into pie</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_CheesePie</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_PastryArts</li>
+            <li>SC_BitterProduction</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_Raw_Dough</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_BitterNectar</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>SC_Spongecake</thing>
+                <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
         <defName>SC_DoughToMeatRockpie</defName>
         <label>Bake a meat rockpie</label>
-        <description>Turns 30 dough and 45 meat into rockpie (16)</description>
+        <description>Turns 30 dough, 45 meat and 15 herbs into rockpie (16)</description>
         <spawnOnInteractionCell>true</spawnOnInteractionCell>
-        <labelOverride>Bake dough and meat into rockpie</labelOverride>
+        <labelOverride>Bake dough, meat and herbs into rockpie</labelOverride>
         <priorityInBillList>0</priorityInBillList>
         <descriptionHyperlinks>
             <ThingDef>SC_MeatRockpie</ThingDef>
@@ -479,6 +522,10 @@
             <li>
                 <thing>SC_Raw_Dough</thing>
                 <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_AssortedHerbs</thing>
+                <countNeeded>15</countNeeded>
             </li>
         </ingredients>
         <ticks>120000</ticks>
@@ -499,9 +546,9 @@
     <PipeSystem.ProcessDef>
         <defName>SC_DoughToVeganRockpie</defName>
         <label>Bake a vegetarian rockpie</label>
-        <description>Turns 30 dough and 45 vegetables into rockpie (16)</description>
+        <description>Turns 30 dough, 45 vegetables and 15 herbs into rockpie (16)</description>
         <spawnOnInteractionCell>true</spawnOnInteractionCell>
-        <labelOverride>Bake dough and vegetables into rockpie</labelOverride>
+        <labelOverride>Bake dough, vegetables and herbs into rockpie</labelOverride>
         <priorityInBillList>0</priorityInBillList>
         <descriptionHyperlinks>
             <ThingDef>SC_VeganRockpie</ThingDef>
@@ -517,6 +564,10 @@
             <li>
                 <thing>SC_Raw_Dough</thing>
                 <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_AssortedHerbs</thing>
+                <countNeeded>15</countNeeded>
             </li>
         </ingredients>
         <ticks>120000</ticks>
@@ -537,9 +588,9 @@
     <PipeSystem.ProcessDef>
         <defName>SC_DoughToMushroomRockpie</defName>
         <label>Bake a mushroom rockpie</label>
-        <description>Turns 30 dough and 45 fungus into rockpie (16)</description>
+        <description>Turns 30 dough, 45 fungus and 15 herbs into rockpie (16)</description>
         <spawnOnInteractionCell>true</spawnOnInteractionCell>
-        <labelOverride>Bake dough and fungus into rockpie</labelOverride>
+        <labelOverride>Bake dough, fungus and herbs into rockpie</labelOverride>
         <priorityInBillList>0</priorityInBillList>
         <descriptionHyperlinks>
             <ThingDef>SC_MushroomRockpie</ThingDef>
@@ -555,6 +606,10 @@
             <li>
                 <thing>SC_Raw_Dough</thing>
                 <countNeeded>30</countNeeded>
+            </li>
+            <li>
+                <thing>SC_AssortedHerbs</thing>
+                <countNeeded>15</countNeeded>
             </li>
         </ingredients>
         <ticks>120000</ticks>
@@ -661,9 +716,9 @@
     <PipeSystem.ProcessDef>
         <defName>SC_RawToMushroomSoup</defName>
         <label>Cook cream of mushroom soup</label>
-        <description>Turns 75 fungus and 45 dwarven milk into cream of mushroom soup (16)</description>
+        <description>Turns 75 fungus, 45 dwarven milk and 25 herbs into cream of mushroom soup (16)</description>
         <spawnOnInteractionCell>true</spawnOnInteractionCell>
-        <labelOverride>Cook fungus and dwarven milk into cream of mushroom soup</labelOverride>
+        <labelOverride>Cook fungus, dwarven milk and herbs into cream of mushroom soup</labelOverride>
         <transfersIngredientList>true</transfersIngredientList>
         <priorityInBillList>0</priorityInBillList>
         <descriptionHyperlinks>
@@ -680,6 +735,10 @@
             <li>
                 <thing>SC_DwarvenMilk</thing>
                 <countNeeded>45</countNeeded>
+            </li>
+            <li>
+                <thing>SC_AssortedHerbs</thing>
+                <countNeeded>25</countNeeded>
             </li>
         </ingredients>
         <ticks>160000</ticks>
@@ -740,7 +799,7 @@
         <sustainerDef>SC_Recipe_Bake</sustainerDef>
     </PipeSystem.ProcessDef>
 
-        <PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
         <defName>SC_RawToCrustedFillet</defName>
         <label>Bake a crusted fillet</label>
         <description>Turns 75 meat, 30 pastry dough, 30 fungus and 15 dwarven butter into a crusted fillet (16)</description>
@@ -778,6 +837,84 @@
             <li>
                 <thing>SC_Feast_CrustedFillet</thing>
                 <count>16</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <!-- Prime cut processes -->
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_TenderloinToRoast</defName>
+        <label>Cook a rockbull roast</label>
+        <description>Turns 12 rockbull tenderloin and 25 herbs into rockbull roast (8)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Bake rockbull tenderlion into roasts</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_RockbullRoast</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_PrimeCuisine</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_RockbullTenderloin</thing>
+                <countNeeded>12</countNeeded>
+            </li>
+            <li>
+                <thing>SC_AssortedHerbs</thing>
+                <countNeeded>25</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>100000</ticks>
+        <results>
+            <li>
+                <thing>SC_RockbullRoast</thing>
+                <count>8</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <autoExtract>false</autoExtract>
+        <effecterWhenWorking>true</effecterWhenWorking>
+        <effecterDef>SC_OvenSmoke</effecterDef>
+        <sustainerWhenWorking>true</sustainerWhenWorking>
+        <sustainerDef>SC_Recipe_Bake</sustainerDef>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SC_BellyToCrispyBelly</defName>
+        <label>Roast crispy megasloth belly</label>
+        <description>Turns 12 megasloth belly into crispy megasloth belly (8)</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Roast belly into crispy belly</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <descriptionHyperlinks>
+            <ThingDef>SC_CrispyMegasloth</ThingDef>
+        </descriptionHyperlinks>
+        <researchPrerequisites>
+            <li>SC_PrimeCuisine</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>SC_MegaslothBelly</thing>
+                <countNeeded>12</countNeeded>
+            </li>
+            <li>
+                <thing>SC_AssortedHerbs</thing>
+                <countNeeded>25</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>100000</ticks>
+        <results>
+            <li>
+                <thing>SC_CrispyMegasloth</thing>
+                <count>8</count>
             </li>
         </results>
         <useIngredients>true</useIngredients>
@@ -900,7 +1037,7 @@
         <sustainerDef>SC_Recipe_Reheat</sustainerDef>
     </PipeSystem.ProcessDef>
 
-    
+
     <PipeSystem.ProcessDef>
         <defName>SC_Microwave_ReheatCrustedFillet</defName>
         <label>Reheat crusted fillet</label>

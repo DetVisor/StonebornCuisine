@@ -25,10 +25,18 @@
     <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
   </ThingCategoryDef>
 
-    <ThingCategoryDef>
+  <ThingCategoryDef>
     <defName>DV_DwarvenGrills</defName>
     <label>grills</label>
     <parent>DV_DwarvenFoods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DV_CuredFood</defName>
+    <label>cured meat</label>
+    <parent>Foods</parent>
     <resourceReadoutRoot>true</resourceReadoutRoot>
     <iconPath>UI/Icons/ThingCategories/Foods</iconPath>
   </ThingCategoryDef>

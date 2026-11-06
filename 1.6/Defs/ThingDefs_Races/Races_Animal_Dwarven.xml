@@ -94,12 +94,12 @@
       <trainability>None</trainability>
       <foodType>OmnivoreRoughAnimal</foodType>
       <wildBiomes>
-        <Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.8</Glowforest>
-        <TropicalSwamp>0.67</TropicalSwamp>
-        <TropicalRainforest>0.43</TropicalRainforest>
-        <AridShrubland>0.55</AridShrubland>
-        <TemperateForest>0.43</TemperateForest>
-        <TemperateSwamp>0.43</TemperateSwamp>
+        <Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.6</Glowforest>
+        <TropicalSwamp>0.4</TropicalSwamp>
+        <TropicalRainforest>0.4</TropicalRainforest>
+        <AridShrubland>0.2</AridShrubland>
+        <TemperateForest>0.3</TemperateForest>
+        <TemperateSwamp>0.4</TemperateSwamp>
       </wildBiomes>
       <lifeStageAges>
         <li>
@@ -129,12 +129,12 @@
         <li>(-0.07, 0, 0.08)</li>
       </headPosPerRotation>
     </race>
-	<comps>
+    <comps>
       <li Class="DV_Cuisine.CompProperties_OnDeathEffects">
         <effecter IsNull="True" />
-		<spawnThing>SC_DwarvenMilk</spawnThing>
-		<spawnAmount>45</spawnAmount>
-		<multiplyByBodySize>true</multiplyByBodySize>
+        <spawnThing>SC_DwarvenMilk</spawnThing>
+        <spawnAmount>45</spawnAmount>
+        <multiplyByBodySize>true</multiplyByBodySize>
       </li>
     </comps>
     <tradeTags>

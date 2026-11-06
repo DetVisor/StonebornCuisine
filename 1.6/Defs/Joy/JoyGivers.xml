@@ -10,6 +10,8 @@
             <li>SC_BerryPie</li>
             <li>SC_ChocolatePie</li>
             <li>SC_CheesePie</li>
+            <li>SC_Spongecake</li>
+            <li>SC_ButterTarts</li>
         </thingDefs>
         <joyKind>Gluttonous</joyKind>
         <requiredCapacities>

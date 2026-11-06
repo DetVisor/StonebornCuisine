@@ -102,4 +102,18 @@
         </replaceThoughts>
     </ThoughtDef>
 
+    <ThoughtDef>
+        <defName>SC_AteCookedPrimeCut</defName>
+        <durationDays>1</durationDays>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Joy_Low</icon>
+        <stages>
+            <li>
+                <label>ate prime cut</label>
+                <description>Such a rich, prized taste!</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
 </Defs>

@@ -2,9 +2,83 @@
 <Defs>
 
   <ThingDef ParentName="BenchBase">
+    <defName>SC_CarvingTable</defName>
+    <label>carving table</label>
+    <description>A simple tough wooden bench to finely carve prime cuts out of specific animals.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Buildings/Production/CarvingTable/CarvingTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.8, 2.8)</drawSize>
+      <shadowData>
+        <volume>(1.8, 0.35, 0.59)</volume>
+        <offset>(0, 0, 0.08)</offset>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>SC_PrimeCuisine</li>
+    </researchPrerequisites>
+    <costList>
+      <WoodLog>80</WoodLog>
+      <Steel>25</Steel>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2200</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <size>(2,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2500</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(1,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <recipes>
+      <li>SC_CarveRockbull</li>
+      <li>SC_CarveMuffalo</li>
+      <li>SC_CarveMegasloth</li>
+      <li>SC_CarveThrumbo</li>
+      <li>SC_Custom_ButcherCorpseFlesh</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Kitchen</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.5</workTableNotInRoomRoleFactor>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>SC_KitchenCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
     <defName>SC_HotGrill</defName>
     <label>hot grill</label>
-    <description>A metal grill with a campfire below, used to grill food.</description>
+    <description>A metal grill with a campfire below, used to grill food. Can also be used as a stove with a pan.</description>
     <thingClass>Building_WorkTable_HeatPush</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -64,7 +138,11 @@
       <li>SC_CookCaveburger</li>
 
       <li>SC_CookCheeseSandwich</li>
+      <li>SC_CookSteak</li>
       <li>SC_CookOmelette</li>
+
+      <li>SC_CookCountryFriedMuffalo</li>
+      <li>SC_CookThrumboTomahawk</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -112,6 +190,7 @@
     </comps>
     <placeWorkers>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
     <building>
       <isMealSource>true</isMealSource>
@@ -258,9 +337,14 @@
           <li>SC_RawToVeganMeal</li>
 
           <li>SC_DoughToPastry</li>
+          <li>SC_DoughToTarts</li>
           <li>SC_DoughToBerryPie</li>
           <li>SC_DoughToChocolatePie</li>
           <li>SC_DoughToCheesePie</li>
+          <li>SC_DoughToSpongecake</li>
+
+          <li>SC_TenderloinToRoast</li>
+          <li>SC_BellyToCrispyBelly</li>
 
           <li>SC_RawToJellyGlazedShank</li>
           <li>SC_RawToRoastedMegascarab</li>
@@ -498,7 +582,7 @@
       <WorkToBuild>2200</WorkToBuild>
       <MaxHitPoints>150</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <Cleanliness>-3</Cleanliness>
+      <Cleanliness>-2</Cleanliness>
     </statBases>
     <size>(2,1)</size>
     <designationCategory>Production</designationCategory>
@@ -533,6 +617,7 @@
     </building>
     <placeWorkers>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
     <comps>
       <li Class="CompProperties_AffectedByFacilities">

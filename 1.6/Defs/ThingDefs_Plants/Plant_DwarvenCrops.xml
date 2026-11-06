@@ -345,11 +345,123 @@
     <thingCategories>
       <li>PlantMatter</li>
     </thingCategories>
+    <tradeTags>
+      <li>SC_CookingIngredient</li>
+    </tradeTags>
     <ingestible>
       <preferability>DesperateOnly</preferability>
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
     </ingestible>
   </ThingDef>
+
+
+  <ThingDef ParentName="PlantBase">
+    <defName>SC_Plant_HerbGuild</defName>
+    <label>herb guild</label>
+    <description>A mix of various herbs that are grown together to benefit eachother. They grow fairly fast, can't be blighted and harvesting them is never failable.\n\n&lt;color=#6e6e6eff&gt;The three herbs, whiskerwort, lockleaf and spiralmint, are considered the backbone of stoneborn culinary culture. Spiralmint, however, is the only herb in the bunch native to Grugni.&lt;/color&gt;</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.10</Nutrition>
+      <Beauty>4</Beauty>
+      <BeautyOutdoors>4</BeautyOutdoors>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/HerbGuild</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <sowResearchPrerequisites Inherit="False">
+        <li>SC_DwarvenCrops</li>
+      </sowResearchPrerequisites>
+      <maxMeshCount>4</maxMeshCount>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SC_AssortedHerbs</harvestedThingDef>
+      <harvestYield>20</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+        <li>Herbal</li>
+      </sowTags>
+      <harvestFailable>false</harvestFailable>
+      <neverBlightable>true</neverBlightable>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>5</growDays>
+      <visualSizeRange>0.5~1</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>SC_AssortedHerbs</defName>
+    <label>herbs</label>
+    <description>An assorted bundle of herbs, ready for cooking.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/HerbalMix</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <Nutrition>0.02</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+      <preferability>DesperateOnly</preferability>
+      <babiesCanIngest>false</babiesCanIngest>
+    </ingestible>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <tradeTags>
+      <li>SC_CookingIngredient</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>80</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>SC_Plant_WildWhiskerwort</defName>
+    <label>wild whiskerwort</label>
+    <description>A fast-growing herb which yields edible, aromatic leaves when harvested.\n\n&lt;color=#6e6e6eff&gt;Whiskerwort was the first aromatic plant humans brought on a long trip through space, and it was famously appreciated and praised by the on-board cooking staff.&lt;/color&gt;</description>
+    <neverMultiSelect>false</neverMultiSelect>
+    <graphicData>
+      <texPath>Things/Plant/WildWhiskerwort</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <maxMeshCount>4</maxMeshCount>
+      <growDays>4</growDays>
+      <dieIfLeafless>false</dieIfLeafless>
+      <harvestWork>150</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SC_AssortedHerbs</harvestedThingDef>
+      <harvestYield>10</harvestYield>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.8~1</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <wildClusterRadius>3</wildClusterRadius>
+      <wildClusterWeight>200</wildClusterWeight>
+      <allowAutoCut>false</allowAutoCut>
+    </plant>
+  </ThingDef>
+
 
 </Defs>
   

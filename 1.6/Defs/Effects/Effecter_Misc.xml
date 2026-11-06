@@ -82,7 +82,7 @@
     </children>
   </EffecterDef>
 
-    <EffecterDef>
+  <EffecterDef>
     <defName>SC_FeastSparkles</defName>
     <children>
       <li>
@@ -99,7 +99,7 @@
     </children>
   </EffecterDef>
 
-    <EffecterDef>
+  <EffecterDef>
     <defName>SC_FeastVapors</defName>
     <children>
       <li>
@@ -112,6 +112,23 @@
         <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
         <positionOffset>(0, 0, 0.5)</positionOffset>
         <positionRadius>0.2</positionRadius>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <EffecterDef>
+    <defName>SC_SpitVapors</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <fleckDef>SC_SmokeGrowing</fleckDef>
+        <scale>0.8~1.1</scale>
+        <rotationRate>15~30</rotationRate>
+        <speed>0.3~0.35</speed>
+        <angle>32~40</angle>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+        <positionOffset>(-0.5, 0.8, 1)</positionOffset>
+        <positionRadius>0.3</positionRadius>
       </li>
     </children>
   </EffecterDef>
