@@ -9,11 +9,15 @@
 	<packageId>det.sbcuisine</packageId>
 	<description>Bake, grill and sear all new foods for your stoneborn hall! From simple goods to delicious pastries, to even massive, steaming hot feasts!</description>
 	<forceLoadAfter>
+		<li>brrainz.harmony</li>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>Ludeon.RimWorld.Anomaly</li>
+		<li>Ludeon.RimWorld.Odyssey</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>syrchalis.processor.framework</li>
 	</forceLoadAfter>
 	<modDependencies>
 		<li>

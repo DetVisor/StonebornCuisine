@@ -19,9 +19,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>SC_DwarvenMilk</li>
-                        <li>Milk</li>
-                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
+                        <li>SC_Flour</li>
                     </thingDefs>
                 </filter>
                 <count>20</count>
@@ -29,7 +27,9 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>RawFungus</li>
+                        <li>SC_DwarvenMilk</li>
+                        <li>Milk</li>
+                        <li MayRequire="van.beasts">DA_MufftonMilk</li>
                     </thingDefs>
                 </filter>
                 <count>10</count>

@@ -28,8 +28,8 @@
         <comps>
             <li Class="CompProperties_ThingContainer">
                 <compClass>CompEggContainer</compClass>
-                <stackLimit>10</stackLimit>
-                <minCountToEmpty>10</minCountToEmpty>
+                <stackLimit>25</stackLimit>
+                <minCountToEmpty>5</minCountToEmpty>
                 <drawStackLabel>true</drawStackLabel>
             </li>
         </comps>
