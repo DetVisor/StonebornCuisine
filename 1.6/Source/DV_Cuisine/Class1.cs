@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace DV_Cuisine
 {
@@ -101,5 +102,66 @@ namespace DV_Cuisine
         }
         private bool isFlipped;
         //private GraphicData flippedGraphicData;
+    }
+
+    public class WorkGiver_EmptyMoleroachBurrow : WorkGiver_Scanner
+    {
+        public override ThingRequest PotentialWorkThingRequest
+        {
+            get
+            {
+                return ThingRequest.ForDef(ThingDef.Named("SC_MoleroachNest"));
+            }
+        }
+        public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+        {
+            if (!t.Spawned)
+            {
+                return false;
+            }
+            if (!pawn.CanReserve(t, 1, -1, null, forced))
+            {
+                return false;
+            }
+            CompEggContainer compEggContainer = t.TryGetComp<CompEggContainer>();
+            if (((compEggContainer != null) ? compEggContainer.ContainedThing : null) == null)
+            {
+                return false;
+            }
+            if (!compEggContainer.CanEmpty && !forced)
+            {
+                return false;
+            }
+            IntVec3 intVec;
+            IHaulDestination haulDestination;
+            if (!StoreUtility.TryFindBestBetterStorageFor(compEggContainer.ContainedThing, pawn, pawn.Map, StoragePriority.Unstored, pawn.Faction, out intVec, out haulDestination, false))
+            {
+                JobFailReason.Is(HaulAIUtility.NoEmptyPlaceLowerTrans, null);
+                return false;
+            }
+            return true;
+        }
+        public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
+        {
+            CompEggContainer compEggContainer = t.TryGetComp<CompEggContainer>();
+            if (((compEggContainer != null) ? compEggContainer.ContainedThing : null) == null)
+            {
+                return null;
+            }
+            if (!compEggContainer.CanEmpty && !forced)
+            {
+                return null;
+            }
+            IntVec3 c;
+            IHaulDestination haulDestination;
+            if (!StoreUtility.TryFindBestBetterStorageFor(compEggContainer.ContainedThing, pawn, pawn.Map, StoragePriority.Unstored, pawn.Faction, out c, out haulDestination, true))
+            {
+                JobFailReason.Is(HaulAIUtility.NoEmptyPlaceLowerTrans, null);
+                return null;
+            }
+            Job job = JobMaker.MakeJob(JobDefOf.EmptyThingContainer, t, compEggContainer.ContainedThing, c);
+            job.count = compEggContainer.ContainedThing.stackCount;
+            return job;
+        }
     }
 }
